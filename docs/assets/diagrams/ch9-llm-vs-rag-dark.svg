@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 400" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/>
+    </pattern>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#64748b"/></marker>
+    <marker id="arr-input" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#60a5fa"/></marker>
+    <marker id="arr-llm" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#fb923c"/></marker>
+    <marker id="arr-model" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#a78bfa"/></marker>
+    <marker id="arr-token" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#34d399"/></marker>
+    <marker id="arr-output" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#34d399"/></marker>
+    <marker id="arr-gate" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#fbbf24"/></marker>
+    <marker id="arr-tool" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#22d3ee"/></marker>
+    <marker id="arr-memory" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#f472b6"/></marker>
+    <marker id="arr-error" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#f87171"/></marker>
+  </defs>
+  <rect width="1040" height="400" fill="#020617"/>
+  <rect width="1040" height="400" fill="url(#grid)"/>
+  <text x="520" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#f1f5f9">LLM 단독 vs LLM + RAG</text>
+  <text x="520" y="58" text-anchor="middle" font-size="12" fill="#94a3b8">같은 질문, 다른 근거 — "환불 정책이 어떻게 되나요?"</text>
+  <path d="M 180,225 L 320,145" stroke="#64748b" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <rect x="235.0" y="158.0" width="30" height="18" rx="4" fill="#0f172a" stroke="#334155" stroke-width="0.8"/>
+  <text x="250.0" y="171.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#94a3b8">직접</text>
+  <path d="M 460,145 L 640,145" stroke="#fbbf24" stroke-width="1.5" fill="none" marker-end="url(#arr-gate)" stroke-dasharray="3,3"/>
+  <path d="M 180,265 L 320,335" stroke="#64748b" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <rect x="228.0" y="273.0" width="44" height="18" rx="4" fill="#0f172a" stroke="#334155" stroke-width="0.8"/>
+  <text x="250.0" y="286.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#94a3b8">+RAG</text>
+  <path d="M 460,335 L 540,335" stroke="#64748b" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <rect x="485.0" y="308.0" width="30" height="18" rx="4" fill="#0f172a" stroke="#334155" stroke-width="0.8"/>
+  <text x="500.0" y="321.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#94a3b8">문서</text>
+  <path d="M 680,335 L 760,335" stroke="#64748b" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <rect x="40" y="200" width="140" height="90" rx="10" fill="#0f172a"/>
+  <rect x="40" y="200" width="140" height="90" rx="10" fill="rgba(96,165,250,0.15)" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="110.0" y="241.0" text-anchor="middle" font-size="14" font-weight="700" fill="#bfdbfe">질문</text>
+  <text x="110.0" y="257.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#60a5fa">user</text>
+  <rect x="320" y="100" width="140" height="110" rx="10" fill="#0f172a"/>
+  <rect x="320" y="100" width="140" height="110" rx="10" fill="rgba(167,139,250,0.15)" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="390.0" y="151.0" text-anchor="middle" font-size="14" font-weight="700" fill="#ddd6fe">LLM</text>
+  <text x="390.0" y="167.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#a78bfa">학습 지식만</text>
+  <text x="390.0" y="183.0" text-anchor="middle" font-size="10" fill="#a78bfa">hallucination 위험</text>
+  <rect x="640" y="100" width="140" height="110" rx="10" fill="#0f172a"/>
+  <rect x="640" y="100" width="140" height="110" rx="10" fill="rgba(248,113,113,0.15)" stroke="#f87171" stroke-width="1.5"/>
+  <text x="710.0" y="151.0" text-anchor="middle" font-size="14" font-weight="700" fill="#fecaca">답</text>
+  <text x="710.0" y="167.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#f87171">출처 없음</text>
+  <text x="710.0" y="183.0" text-anchor="middle" font-size="10" fill="#f87171">그럴듯한 추측</text>
+  <rect x="320" y="290" width="140" height="90" rx="10" fill="#0f172a"/>
+  <rect x="320" y="290" width="140" height="90" rx="10" fill="rgba(34,211,238,0.15)" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="390.0" y="331.0" text-anchor="middle" font-size="14" font-weight="700" fill="#a5f3fc">검색</text>
+  <text x="390.0" y="347.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#22d3ee">vector DB</text>
+  <rect x="540" y="290" width="140" height="90" rx="10" fill="#0f172a"/>
+  <rect x="540" y="290" width="140" height="90" rx="10" fill="rgba(167,139,250,0.15)" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="610.0" y="331.0" text-anchor="middle" font-size="14" font-weight="700" fill="#ddd6fe">LLM</text>
+  <text x="610.0" y="347.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#a78bfa">+ 검색 문서</text>
+  <rect x="760" y="290" width="140" height="90" rx="10" fill="#0f172a"/>
+  <rect x="760" y="290" width="140" height="90" rx="10" fill="rgba(52,211,153,0.2)" stroke="#34d399" stroke-width="1.5"/>
+  <text x="830.0" y="331.0" text-anchor="middle" font-size="14" font-weight="700" fill="#a7f3d0">답</text>
+  <text x="830.0" y="347.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#34d399">출처 포함</text>
+</svg>

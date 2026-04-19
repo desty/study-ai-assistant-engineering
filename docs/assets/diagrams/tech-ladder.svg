@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 220" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#f1f5f9" stroke-width="0.5"/>
+    </pattern>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#6b7280"/></marker>
+    <marker id="arr-input" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#2563eb"/></marker>
+    <marker id="arr-llm" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ea580c"/></marker>
+    <marker id="arr-model" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#7c3aed"/></marker>
+    <marker id="arr-token" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-output" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-gate" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ca8a04"/></marker>
+    <marker id="arr-tool" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#0891b2"/></marker>
+    <marker id="arr-memory" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#db2777"/></marker>
+    <marker id="arr-error" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#dc2626"/></marker>
+  </defs>
+  <rect width="960" height="220" fill="#ffffff"/>
+  <rect width="960" height="220" fill="url(#grid)"/>
+  <text x="480" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">기술 선택의 계단</text>
+  <text x="480" y="58" text-anchor="middle" font-size="12" fill="#64748b">왼쪽 → 오른쪽으로 갈수록 비용·복잡도 ↑</text>
+  <path d="M 243,140 L 261,140" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <rect x="237.0" y="113.0" width="30" height="18" rx="4" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.8"/>
+  <text x="252.0" y="126.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#475569">부족</text>
+  <path d="M 395,140 L 413,140" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <rect x="389.0" y="113.0" width="30" height="18" rx="4" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.8"/>
+  <text x="404.0" y="126.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#475569">부족</text>
+  <path d="M 547,140 L 565,140" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <rect x="541.0" y="113.0" width="30" height="18" rx="4" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.8"/>
+  <text x="556.0" y="126.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#475569">부족</text>
+  <path d="M 699,140 L 717,140" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <rect x="693.0" y="113.0" width="30" height="18" rx="4" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.8"/>
+  <text x="708.0" y="126.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#475569">부족</text>
+  <rect x="111" y="100" width="130" height="80" rx="10" fill="#ffffff"/>
+  <rect x="111" y="100" width="130" height="80" rx="10" fill="#e3f2fd" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="176.0" y="136.0" text-anchor="middle" font-size="14" font-weight="700" fill="#0d47a1">코드/규칙</text>
+  <text x="176.0" y="152.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#1e40af">Part 1</text>
+  <rect x="263" y="100" width="130" height="80" rx="10" fill="#ffffff"/>
+  <rect x="263" y="100" width="130" height="80" rx="10" fill="#fef3e0" stroke="#ea580c" stroke-width="1.5"/>
+  <text x="328.0" y="136.0" text-anchor="middle" font-size="14" font-weight="700" fill="#9a3412">Prompt</text>
+  <text x="328.0" y="152.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#c2410c">Part 2</text>
+  <rect x="415" y="100" width="130" height="80" rx="10" fill="#ffffff"/>
+  <rect x="415" y="100" width="130" height="80" rx="10" fill="#cffafe" stroke="#0891b2" stroke-width="1.5"/>
+  <text x="480.0" y="136.0" text-anchor="middle" font-size="14" font-weight="700" fill="#083344">RAG</text>
+  <text x="480.0" y="152.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#0e7490">Part 3</text>
+  <rect x="567" y="100" width="130" height="80" rx="10" fill="#ffffff"/>
+  <rect x="567" y="100" width="130" height="80" rx="10" fill="#fce7f3" stroke="#db2777" stroke-width="1.5"/>
+  <text x="632.0" y="136.0" text-anchor="middle" font-size="14" font-weight="700" fill="#500724">Agent</text>
+  <text x="632.0" y="152.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#be185d">Part 5</text>
+  <rect x="719" y="100" width="130" height="80" rx="10" fill="#ffffff"/>
+  <rect x="719" y="100" width="130" height="80" rx="10" fill="#f3e8ff" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="784.0" y="136.0" text-anchor="middle" font-size="14" font-weight="700" fill="#4c1d95">Fine-tune</text>
+  <text x="784.0" y="152.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#6d28d9">Part 7</text>
+</svg>

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 380" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#f1f5f9" stroke-width="0.5"/>
+    </pattern>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#6b7280"/></marker>
+    <marker id="arr-input" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#2563eb"/></marker>
+    <marker id="arr-llm" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ea580c"/></marker>
+    <marker id="arr-model" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#7c3aed"/></marker>
+    <marker id="arr-token" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-output" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-gate" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ca8a04"/></marker>
+    <marker id="arr-tool" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#0891b2"/></marker>
+    <marker id="arr-memory" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#db2777"/></marker>
+    <marker id="arr-error" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#dc2626"/></marker>
+  </defs>
+  <rect width="1000" height="380" fill="#ffffff"/>
+  <rect width="1000" height="380" fill="url(#grid)"/>
+  <text x="500" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">Chunking 전략 — 크기의 트레이드오프</text>
+  <text x="500" y="58" text-anchor="middle" font-size="12" fill="#64748b">너무 작으면 맥락 손실, 너무 크면 정밀도 하락</text>
+  <text x="40" y="130" font-size="13" font-weight="700" fill="#0f172a">작게 (~200토큰)</text>
+  <text x="40" y="146" font-size="10" fill="#64748b" font-family="JetBrains Mono, monospace">fixed, overlap=0</text>
+  <rect x="220" y="110" width="70.0" height="40" rx="4" fill="#fce7f3" stroke="#db2777" stroke-width="1.5"/>
+  <rect x="292.0" y="110" width="70.0" height="40" rx="4" fill="#fce7f3" stroke="#db2777" stroke-width="1.5"/>
+  <rect x="364.0" y="110" width="70.0" height="40" rx="4" fill="#fce7f3" stroke="#db2777" stroke-width="1.5"/>
+  <rect x="436.0" y="110" width="70.0" height="40" rx="4" fill="#fce7f3" stroke="#db2777" stroke-width="1.5"/>
+  <rect x="508.0" y="110" width="70.0" height="40" rx="4" fill="#fce7f3" stroke="#db2777" stroke-width="1.5"/>
+  <rect x="580.0" y="110" width="70.0" height="40" rx="4" fill="#fce7f3" stroke="#db2777" stroke-width="1.5"/>
+  <rect x="652.0" y="110" width="70.0" height="40" rx="4" fill="#fce7f3" stroke="#db2777" stroke-width="1.5"/>
+  <rect x="724.0" y="110" width="70.0" height="40" rx="4" fill="#fce7f3" stroke="#db2777" stroke-width="1.5"/>
+  <rect x="796.0" y="110" width="70.0" height="40" rx="4" fill="#fce7f3" stroke="#db2777" stroke-width="1.5"/>
+  <rect x="868.0" y="110" width="70.0" height="40" rx="4" fill="#fce7f3" stroke="#db2777" stroke-width="1.5"/>
+  <text x="40" y="210" font-size="13" font-weight="700" fill="#0f172a">중간 (~512토큰)</text>
+  <text x="40" y="226" font-size="10" fill="#64748b" font-family="JetBrains Mono, monospace">fixed, overlap=50</text>
+  <rect x="220" y="190" width="142.0" height="40" rx="4" fill="#dcfce7" stroke="#059669" stroke-width="1.5"/>
+  <rect x="364.0" y="190" width="142.0" height="40" rx="4" fill="#dcfce7" stroke="#059669" stroke-width="1.5"/>
+  <rect x="508.0" y="190" width="142.0" height="40" rx="4" fill="#dcfce7" stroke="#059669" stroke-width="1.5"/>
+  <rect x="652.0" y="190" width="142.0" height="40" rx="4" fill="#dcfce7" stroke="#059669" stroke-width="1.5"/>
+  <rect x="796.0" y="190" width="142.0" height="40" rx="4" fill="#dcfce7" stroke="#059669" stroke-width="1.5"/>
+  <text x="40" y="290" font-size="13" font-weight="700" fill="#0f172a">크게 (~2000토큰)</text>
+  <text x="40" y="306" font-size="10" fill="#64748b" font-family="JetBrains Mono, monospace">fixed / section</text>
+  <rect x="220" y="270" width="358.0" height="40" rx="4" fill="#fef3e0" stroke="#ea580c" stroke-width="1.5"/>
+  <rect x="580.0" y="270" width="358.0" height="40" rx="4" fill="#fef3e0" stroke="#ea580c" stroke-width="1.5"/>
+  <line x1="220" y1="90" x2="940" y2="90" stroke="#6b7280" stroke-width="1.5"/>
+  <text x="580" y="80" text-anchor="middle" font-size="11" fill="#64748b">← 문서 한 개 (예: 10페이지 정책 문서) →</text>
+  <text x="40" y="330" font-size="11" fill="#64748b">• 작게: 세밀 · 맥락 손실  |  중간: 균형 (권장)  |  크게: 맥락 보존 · 정밀도↓</text>
+</svg>

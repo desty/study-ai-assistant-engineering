@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 420" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/>
+    </pattern>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#64748b"/></marker>
+    <marker id="arr-input" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#60a5fa"/></marker>
+    <marker id="arr-llm" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#fb923c"/></marker>
+    <marker id="arr-model" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#a78bfa"/></marker>
+    <marker id="arr-token" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#34d399"/></marker>
+    <marker id="arr-output" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#34d399"/></marker>
+    <marker id="arr-gate" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#fbbf24"/></marker>
+    <marker id="arr-tool" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#22d3ee"/></marker>
+    <marker id="arr-memory" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#f472b6"/></marker>
+    <marker id="arr-error" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#f87171"/></marker>
+  </defs>
+  <rect width="1120" height="420" fill="#020617"/>
+  <rect width="1120" height="420" fill="url(#grid)"/>
+  <text x="560" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#f1f5f9">Evalset 구축 파이프라인 — 실사용에서 gold 까지</text>
+  <text x="560" y="58" text-anchor="middle" font-size="12" fill="#94a3b8">평가셋은 한 번 만들고 끝이 아니라 실사용 실패에서 계속 자란다.</text>
+  <path d="M 232,220.0 L 258,220.0" stroke="#64748b" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 442,220.0 L 468,220.0" stroke="#64748b" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 652,220.0 L 678,220.0" stroke="#64748b" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 862,220.0 L 888,220.0" stroke="#64748b" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <rect x="50" y="170" width="180" height="110" rx="10" fill="#0f172a"/>
+  <rect x="50" y="170" width="180" height="110" rx="10" fill="rgba(244,114,182,0.15)" stroke="#f472b6" stroke-width="1.5"/>
+  <circle cx="140.0" cy="192" r="13" fill="#f472b6"/>
+  <text x="140.0" y="197" text-anchor="middle" font-size="13" font-weight="700" fill="#020617" font-family="JetBrains Mono, monospace">1</text>
+  <text x="140.0" y="224" text-anchor="middle" font-size="14" font-weight="700" fill="#fbcfe8">실사용 로그</text>
+  <text x="140.0" y="242" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#f472b6">prod traffic</text>
+  <text x="140.0" y="256" text-anchor="middle" font-size="10" fill="#f472b6">질문·응답·👎</text>
+  <rect x="260" y="170" width="180" height="110" rx="10" fill="#0f172a"/>
+  <rect x="260" y="170" width="180" height="110" rx="10" fill="rgba(34,211,238,0.15)" stroke="#22d3ee" stroke-width="1.5"/>
+  <circle cx="350.0" cy="192" r="13" fill="#22d3ee"/>
+  <text x="350.0" y="197" text-anchor="middle" font-size="13" font-weight="700" fill="#020617" font-family="JetBrains Mono, monospace">2</text>
+  <text x="350.0" y="224" text-anchor="middle" font-size="14" font-weight="700" fill="#a5f3fc">샘플링</text>
+  <text x="350.0" y="242" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#22d3ee">stratified</text>
+  <text x="350.0" y="256" text-anchor="middle" font-size="10" fill="#22d3ee">난이도·도메인 균형</text>
+  <rect x="470" y="170" width="180" height="110" rx="10" fill="#0f172a"/>
+  <rect x="470" y="170" width="180" height="110" rx="10" fill="rgba(96,165,250,0.15)" stroke="#60a5fa" stroke-width="1.5"/>
+  <circle cx="560.0" cy="192" r="13" fill="#60a5fa"/>
+  <text x="560.0" y="197" text-anchor="middle" font-size="13" font-weight="700" fill="#020617" font-family="JetBrains Mono, monospace">3</text>
+  <text x="560.0" y="224" text-anchor="middle" font-size="14" font-weight="700" fill="#bfdbfe">레이블링</text>
+  <text x="560.0" y="242" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#60a5fa">human / LLM</text>
+  <text x="560.0" y="256" text-anchor="middle" font-size="10" fill="#60a5fa">gold answer 작성</text>
+  <rect x="680" y="170" width="180" height="110" rx="10" fill="#0f172a"/>
+  <rect x="680" y="170" width="180" height="110" rx="10" fill="rgba(251,191,36,0.15)" stroke="#fbbf24" stroke-width="1.5"/>
+  <circle cx="770.0" cy="192" r="13" fill="#fbbf24"/>
+  <text x="770.0" y="197" text-anchor="middle" font-size="13" font-weight="700" fill="#020617" font-family="JetBrains Mono, monospace">4</text>
+  <text x="770.0" y="224" text-anchor="middle" font-size="14" font-weight="700" fill="#fde68a">검수</text>
+  <text x="770.0" y="242" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#fbbf24">QA review</text>
+  <text x="770.0" y="256" text-anchor="middle" font-size="10" fill="#fbbf24">이중 체크 · hold-out 분리</text>
+  <rect x="890" y="170" width="180" height="110" rx="10" fill="#0f172a"/>
+  <rect x="890" y="170" width="180" height="110" rx="10" fill="rgba(52,211,153,0.2)" stroke="#34d399" stroke-width="1.5"/>
+  <circle cx="980.0" cy="192" r="13" fill="#34d399"/>
+  <text x="980.0" y="197" text-anchor="middle" font-size="13" font-weight="700" fill="#020617" font-family="JetBrains Mono, monospace">5</text>
+  <text x="980.0" y="224" text-anchor="middle" font-size="14" font-weight="700" fill="#a7f3d0">Gold Set</text>
+  <text x="980.0" y="242" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#34d399">versioned</text>
+  <text x="980.0" y="256" text-anchor="middle" font-size="10" fill="#34d399">git/DVC 관리</text>
+  <path d="M 980.0 284 C 980.0 374, 350.0 374, 350.0 166" stroke="#34d399" stroke-width="1.5" fill="none" marker-end="url(#arr-token)" stroke-dasharray="5,3"/>
+  <rect x="450.5" y="367" width="219" height="18" rx="4" fill="#0f172a" stroke="#334155" stroke-width="0.8"/>
+  <text x="560.0" y="380" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#94a3b8">운영 중 실패 케이스 → 다음 라운드 샘플 풀에 추가</text>
+  <rect x="40" y="370" width="1040" height="30" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+  <text x="560.0" y="389" text-anchor="middle" font-size="12" fill="#cbd5e1">권장 최소 규모: QA 30건 · 요약 30건 · 분류 100건 (Ch 15 예고). hold-out 20~30%는 별도 보관.</text>
+</svg>

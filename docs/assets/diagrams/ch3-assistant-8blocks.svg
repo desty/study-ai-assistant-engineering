@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 620" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#f1f5f9" stroke-width="0.5"/>
+    </pattern>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#6b7280"/></marker>
+    <marker id="arr-input" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#2563eb"/></marker>
+    <marker id="arr-llm" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ea580c"/></marker>
+    <marker id="arr-model" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#7c3aed"/></marker>
+    <marker id="arr-token" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-output" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-gate" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ca8a04"/></marker>
+    <marker id="arr-tool" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#0891b2"/></marker>
+    <marker id="arr-memory" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#db2777"/></marker>
+    <marker id="arr-error" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#dc2626"/></marker>
+  </defs>
+  <rect width="960" height="620" fill="#ffffff"/>
+  <rect width="960" height="620" fill="url(#grid)"/>
+  <text x="480" y="36" text-anchor="middle" font-size="20" font-weight="700" fill="#0f172a">AI Assistant의 8 블록</text>
+  <text x="480" y="58" text-anchor="middle" font-size="12" fill="#64748b">3개 레이어로 묶어 본 운영형 Assistant 파이프라인</text>
+  <rect x="9" y="99" width="152" height="128" rx="12" fill="rgba(37,99,235,0.04)" stroke="#2563eb" stroke-width="1" stroke-dasharray="8,4"/>
+  <text x="21" y="117" font-size="10" font-weight="700" fill="#2563eb" font-family="JetBrains Mono, monospace">LAYER 1 · INTAKE</text>
+  <rect x="191" y="99" width="436" height="128" rx="12" fill="rgba(234,88,12,0.04)" stroke="#ea580c" stroke-width="1" stroke-dasharray="8,4"/>
+  <text x="203" y="117" font-size="10" font-weight="700" fill="#ea580c" font-family="JetBrains Mono, monospace">LAYER 2 · REASONING (LLM + RAG)</text>
+  <rect x="657" y="99" width="294" height="128" rx="12" fill="rgba(202,138,4,0.04)" stroke="#ca8a04" stroke-width="1" stroke-dasharray="8,4"/>
+  <text x="669" y="117" font-size="10" font-weight="700" fill="#ca8a04" font-family="JetBrains Mono, monospace">LAYER 3 · SAFETY &amp; PERSIST</text>
+  <path d="M 147,170 L 205,170" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 329,170 L 347,170" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 471,170 L 489,170" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 613,170 L 671,170" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 795,170 L 813,170" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 875,215 L 875,330 L 409,330 L 409,360" stroke="#6b7280" stroke-width="1.5" fill="none" marker-end="url(#arr)" stroke-dasharray="4,2"/>
+  <rect x="620.0" y="311" width="44" height="18" rx="4" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.8"/>
+  <text x="642.0" y="324" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#475569">logs</text>
+  <path d="M 733,215 Q 733,287 804,360" stroke="#dc2626" stroke-width="1.8" fill="none" marker-end="url(#arr-error)"/>
+  <rect x="693.5" y="293" width="149" height="18" rx="4" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.8"/>
+  <text x="768" y="306" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#475569">on fail / high-risk</text>
+  <path d="M 864,405 Q 904,405 904,310.0 Q 904,230 915,230 L 915,215" stroke="#059669" stroke-width="1.5" fill="none" marker-end="url(#arr-token)" stroke-dasharray="5,3"/>
+  <rect x="873.0" y="221" width="72" height="18" rx="4" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.8"/>
+  <text x="909" y="234" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#475569">feedback</text>
+  <rect x="25" y="125" width="120" height="90" rx="10" fill="#ffffff"/>
+  <rect x="25" y="125" width="120" height="90" rx="10" fill="#e3f2fd" stroke="#2563eb" stroke-width="1.5"/>
+  <circle cx="85.0" cy="147" r="13" fill="#2563eb"/>
+  <text x="85.0" y="152" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff" font-family="JetBrains Mono, monospace">1</text>
+  <text x="85.0" y="179" text-anchor="middle" font-size="14" font-weight="700" fill="#0d47a1">입력</text>
+  <text x="85.0" y="197" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#1e40af">intake</text>
+  <rect x="207" y="125" width="120" height="90" rx="10" fill="#ffffff"/>
+  <rect x="207" y="125" width="120" height="90" rx="10" fill="#fef3e0" stroke="#ea580c" stroke-width="1.5"/>
+  <circle cx="267.0" cy="147" r="13" fill="#ea580c"/>
+  <text x="267.0" y="152" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff" font-family="JetBrains Mono, monospace">2</text>
+  <text x="267.0" y="179" text-anchor="middle" font-size="14" font-weight="700" fill="#9a3412">이해</text>
+  <text x="267.0" y="197" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#c2410c">understand</text>
+  <rect x="349" y="125" width="120" height="90" rx="10" fill="#ffffff"/>
+  <rect x="349" y="125" width="120" height="90" rx="10" fill="#cffafe" stroke="#0891b2" stroke-width="1.5"/>
+  <circle cx="409.0" cy="147" r="13" fill="#0891b2"/>
+  <text x="409.0" y="152" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff" font-family="JetBrains Mono, monospace">3</text>
+  <text x="409.0" y="179" text-anchor="middle" font-size="14" font-weight="700" fill="#083344">검색</text>
+  <text x="409.0" y="197" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#0e7490">retrieve</text>
+  <rect x="491" y="125" width="120" height="90" rx="10" fill="#ffffff"/>
+  <rect x="491" y="125" width="120" height="90" rx="10" fill="#fef3e0" stroke="#ea580c" stroke-width="1.5"/>
+  <circle cx="551.0" cy="147" r="13" fill="#ea580c"/>
+  <text x="551.0" y="152" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff" font-family="JetBrains Mono, monospace">4</text>
+  <text x="551.0" y="179" text-anchor="middle" font-size="14" font-weight="700" fill="#9a3412">생성</text>
+  <text x="551.0" y="197" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#c2410c">generate</text>
+  <rect x="673" y="125" width="120" height="90" rx="10" fill="#ffffff"/>
+  <rect x="673" y="125" width="120" height="90" rx="10" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+  <circle cx="733.0" cy="147" r="13" fill="#ca8a04"/>
+  <text x="733.0" y="152" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff" font-family="JetBrains Mono, monospace">5</text>
+  <text x="733.0" y="179" text-anchor="middle" font-size="14" font-weight="700" fill="#713f12">검증</text>
+  <text x="733.0" y="197" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#a16207">validate</text>
+  <rect x="815" y="125" width="120" height="90" rx="10" fill="#ffffff"/>
+  <rect x="815" y="125" width="120" height="90" rx="10" fill="#fce7f3" stroke="#db2777" stroke-width="1.5"/>
+  <circle cx="875.0" cy="147" r="13" fill="#db2777"/>
+  <text x="875.0" y="152" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff" font-family="JetBrains Mono, monospace">6</text>
+  <text x="875.0" y="179" text-anchor="middle" font-size="14" font-weight="700" fill="#500724">저장</text>
+  <text x="875.0" y="197" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#be185d">persist</text>
+  <rect x="349" y="360" width="120" height="90" rx="10" fill="#ffffff"/>
+  <rect x="349" y="360" width="120" height="90" rx="10" fill="#cffafe" stroke="#0891b2" stroke-width="1.5"/>
+  <circle cx="409.0" cy="382" r="13" fill="#0891b2"/>
+  <text x="409.0" y="387" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff" font-family="JetBrains Mono, monospace">7</text>
+  <text x="409.0" y="414" text-anchor="middle" font-size="14" font-weight="700" fill="#083344">모니터링</text>
+  <text x="409.0" y="432" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#0e7490">observe</text>
+  <rect x="744" y="360" width="120" height="90" rx="10" fill="#ffffff"/>
+  <rect x="744" y="360" width="120" height="90" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <circle cx="804.0" cy="382" r="13" fill="#dc2626"/>
+  <text x="804.0" y="387" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff" font-family="JetBrains Mono, monospace">8</text>
+  <text x="804.0" y="414" text-anchor="middle" font-size="14" font-weight="700" fill="#7f1d1d">휴먼 핸드오프</text>
+  <text x="804.0" y="432" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#b91c1c">escalate</text>
+  <rect x="720" y="500" width="200" height="84" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="732" y="520" font-size="10" font-weight="700" fill="#334155" font-family="JetBrains Mono, monospace">ARROWS</text>
+  <line x1="734" y1="536" x2="770" y2="536" stroke="#6b7280" stroke-width="1.8"/>
+  <text x="778" y="539" font-size="10" fill="#334155" font-family="JetBrains Mono, monospace">primary</text>
+  <line x1="734" y1="550" x2="770" y2="550" stroke="#6b7280" stroke-width="1.8" stroke-dasharray="4,2"/>
+  <text x="778" y="553" font-size="10" fill="#334155" font-family="JetBrains Mono, monospace">async</text>
+  <line x1="734" y1="564" x2="770" y2="564" stroke="#dc2626" stroke-width="1.8"/>
+  <text x="778" y="567" font-size="10" fill="#334155" font-family="JetBrains Mono, monospace">escalate</text>
+  <line x1="734" y1="578" x2="770" y2="578" stroke="#059669" stroke-width="1.8" stroke-dasharray="5,3"/>
+  <text x="778" y="581" font-size="10" fill="#334155" font-family="JetBrains Mono, monospace">feedback</text>
+  <rect x="60" y="500" width="640" height="72" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="72" y="520" font-size="10" font-weight="700" fill="#334155" font-family="JetBrains Mono, monospace">ROLES</text>
+  <rect x="170" y="527" width="14" height="14" rx="3" fill="#2563eb"/>
+  <text x="192" y="538" font-size="11" fill="#334155">입력/사용자</text>
+  <rect x="346" y="527" width="14" height="14" rx="3" fill="#ea580c"/>
+  <text x="368" y="538" font-size="11" fill="#334155">LLM 호출</text>
+  <rect x="522" y="527" width="14" height="14" rx="3" fill="#0891b2"/>
+  <text x="544" y="538" font-size="11" fill="#334155">툴/검색</text>
+  <rect x="170" y="549" width="14" height="14" rx="3" fill="#ca8a04"/>
+  <text x="192" y="560" font-size="11" fill="#334155">검증/게이트</text>
+  <rect x="346" y="549" width="14" height="14" rx="3" fill="#db2777"/>
+  <text x="368" y="560" font-size="11" fill="#334155">저장/메모리</text>
+  <rect x="522" y="549" width="14" height="14" rx="3" fill="#dc2626"/>
+  <text x="544" y="560" font-size="11" fill="#334155">에러/핸드오프</text>
+</svg>

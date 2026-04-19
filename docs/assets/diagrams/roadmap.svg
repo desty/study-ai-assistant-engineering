@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 300" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#f1f5f9" stroke-width="0.5"/>
+    </pattern>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#6b7280"/></marker>
+    <marker id="arr-input" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#2563eb"/></marker>
+    <marker id="arr-llm" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ea580c"/></marker>
+    <marker id="arr-model" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#7c3aed"/></marker>
+    <marker id="arr-token" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-output" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-gate" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ca8a04"/></marker>
+    <marker id="arr-tool" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#0891b2"/></marker>
+    <marker id="arr-memory" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#db2777"/></marker>
+    <marker id="arr-error" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#dc2626"/></marker>
+  </defs>
+  <rect width="960" height="300" fill="#ffffff"/>
+  <rect width="960" height="300" fill="url(#grid)"/>
+  <text x="480" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">7부 + 캡스톤</text>
+  <path d="M 300,120 L 324,120" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 468,120 L 492,120" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 636,120 L 660,120" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 732,160 Q 732,175.0 480.0,175.0 Q 228,175.0 228,190" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 300,230 L 324,230" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 468,230 L 492,230" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 636,230 L 660,230" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <rect x="158" y="80" width="140" height="80" rx="10" fill="#ffffff"/>
+  <rect x="158" y="80" width="140" height="80" rx="10" fill="#e3f2fd" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="228.0" y="116.0" text-anchor="middle" font-size="14" font-weight="700" fill="#0d47a1">Part 1</text>
+  <text x="228.0" y="132.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#1e40af">입문</text>
+  <rect x="326" y="80" width="140" height="80" rx="10" fill="#ffffff"/>
+  <rect x="326" y="80" width="140" height="80" rx="10" fill="#fef3e0" stroke="#ea580c" stroke-width="1.5"/>
+  <text x="396.0" y="116.0" text-anchor="middle" font-size="14" font-weight="700" fill="#9a3412">Part 2</text>
+  <text x="396.0" y="132.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#c2410c">Python · API</text>
+  <rect x="494" y="80" width="140" height="80" rx="10" fill="#ffffff"/>
+  <rect x="494" y="80" width="140" height="80" rx="10" fill="#cffafe" stroke="#0891b2" stroke-width="1.5"/>
+  <text x="564.0" y="116.0" text-anchor="middle" font-size="14" font-weight="700" fill="#083344">Part 3</text>
+  <text x="564.0" y="132.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#0e7490">RAG</text>
+  <rect x="662" y="80" width="140" height="80" rx="10" fill="#ffffff"/>
+  <rect x="662" y="80" width="140" height="80" rx="10" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+  <text x="732.0" y="116.0" text-anchor="middle" font-size="14" font-weight="700" fill="#713f12">Part 4</text>
+  <text x="732.0" y="132.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#a16207">평가·추론</text>
+  <rect x="158" y="190" width="140" height="80" rx="10" fill="#ffffff"/>
+  <rect x="158" y="190" width="140" height="80" rx="10" fill="#fef3e0" stroke="#ea580c" stroke-width="1.5"/>
+  <text x="228.0" y="226.0" text-anchor="middle" font-size="14" font-weight="700" fill="#9a3412">Part 5</text>
+  <text x="228.0" y="242.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#c2410c">Agent · LangGraph</text>
+  <rect x="326" y="190" width="140" height="80" rx="10" fill="#ffffff"/>
+  <rect x="326" y="190" width="140" height="80" rx="10" fill="#fce7f3" stroke="#db2777" stroke-width="1.5"/>
+  <text x="396.0" y="226.0" text-anchor="middle" font-size="14" font-weight="700" fill="#500724">Part 6</text>
+  <text x="396.0" y="242.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#be185d">운영</text>
+  <rect x="494" y="190" width="140" height="80" rx="10" fill="#ffffff"/>
+  <rect x="494" y="190" width="140" height="80" rx="10" fill="#f3e8ff" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="564.0" y="226.0" text-anchor="middle" font-size="14" font-weight="700" fill="#4c1d95">Part 7</text>
+  <text x="564.0" y="242.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#6d28d9">모델·파인튜닝</text>
+  <rect x="662" y="190" width="140" height="80" rx="10" fill="#ffffff"/>
+  <rect x="662" y="190" width="140" height="80" rx="10" fill="#d1fae5" stroke="#059669" stroke-width="1.5"/>
+  <text x="732.0" y="226.0" text-anchor="middle" font-size="14" font-weight="700" fill="#064e3b">캡스톤</text>
+  <text x="732.0" y="242.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#047857">Self-Improving</text>
+</svg>

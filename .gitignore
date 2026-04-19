@@ -1,0 +1,18 @@
+.venv/
+site/
+__pycache__/
+*.pyc
+.DS_Store
+.mkdocs_cache/
+
+# SVG is the source (committed). PNG is verification-only (regenerable via _tools/gen_*.py).
+docs/assets/diagrams/*.png
+
+# Private working notes — not for public repo
+_plans/
+_research/
+
+# Local IDE / editor
+.idea/
+.vscode/
+*.swp

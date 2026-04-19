@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 260" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#f1f5f9" stroke-width="0.5"/>
+    </pattern>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#6b7280"/></marker>
+    <marker id="arr-input" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#2563eb"/></marker>
+    <marker id="arr-llm" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ea580c"/></marker>
+    <marker id="arr-model" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#7c3aed"/></marker>
+    <marker id="arr-token" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-output" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-gate" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ca8a04"/></marker>
+    <marker id="arr-tool" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#0891b2"/></marker>
+    <marker id="arr-memory" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#db2777"/></marker>
+    <marker id="arr-error" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#dc2626"/></marker>
+  </defs>
+  <rect width="900" height="260" fill="#ffffff"/>
+  <rect width="900" height="260" fill="url(#grid)"/>
+  <text x="450" y="38" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">사이트 맵</text>
+  <path d="M 270,130 L 294,130" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 438,130 L 462,130" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 606,130 L 630,130" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <rect x="128" y="90" width="140" height="100" rx="10" fill="#ffffff"/>
+  <rect x="128" y="90" width="140" height="100" rx="10" fill="#e3f2fd" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="198.0" y="136.0" text-anchor="middle" font-size="14" font-weight="700" fill="#0d47a1">홈</text>
+  <text x="198.0" y="152.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#1e40af">index.md</text>
+  <rect x="296" y="90" width="140" height="100" rx="10" fill="#ffffff"/>
+  <rect x="296" y="90" width="140" height="100" rx="10" fill="#cffafe" stroke="#0891b2" stroke-width="1.5"/>
+  <text x="366.0" y="136.0" text-anchor="middle" font-size="14" font-weight="700" fill="#083344">소개</text>
+  <text x="366.0" y="152.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#0e7490">about/</text>
+  <text x="366.0" y="168.0" text-anchor="middle" font-size="10" fill="#0e7490">학습 시스템 · 학습 내용</text>
+  <rect x="464" y="90" width="140" height="100" rx="10" fill="#ffffff"/>
+  <rect x="464" y="90" width="140" height="100" rx="10" fill="#fef3e0" stroke="#ea580c" stroke-width="1.5"/>
+  <text x="534.0" y="136.0" text-anchor="middle" font-size="14" font-weight="700" fill="#9a3412">본문 7부</text>
+  <text x="534.0" y="152.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#c2410c">part1 ~ part7</text>
+  <text x="534.0" y="168.0" text-anchor="middle" font-size="10" fill="#c2410c">각 Part 3~6챕터</text>
+  <rect x="632" y="90" width="140" height="100" rx="10" fill="#ffffff"/>
+  <rect x="632" y="90" width="140" height="100" rx="10" fill="#d1fae5" stroke="#059669" stroke-width="1.5"/>
+  <text x="702.0" y="136.0" text-anchor="middle" font-size="14" font-weight="700" fill="#064e3b">캡스톤</text>
+  <text x="702.0" y="152.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#047857">capstone</text>
+  <text x="702.0" y="168.0" text-anchor="middle" font-size="10" fill="#047857">Self-Improving Assistant</text>
+</svg>

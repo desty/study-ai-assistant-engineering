@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 440" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/>
+    </pattern>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#64748b"/></marker>
+    <marker id="arr-input" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#60a5fa"/></marker>
+    <marker id="arr-llm" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#fb923c"/></marker>
+    <marker id="arr-model" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#a78bfa"/></marker>
+    <marker id="arr-token" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#34d399"/></marker>
+    <marker id="arr-output" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#34d399"/></marker>
+    <marker id="arr-gate" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#fbbf24"/></marker>
+    <marker id="arr-tool" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#22d3ee"/></marker>
+    <marker id="arr-memory" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#f472b6"/></marker>
+    <marker id="arr-error" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#f87171"/></marker>
+  </defs>
+  <rect width="1000" height="440" fill="#020617"/>
+  <rect width="1000" height="440" fill="url(#grid)"/>
+  <text x="500" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#f1f5f9">Cost vs Quality — 언제 어느 기법을 쓸까</text>
+  <text x="500" y="58" text-anchor="middle" font-size="12" fill="#94a3b8">같은 모델에서 토큰·호출을 늘리면 품질은 오르지만 비용·지연도 비선형</text>
+  <line x1="280" y1="370" x2="920" y2="370" stroke="#94a3b8" stroke-width="1.2"/>
+  <line x1="280" y1="370" x2="280" y2="100" stroke="#94a3b8" stroke-width="1.2"/>
+  <text x="600.0" y="410" text-anchor="middle" font-size="12" font-weight="700" fill="#f1f5f9">Cost (호출 수 × 토큰) →</text>
+  <text x="250" y="240.0" text-anchor="middle" font-size="12" font-weight="700" fill="#f1f5f9" transform="rotate(-90 250 240.0)">Quality (judge score) →</text>
+  <line x1="371.42857142857144" y1="370" x2="371.42857142857144" y2="375" stroke="#94a3b8" stroke-width="1"/>
+  <text x="371.42857142857144" y="390" text-anchor="middle" font-size="10" fill="#cbd5e1" font-family="JetBrains Mono, monospace">1×</text>
+  <line x1="554.2857142857142" y1="370" x2="554.2857142857142" y2="375" stroke="#94a3b8" stroke-width="1"/>
+  <text x="554.2857142857142" y="390" text-anchor="middle" font-size="10" fill="#cbd5e1" font-family="JetBrains Mono, monospace">3×</text>
+  <line x1="737.1428571428571" y1="370" x2="737.1428571428571" y2="375" stroke="#94a3b8" stroke-width="1"/>
+  <text x="737.1428571428571" y="390" text-anchor="middle" font-size="10" fill="#cbd5e1" font-family="JetBrains Mono, monospace">5×</text>
+  <line x1="920.0" y1="370" x2="920.0" y2="375" stroke="#94a3b8" stroke-width="1"/>
+  <text x="920.0" y="390" text-anchor="middle" font-size="10" fill="#cbd5e1" font-family="JetBrains Mono, monospace">7×</text>
+  <line x1="275" y1="370.0" x2="280" y2="370.0" stroke="#94a3b8" stroke-width="1"/>
+  <text x="270" y="374.0" text-anchor="end" font-size="10" fill="#cbd5e1" font-family="JetBrains Mono, monospace">0.5</text>
+  <line x1="275" y1="318.0" x2="280" y2="318.0" stroke="#94a3b8" stroke-width="1"/>
+  <text x="270" y="322.0" text-anchor="end" font-size="10" fill="#cbd5e1" font-family="JetBrains Mono, monospace">0.6</text>
+  <line x1="275" y1="266.0" x2="280" y2="266.0" stroke="#94a3b8" stroke-width="1"/>
+  <text x="270" y="270.0" text-anchor="end" font-size="10" fill="#cbd5e1" font-family="JetBrains Mono, monospace">0.7</text>
+  <line x1="275" y1="213.99999999999997" x2="280" y2="213.99999999999997" stroke="#94a3b8" stroke-width="1"/>
+  <text x="270" y="217.99999999999997" text-anchor="end" font-size="10" fill="#cbd5e1" font-family="JetBrains Mono, monospace">0.8</text>
+  <line x1="275" y1="162.0" x2="280" y2="162.0" stroke="#94a3b8" stroke-width="1"/>
+  <text x="270" y="166.0" text-anchor="end" font-size="10" fill="#cbd5e1" font-family="JetBrains Mono, monospace">0.9</text>
+  <circle cx="371.42857142857144" cy="318.0" r="10" fill="rgba(167,139,250,0.15)" stroke="#a78bfa" stroke-width="2"/>
+  <text x="387.42857142857144" y="322.0" font-size="11" font-weight="700" fill="#ddd6fe">Single</text>
+  <text x="387.42857142857144" y="336.0" font-size="10" font-family="JetBrains Mono, monospace" fill="#a78bfa">cost=1.0× · Q=0.60</text>
+  <circle cx="417.1428571428571" cy="255.60000000000002" r="10" fill="rgba(251,146,60,0.15)" stroke="#fb923c" stroke-width="2"/>
+  <text x="433.1428571428571" y="259.6" font-size="11" font-weight="700" fill="#fed7aa">CoT</text>
+  <text x="433.1428571428571" y="273.6" font-size="10" font-family="JetBrains Mono, monospace" fill="#fb923c">cost=1.5× · Q=0.72</text>
+  <circle cx="737.1428571428571" cy="213.99999999999997" r="10" fill="rgba(52,211,153,0.15)" stroke="#34d399" stroke-width="2"/>
+  <text x="753.1428571428571" y="217.99999999999997" font-size="11" font-weight="700" fill="#a7f3d0">Self-Consistency (N=5)</text>
+  <text x="753.1428571428571" y="231.99999999999997" font-size="10" font-family="JetBrains Mono, monospace" fill="#34d399">cost=5.0× · Q=0.80</text>
+  <circle cx="828.5714285714286" cy="177.6" r="10" fill="rgba(251,191,36,0.15)" stroke="#fbbf24" stroke-width="2"/>
+  <text x="844.5714285714286" y="181.6" font-size="11" font-weight="700" fill="#fde68a">Best-of-N + Verifier (N=5)</text>
+  <text x="844.5714285714286" y="195.6" font-size="10" font-family="JetBrains Mono, monospace" fill="#fbbf24">cost=6.0× · Q=0.87</text>
+  <rect x="40" y="100" width="220" height="70" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+  <text x="54" y="120" font-size="11" font-weight="700" fill="#f1f5f9">예시 수치</text>
+  <text x="54" y="138" font-size="10" fill="#cbd5e1">수학 20건 기준 측정</text>
+  <text x="54" y="152" font-size="10" fill="#cbd5e1">도메인별로 다름</text>
+  <text x="54" y="166" font-size="10" fill="#cbd5e1">반드시 자기 eval 로 확인</text>
+</svg>

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 420" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#f1f5f9" stroke-width="0.5"/>
+    </pattern>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#6b7280"/></marker>
+    <marker id="arr-input" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#2563eb"/></marker>
+    <marker id="arr-llm" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ea580c"/></marker>
+    <marker id="arr-model" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#7c3aed"/></marker>
+    <marker id="arr-token" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-output" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-gate" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ca8a04"/></marker>
+    <marker id="arr-tool" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#0891b2"/></marker>
+    <marker id="arr-memory" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#db2777"/></marker>
+    <marker id="arr-error" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#dc2626"/></marker>
+  </defs>
+  <rect width="1100" height="420" fill="#ffffff"/>
+  <rect width="1100" height="420" fill="url(#grid)"/>
+  <text x="550" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">LangChain — RAG 컴포넌트 관계</text>
+  <text x="550" y="58" text-anchor="middle" font-size="12" fill="#64748b">LCEL (chain) 로 조립 가능한 재료들</text>
+  <path d="M 333,185 L 355,185" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 539,185 L 561,185" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 745,185 L 767,185" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <rect x="151" y="140" width="180" height="90" rx="10" fill="#ffffff"/>
+  <rect x="151" y="140" width="180" height="90" rx="10" fill="#e3f2fd" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="241.0" y="181.0" text-anchor="middle" font-size="14" font-weight="700" fill="#0d47a1">DocumentLoader</text>
+  <text x="241.0" y="197.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#1e40af">PDF/MD/HTML</text>
+  <rect x="357" y="140" width="180" height="90" rx="10" fill="#ffffff"/>
+  <rect x="357" y="140" width="180" height="90" rx="10" fill="#cffafe" stroke="#0891b2" stroke-width="1.5"/>
+  <text x="447.0" y="181.0" text-anchor="middle" font-size="14" font-weight="700" fill="#083344">TextSplitter</text>
+  <text x="447.0" y="197.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#0e7490">chunk</text>
+  <rect x="563" y="140" width="180" height="90" rx="10" fill="#ffffff"/>
+  <rect x="563" y="140" width="180" height="90" rx="10" fill="#f3e8ff" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="653.0" y="181.0" text-anchor="middle" font-size="14" font-weight="700" fill="#4c1d95">Embeddings</text>
+  <text x="653.0" y="197.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#6d28d9">OpenAI/Voyage</text>
+  <rect x="769" y="140" width="180" height="90" rx="10" fill="#ffffff"/>
+  <rect x="769" y="140" width="180" height="90" rx="10" fill="#fce7f3" stroke="#db2777" stroke-width="1.5"/>
+  <text x="859.0" y="181.0" text-anchor="middle" font-size="14" font-weight="700" fill="#500724">VectorStore</text>
+  <text x="859.0" y="197.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#be185d">Chroma/Pinecone</text>
+  <rect x="135" y="114" width="830" height="128" rx="12" fill="rgba(8,145,178,0.04)" stroke="#0891b2" stroke-width="1" stroke-dasharray="8,4"/>
+  <text x="147" y="132" font-size="10" font-weight="700" fill="#0891b2" font-family="JetBrains Mono, monospace">INDEXING</text>
+  <path d="M 313,345 L 335,345" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 539,345 L 561,345" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 765,345 L 787,345" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <rect x="111" y="300" width="200" height="90" rx="10" fill="#ffffff"/>
+  <rect x="111" y="300" width="200" height="90" rx="10" fill="#e3f2fd" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="211.0" y="341.0" text-anchor="middle" font-size="14" font-weight="700" fill="#0d47a1">Retriever</text>
+  <text x="211.0" y="357.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#1e40af">VectorStore.as_retriever</text>
+  <rect x="337" y="300" width="200" height="90" rx="10" fill="#ffffff"/>
+  <rect x="337" y="300" width="200" height="90" rx="10" fill="#f3e8ff" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="437.0" y="341.0" text-anchor="middle" font-size="14" font-weight="700" fill="#4c1d95">PromptTemplate</text>
+  <text x="437.0" y="357.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#6d28d9">컨텍스트 + 질문</text>
+  <rect x="563" y="300" width="200" height="90" rx="10" fill="#ffffff"/>
+  <rect x="563" y="300" width="200" height="90" rx="10" fill="#fef3e0" stroke="#ea580c" stroke-width="1.5"/>
+  <text x="663.0" y="341.0" text-anchor="middle" font-size="14" font-weight="700" fill="#9a3412">ChatModel</text>
+  <text x="663.0" y="357.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#c2410c">ChatAnthropic/OpenAI</text>
+  <rect x="789" y="300" width="200" height="90" rx="10" fill="#ffffff"/>
+  <rect x="789" y="300" width="200" height="90" rx="10" fill="#d1fae5" stroke="#059669" stroke-width="1.5"/>
+  <text x="889.0" y="341.0" text-anchor="middle" font-size="14" font-weight="700" fill="#064e3b">OutputParser</text>
+  <text x="889.0" y="357.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#047857">str | Pydantic</text>
+  <rect x="95" y="274" width="910" height="128" rx="12" fill="rgba(234,88,12,0.04)" stroke="#ea580c" stroke-width="1" stroke-dasharray="8,4"/>
+  <text x="107" y="292" font-size="10" font-weight="700" fill="#ea580c" font-family="JetBrains Mono, monospace">CHAIN (LCEL)</text>
+</svg>

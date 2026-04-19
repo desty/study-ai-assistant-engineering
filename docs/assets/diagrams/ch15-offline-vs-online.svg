@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 460" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#f1f5f9" stroke-width="0.5"/>
+    </pattern>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#6b7280"/></marker>
+    <marker id="arr-input" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#2563eb"/></marker>
+    <marker id="arr-llm" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ea580c"/></marker>
+    <marker id="arr-model" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#7c3aed"/></marker>
+    <marker id="arr-token" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-output" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-gate" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ca8a04"/></marker>
+    <marker id="arr-tool" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#0891b2"/></marker>
+    <marker id="arr-memory" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#db2777"/></marker>
+    <marker id="arr-error" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#dc2626"/></marker>
+  </defs>
+  <rect width="1040" height="460" fill="#ffffff"/>
+  <rect width="1040" height="460" fill="url(#grid)"/>
+  <text x="520" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">Offline vs Online 평가 — 배포 전과 후</text>
+  <text x="520" y="58" text-anchor="middle" font-size="12" fill="#64748b">같은 지표라도 실험실 수치와 실사용 수치는 다르다. 둘 다 본다.</text>
+  <rect x="40" y="90" width="440" height="330" rx="12" fill="rgba(8,145,178,0.04)" stroke="#0891b2" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="52" y="108" font-size="10" font-weight="700" fill="#0891b2" font-family="JetBrains Mono, monospace">OFFLINE · 배포 전</text>
+  <rect x="560" y="90" width="440" height="330" rx="12" fill="rgba(219,39,119,0.04)" stroke="#db2777" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="572" y="108" font-size="10" font-weight="700" fill="#db2777" font-family="JetBrains Mono, monospace">ONLINE · 배포 후</text>
+  <text x="60" y="150" font-size="12" font-weight="700" font-family="JetBrains Mono, monospace" fill="#083344">언제?</text>
+  <text x="120" y="150" font-size="12" fill="#0e7490">코드 바꾸기 전 · CI/CD 게이트</text>
+  <text x="60" y="200" font-size="12" font-weight="700" font-family="JetBrains Mono, monospace" fill="#083344">데이터</text>
+  <text x="120" y="200" font-size="12" fill="#0e7490">고정 gold set (Ch 16)</text>
+  <text x="60" y="250" font-size="12" font-weight="700" font-family="JetBrains Mono, monospace" fill="#083344">장점</text>
+  <text x="120" y="250" font-size="12" fill="#0e7490">재현 가능 · 빠름 · 비용 낮음</text>
+  <text x="60" y="300" font-size="12" font-weight="700" font-family="JetBrains Mono, monospace" fill="#083344">지표</text>
+  <text x="120" y="300" font-size="12" fill="#0e7490">Recall@k · Faithfulness · Judge 점수</text>
+  <text x="60" y="350" font-size="12" font-weight="700" font-family="JetBrains Mono, monospace" fill="#083344">한계</text>
+  <text x="120" y="350" font-size="12" fill="#0e7490">실사용자의 진짜 의도를 못 봄</text>
+  <text x="580" y="150" font-size="12" font-weight="700" font-family="JetBrains Mono, monospace" fill="#500724">언제?</text>
+  <text x="640" y="150" font-size="12" fill="#be185d">카나리 배포 · A/B · 상시 모니터링</text>
+  <text x="580" y="200" font-size="12" font-weight="700" font-family="JetBrains Mono, monospace" fill="#500724">데이터</text>
+  <text x="640" y="200" font-size="12" fill="#be185d">실사용자 로그 · 피드백</text>
+  <text x="580" y="250" font-size="12" font-weight="700" font-family="JetBrains Mono, monospace" fill="#500724">장점</text>
+  <text x="640" y="250" font-size="12" fill="#be185d">진짜 사용성 · 장기 추세</text>
+  <text x="580" y="300" font-size="12" font-weight="700" font-family="JetBrains Mono, monospace" fill="#500724">지표</text>
+  <text x="640" y="300" font-size="12" fill="#be185d">만족도(👍/👎) · 재질문율 · 과제 완수율</text>
+  <text x="580" y="350" font-size="12" font-weight="700" font-family="JetBrains Mono, monospace" fill="#500724">한계</text>
+  <text x="640" y="350" font-size="12" fill="#be185d">노이즈 큼 · 지연 반영 · 원인 분리 어려움</text>
+  <path d="M 485,255.0 L 555,255.0" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <rect x="505.0" y="228.0" width="30" height="18" rx="4" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.8"/>
+  <text x="520.0" y="241.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#475569">배포</text>
+  <path d="M 600 426 C 600 470, 440 470, 440 426" stroke="#059669" stroke-width="1.5" fill="none" marker-end="url(#arr-token)" stroke-dasharray="5,3"/>
+  <rect x="442.0" y="466" width="156" height="18" rx="4" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.8"/>
+  <text x="520.0" y="479" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#475569">실패 케이스 → gold set 보강</text>
+</svg>

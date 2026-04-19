@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#f1f5f9" stroke-width="0.5"/>
+    </pattern>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#6b7280"/></marker>
+    <marker id="arr-input" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#2563eb"/></marker>
+    <marker id="arr-llm" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ea580c"/></marker>
+    <marker id="arr-model" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#7c3aed"/></marker>
+    <marker id="arr-token" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-output" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-gate" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ca8a04"/></marker>
+    <marker id="arr-tool" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#0891b2"/></marker>
+    <marker id="arr-memory" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#db2777"/></marker>
+    <marker id="arr-error" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#dc2626"/></marker>
+  </defs>
+  <rect width="900" height="540" fill="#ffffff"/>
+  <rect width="900" height="540" fill="url(#grid)"/>
+  <text x="450" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">의미 공간 (Embedding Space)</text>
+  <text x="450" y="58" text-anchor="middle" font-size="12" fill="#64748b">의미가 비슷한 문장은 벡터 공간에서도 서로 가까이 모임</text>
+  <rect x="80" y="100" width="740" height="380" rx="8" fill="none" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="88" y="116" font-size="10" fill="#64748b" font-family="JetBrains Mono, monospace">x, y = 축소된 임베딩 (실제는 1536차원)</text>
+  <circle cx="180" cy="170" r="70" fill="#e3f2fd" opacity="0.4"/>
+  <circle cx="180" cy="170" r="70" fill="none" stroke="#2563eb" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="235" y="110" font-size="12" font-weight="700" fill="#2563eb">동물</text>
+  <circle cx="160" cy="160" r="5" fill="#2563eb"/>
+  <text x="168" y="164" font-size="11" fill="#0d47a1">강아지</text>
+  <circle cx="195" cy="150" r="5" fill="#2563eb"/>
+  <text x="203" y="154" font-size="11" fill="#0d47a1">고양이</text>
+  <circle cx="170" cy="190" r="5" fill="#2563eb"/>
+  <text x="178" y="194" font-size="11" fill="#0d47a1">토끼</text>
+  <circle cx="200" cy="185" r="5" fill="#2563eb"/>
+  <text x="208" y="189" font-size="11" fill="#0d47a1">햄스터</text>
+  <circle cx="560" cy="160" r="70" fill="#fef3e0" opacity="0.4"/>
+  <circle cx="560" cy="160" r="70" fill="none" stroke="#ea580c" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="615" y="100" font-size="12" font-weight="700" fill="#ea580c">음식</text>
+  <circle cx="540" cy="145" r="5" fill="#ea580c"/>
+  <text x="548" y="149" font-size="11" fill="#9a3412">피자</text>
+  <circle cx="580" cy="150" r="5" fill="#ea580c"/>
+  <text x="588" y="154" font-size="11" fill="#9a3412">김치찌개</text>
+  <circle cx="575" cy="180" r="5" fill="#ea580c"/>
+  <text x="583" y="184" font-size="11" fill="#9a3412">샌드위치</text>
+  <circle cx="540" cy="178" r="5" fill="#ea580c"/>
+  <text x="548" y="182" font-size="11" fill="#9a3412">라면</text>
+  <circle cx="400" cy="360" r="70" fill="#cffafe" opacity="0.4"/>
+  <circle cx="400" cy="360" r="70" fill="none" stroke="#0891b2" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="455" y="300" font-size="12" font-weight="700" fill="#0891b2">기술</text>
+  <circle cx="375" cy="350" r="5" fill="#0891b2"/>
+  <text x="383" y="354" font-size="11" fill="#083344">AI</text>
+  <circle cx="395" cy="335" r="5" fill="#0891b2"/>
+  <text x="403" y="339" font-size="11" fill="#083344">LLM</text>
+  <circle cx="420" cy="370" r="5" fill="#0891b2"/>
+  <text x="428" y="374" font-size="11" fill="#083344">딥러닝</text>
+  <circle cx="425" cy="342" r="5" fill="#0891b2"/>
+  <text x="433" y="346" font-size="11" fill="#083344">트랜스포머</text>
+  <circle cx="440" cy="330" r="10" fill="none" stroke="#dc2626" stroke-width="2"/>
+  <circle cx="440" cy="330" r="5" fill="#dc2626"/>
+  <circle cx="440" cy="330" r="65" fill="none" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <text x="455" y="322" font-size="12" font-weight="700" fill="#dc2626">query</text>
+  <text x="455" y="338" font-size="10" fill="#7f1d1d" font-family="JetBrains Mono, monospace">"요즘 AI는"</text>
+  <text x="500" y="388" font-size="11" fill="#dc2626" font-family="JetBrains Mono, monospace">top-k = 가장 가까운 이웃</text>
+</svg>

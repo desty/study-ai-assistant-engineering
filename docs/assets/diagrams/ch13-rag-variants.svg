@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 620" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#f1f5f9" stroke-width="0.5"/>
+    </pattern>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#6b7280"/></marker>
+    <marker id="arr-input" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#2563eb"/></marker>
+    <marker id="arr-llm" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ea580c"/></marker>
+    <marker id="arr-model" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#7c3aed"/></marker>
+    <marker id="arr-token" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-output" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-gate" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ca8a04"/></marker>
+    <marker id="arr-tool" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#0891b2"/></marker>
+    <marker id="arr-memory" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#db2777"/></marker>
+    <marker id="arr-error" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#dc2626"/></marker>
+  </defs>
+  <rect width="1100" height="620" fill="#ffffff"/>
+  <rect width="1100" height="620" fill="url(#grid)"/>
+  <text x="550" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">Advanced RAG — 4 변형</text>
+  <text x="550" y="58" text-anchor="middle" font-size="12" fill="#64748b">같은 재료 · 다른 조립 — 쿼리/검색/생성의 위치와 역할이 달라짐</text>
+  <text x="40" y="130" font-size="13" font-weight="700" fill="#0f172a">Basic RAG</text>
+  <text x="40" y="148" font-size="10" fill="#64748b" font-family="JetBrains Mono, monospace">표준 파이프라인</text>
+  <rect x="200" y="100" width="100" height="60" rx="8" fill="#e3f2fd" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="250" y="134" text-anchor="middle" font-size="11" font-weight="700" fill="#0d47a1">쿼리</text>
+  <path d="M 302,130 L 316,130" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <rect x="318" y="100" width="100" height="60" rx="8" fill="#cffafe" stroke="#0891b2" stroke-width="1.5"/>
+  <text x="368" y="134" text-anchor="middle" font-size="11" font-weight="700" fill="#083344">검색</text>
+  <path d="M 420,130 L 434,130" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <rect x="436" y="100" width="100" height="60" rx="8" fill="#f3e8ff" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="486" y="134" text-anchor="middle" font-size="11" font-weight="700" fill="#4c1d95">LLM</text>
+  <path d="M 538,130 L 552,130" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <rect x="554" y="100" width="100" height="60" rx="8" fill="#d1fae5" stroke="#059669" stroke-width="1.5"/>
+  <text x="604" y="134" text-anchor="middle" font-size="11" font-weight="700" fill="#064e3b">답변</text>
+  <text x="40" y="260" font-size="13" font-weight="700" fill="#0f172a">HyDE</text>
+  <text x="40" y="278" font-size="10" fill="#64748b" font-family="JetBrains Mono, monospace">쿼리 대신 가상답변을 임베딩</text>
+  <rect x="200" y="230" width="100" height="60" rx="8" fill="#e3f2fd" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="250" y="264" text-anchor="middle" font-size="11" font-weight="700" fill="#0d47a1">쿼리</text>
+  <path d="M 302,260 L 316,260" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <rect x="318" y="230" width="100" height="60" rx="8" fill="#f3e8ff" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="368" y="264" text-anchor="middle" font-size="11" font-weight="700" fill="#4c1d95">가상 답변 생성</text>
+  <path d="M 420,260 L 434,260" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <rect x="436" y="230" width="100" height="60" rx="8" fill="#cffafe" stroke="#0891b2" stroke-width="1.5"/>
+  <text x="486" y="264" text-anchor="middle" font-size="11" font-weight="700" fill="#083344">가상답변으로 검색</text>
+  <path d="M 538,260 L 552,260" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <rect x="554" y="230" width="100" height="60" rx="8" fill="#f3e8ff" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="604" y="264" text-anchor="middle" font-size="11" font-weight="700" fill="#4c1d95">LLM</text>
+  <path d="M 656,260 L 670,260" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <rect x="672" y="230" width="100" height="60" rx="8" fill="#d1fae5" stroke="#059669" stroke-width="1.5"/>
+  <text x="722" y="264" text-anchor="middle" font-size="11" font-weight="700" fill="#064e3b">답변</text>
+  <text x="40" y="390" font-size="13" font-weight="700" fill="#0f172a">Self-RAG</text>
+  <text x="40" y="408" font-size="10" fill="#64748b" font-family="JetBrains Mono, monospace">LLM이 검색 필요성·품질 판단</text>
+  <rect x="200" y="360" width="100" height="60" rx="8" fill="#e3f2fd" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="250" y="394" text-anchor="middle" font-size="11" font-weight="700" fill="#0d47a1">쿼리</text>
+  <path d="M 302,390 L 316,390" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <rect x="318" y="360" width="100" height="60" rx="8" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+  <text x="368" y="394" text-anchor="middle" font-size="11" font-weight="700" fill="#713f12">검색 필요?</text>
+  <path d="M 420,390 L 434,390" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <rect x="436" y="360" width="100" height="60" rx="8" fill="#cffafe" stroke="#0891b2" stroke-width="1.5"/>
+  <text x="486" y="394" text-anchor="middle" font-size="11" font-weight="700" fill="#083344">검색</text>
+  <path d="M 538,390 L 552,390" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <rect x="554" y="360" width="100" height="60" rx="8" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+  <text x="604" y="394" text-anchor="middle" font-size="11" font-weight="700" fill="#713f12">결과 평가</text>
+  <path d="M 656,390 L 670,390" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <rect x="672" y="360" width="100" height="60" rx="8" fill="#d1fae5" stroke="#059669" stroke-width="1.5"/>
+  <text x="722" y="394" text-anchor="middle" font-size="11" font-weight="700" fill="#064e3b">답변</text>
+  <text x="40" y="520" font-size="13" font-weight="700" fill="#0f172a">Agentic RAG</text>
+  <text x="40" y="538" font-size="10" fill="#64748b" font-family="JetBrains Mono, monospace">에이전트 루프 안에 검색 도구</text>
+  <rect x="200" y="490" width="100" height="60" rx="8" fill="#e3f2fd" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="250" y="524" text-anchor="middle" font-size="11" font-weight="700" fill="#0d47a1">쿼리</text>
+  <path d="M 302,520 L 316,520" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <rect x="318" y="490" width="100" height="60" rx="8" fill="#fef3e0" stroke="#ea580c" stroke-width="1.5"/>
+  <text x="368" y="524" text-anchor="middle" font-size="11" font-weight="700" fill="#9a3412">Agent</text>
+  <path d="M 420,520 L 434,520" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <rect x="436" y="490" width="100" height="60" rx="8" fill="#cffafe" stroke="#0891b2" stroke-width="1.5"/>
+  <text x="486" y="524" text-anchor="middle" font-size="11" font-weight="700" fill="#083344">검색·툴</text>
+  <path d="M 538,520 L 552,520" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <rect x="554" y="490" width="100" height="60" rx="8" fill="#fef3e0" stroke="#ea580c" stroke-width="1.5"/>
+  <text x="604" y="524" text-anchor="middle" font-size="11" font-weight="700" fill="#9a3412">추론</text>
+  <path d="M 656,520 L 670,520" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <rect x="672" y="490" width="100" height="60" rx="8" fill="#d1fae5" stroke="#059669" stroke-width="1.5"/>
+  <text x="722" y="524" text-anchor="middle" font-size="11" font-weight="700" fill="#064e3b">답변</text>
+</svg>

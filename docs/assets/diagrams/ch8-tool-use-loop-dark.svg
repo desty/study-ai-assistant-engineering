@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 420" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/>
+    </pattern>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#64748b"/></marker>
+    <marker id="arr-input" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#60a5fa"/></marker>
+    <marker id="arr-llm" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#fb923c"/></marker>
+    <marker id="arr-model" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#a78bfa"/></marker>
+    <marker id="arr-token" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#34d399"/></marker>
+    <marker id="arr-output" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#34d399"/></marker>
+    <marker id="arr-gate" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#fbbf24"/></marker>
+    <marker id="arr-tool" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#22d3ee"/></marker>
+    <marker id="arr-memory" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#f472b6"/></marker>
+    <marker id="arr-error" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#f87171"/></marker>
+  </defs>
+  <rect width="1040" height="420" fill="#020617"/>
+  <rect width="1040" height="420" fill="url(#grid)"/>
+  <text x="520" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#f1f5f9">Tool Calling 루프</text>
+  <text x="520" y="58" text-anchor="middle" font-size="12" fill="#94a3b8">LLM 이 "도구가 필요하다"고 판단 → 호출 → 결과를 받아 이어서 추론</text>
+  <path d="M 180,225 L 240,225" stroke="#64748b" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 380,225 L 460,225" stroke="#64748b" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 600,195 L 680,125" stroke="#fbbf24" stroke-width="1.5" fill="none" marker-end="url(#arr-gate)" stroke-dasharray="3,3"/>
+  <rect x="604.0" y="133.0" width="72" height="18" rx="4" fill="#0f172a" stroke="#334155" stroke-width="0.8"/>
+  <text x="640.0" y="146.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#94a3b8">tool_use</text>
+  <path d="M 600,225 L 880,225" stroke="#34d399" stroke-width="1.5" fill="none" marker-end="url(#arr-output)"/>
+  <rect x="704.0" y="198.0" width="72" height="18" rx="4" fill="#0f172a" stroke="#334155" stroke-width="0.8"/>
+  <text x="740.0" y="211.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#94a3b8">end_turn</text>
+  <path d="M 750,170 L 750,280" stroke="#64748b" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 680,325 L 650,325 L 650,350 L 310,350 L 310,270" stroke="#34d399" stroke-width="1.5" fill="none" marker-end="url(#arr-token)" stroke-dasharray="5,3"/>
+  <rect x="409.0" y="329" width="142" height="18" rx="4" fill="#0f172a" stroke="#334155" stroke-width="0.8"/>
+  <text x="480" y="342" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#94a3b8">tool_result 포함 재요청</text>
+  <rect x="40" y="180" width="140" height="90" rx="10" fill="#0f172a"/>
+  <rect x="40" y="180" width="140" height="90" rx="10" fill="rgba(96,165,250,0.15)" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="110.0" y="221.0" text-anchor="middle" font-size="14" font-weight="700" fill="#bfdbfe">사용자</text>
+  <text x="110.0" y="237.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#60a5fa">user message</text>
+  <rect x="240" y="180" width="140" height="90" rx="10" fill="#0f172a"/>
+  <rect x="240" y="180" width="140" height="90" rx="10" fill="rgba(167,139,250,0.15)" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="310.0" y="221.0" text-anchor="middle" font-size="14" font-weight="700" fill="#ddd6fe">LLM</text>
+  <text x="310.0" y="237.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#a78bfa">inference</text>
+  <rect x="460" y="180" width="140" height="90" rx="10" fill="#0f172a"/>
+  <rect x="460" y="180" width="140" height="90" rx="10" fill="rgba(251,191,36,0.15)" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="530.0" y="221.0" text-anchor="middle" font-size="14" font-weight="700" fill="#fde68a">판단</text>
+  <text x="530.0" y="237.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#fbbf24">stop_reason</text>
+  <rect x="680" y="80" width="140" height="90" rx="10" fill="#0f172a"/>
+  <rect x="680" y="80" width="140" height="90" rx="10" fill="rgba(34,211,238,0.15)" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="750.0" y="121.0" text-anchor="middle" font-size="14" font-weight="700" fill="#a5f3fc">툴 실행</text>
+  <text x="750.0" y="137.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#22d3ee">your function</text>
+  <rect x="680" y="280" width="140" height="90" rx="10" fill="#0f172a"/>
+  <rect x="680" y="280" width="140" height="90" rx="10" fill="rgba(244,114,182,0.15)" stroke="#f472b6" stroke-width="1.5"/>
+  <text x="750.0" y="321.0" text-anchor="middle" font-size="14" font-weight="700" fill="#fbcfe8">tool_result</text>
+  <text x="750.0" y="337.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#f472b6">반환값</text>
+  <rect x="880" y="180" width="140" height="90" rx="10" fill="#0f172a"/>
+  <rect x="880" y="180" width="140" height="90" rx="10" fill="rgba(52,211,153,0.2)" stroke="#34d399" stroke-width="1.5"/>
+  <text x="950.0" y="221.0" text-anchor="middle" font-size="14" font-weight="700" fill="#a7f3d0">최종 응답</text>
+  <text x="950.0" y="237.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#34d399">text</text>
+</svg>

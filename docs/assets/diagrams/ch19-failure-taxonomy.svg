@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1160 480" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#f1f5f9" stroke-width="0.5"/>
+    </pattern>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#6b7280"/></marker>
+    <marker id="arr-input" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#2563eb"/></marker>
+    <marker id="arr-llm" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ea580c"/></marker>
+    <marker id="arr-model" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#7c3aed"/></marker>
+    <marker id="arr-token" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-output" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-gate" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ca8a04"/></marker>
+    <marker id="arr-tool" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#0891b2"/></marker>
+    <marker id="arr-memory" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#db2777"/></marker>
+    <marker id="arr-error" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#dc2626"/></marker>
+  </defs>
+  <rect width="1160" height="480" fill="#ffffff"/>
+  <rect width="1160" height="480" fill="url(#grid)"/>
+  <text x="580" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">실패 분류 Taxonomy — 어느 층의 문제인가</text>
+  <text x="580" y="58" text-anchor="middle" font-size="12" fill="#64748b">"왜 틀렸는가?"를 층별로 쪼개야 수정이 가능하다. LLM 교체는 최후.</text>
+  <rect x="480" y="85" width="200" height="55" rx="10" fill="#ffffff"/>
+  <rect x="480" y="85" width="200" height="55" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="580.0" y="108.5" text-anchor="middle" font-size="14" font-weight="700" fill="#7f1d1d">실패 사례 (log)</text>
+  <text x="580.0" y="124.5" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#b91c1c">👎 · low judge score</text>
+  <path d="M 580,142 L 180.0,218" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <rect x="90" y="220" width="180" height="130" rx="10" fill="#ffffff"/>
+  <rect x="90" y="220" width="180" height="130" rx="10" fill="#e3f2fd" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="180.0" y="248" text-anchor="middle" font-size="14" font-weight="700" fill="#0d47a1">1. Prompt</text>
+  <text x="180.0" y="278" text-anchor="middle" font-size="11" fill="#1e40af">system/few-shot</text>
+  <text x="180.0" y="296" text-anchor="middle" font-size="11" fill="#1e40af">부족 · 모호</text>
+  <path d="M 180.0,352 L 180.0,378" stroke="#059669" stroke-width="1.5" fill="none" marker-end="url(#arr-output)"/>
+  <rect x="100" y="380" width="160" height="60" rx="6" fill="#f8fafc" stroke="#059669" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="180.0" y="402" text-anchor="middle" font-size="10" fill="#064e3b" font-family="JetBrains Mono, monospace">프롬프트 재설계</text>
+  <text x="180.0" y="418" text-anchor="middle" font-size="10" fill="#064e3b" font-family="JetBrains Mono, monospace">Ch 5 · few-shot 추가</text>
+  <path d="M 580,142 L 380.0,218" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <rect x="290" y="220" width="180" height="130" rx="10" fill="#ffffff"/>
+  <rect x="290" y="220" width="180" height="130" rx="10" fill="#fce7f3" stroke="#db2777" stroke-width="1.5"/>
+  <text x="380.0" y="248" text-anchor="middle" font-size="14" font-weight="700" fill="#500724">2. Retrieval</text>
+  <text x="380.0" y="278" text-anchor="middle" font-size="11" fill="#be185d">top-k 에 정답 없음</text>
+  <text x="380.0" y="296" text-anchor="middle" font-size="11" fill="#be185d">(Ch 12 recall↓)</text>
+  <path d="M 380.0,352 L 380.0,378" stroke="#059669" stroke-width="1.5" fill="none" marker-end="url(#arr-output)"/>
+  <rect x="300" y="380" width="160" height="60" rx="6" fill="#f8fafc" stroke="#059669" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="380.0" y="402" text-anchor="middle" font-size="10" fill="#064e3b" font-family="JetBrains Mono, monospace">reranker · hybrid</text>
+  <text x="380.0" y="418" text-anchor="middle" font-size="10" fill="#064e3b" font-family="JetBrains Mono, monospace">임베딩 교체</text>
+  <path d="M 580,142 L 580.0,218" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <rect x="490" y="220" width="180" height="130" rx="10" fill="#ffffff"/>
+  <rect x="490" y="220" width="180" height="130" rx="10" fill="#cffafe" stroke="#0891b2" stroke-width="1.5"/>
+  <text x="580.0" y="248" text-anchor="middle" font-size="14" font-weight="700" fill="#083344">3. Data</text>
+  <text x="580.0" y="278" text-anchor="middle" font-size="11" fill="#0e7490">chunk 경계 · 오타</text>
+  <text x="580.0" y="296" text-anchor="middle" font-size="11" fill="#0e7490">gold doc 품질</text>
+  <path d="M 580.0,352 L 580.0,378" stroke="#059669" stroke-width="1.5" fill="none" marker-end="url(#arr-output)"/>
+  <rect x="500" y="380" width="160" height="60" rx="6" fill="#f8fafc" stroke="#059669" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="580.0" y="402" text-anchor="middle" font-size="10" fill="#064e3b" font-family="JetBrains Mono, monospace">chunking 재설정</text>
+  <text x="580.0" y="418" text-anchor="middle" font-size="10" fill="#064e3b" font-family="JetBrains Mono, monospace">문서 정제</text>
+  <path d="M 580,142 L 780.0,218" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <rect x="690" y="220" width="180" height="130" rx="10" fill="#ffffff"/>
+  <rect x="690" y="220" width="180" height="130" rx="10" fill="#f3e8ff" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="780.0" y="248" text-anchor="middle" font-size="14" font-weight="700" fill="#4c1d95">4. Generation</text>
+  <text x="780.0" y="278" text-anchor="middle" font-size="11" fill="#6d28d9">문서 있는데 답을</text>
+  <text x="780.0" y="296" text-anchor="middle" font-size="11" fill="#6d28d9">왜곡 / hallucination</text>
+  <path d="M 780.0,352 L 780.0,378" stroke="#059669" stroke-width="1.5" fill="none" marker-end="url(#arr-output)"/>
+  <rect x="700" y="380" width="160" height="60" rx="6" fill="#f8fafc" stroke="#059669" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="780.0" y="402" text-anchor="middle" font-size="10" fill="#064e3b" font-family="JetBrains Mono, monospace">temperature↓</text>
+  <text x="780.0" y="418" text-anchor="middle" font-size="10" fill="#064e3b" font-family="JetBrains Mono, monospace">CoT · Ch 18</text>
+  <path d="M 580,142 L 980.0,218" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <rect x="890" y="220" width="180" height="130" rx="10" fill="#ffffff"/>
+  <rect x="890" y="220" width="180" height="130" rx="10" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+  <text x="980.0" y="248" text-anchor="middle" font-size="14" font-weight="700" fill="#713f12">5. Tool / Flow</text>
+  <text x="980.0" y="278" text-anchor="middle" font-size="11" fill="#a16207">tool call 잘못</text>
+  <text x="980.0" y="296" text-anchor="middle" font-size="11" fill="#a16207">상태 전이 오류</text>
+  <path d="M 980.0,352 L 980.0,378" stroke="#059669" stroke-width="1.5" fill="none" marker-end="url(#arr-output)"/>
+  <rect x="900" y="380" width="160" height="60" rx="6" fill="#f8fafc" stroke="#059669" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="980.0" y="402" text-anchor="middle" font-size="10" fill="#064e3b" font-family="JetBrains Mono, monospace">tool description</text>
+  <text x="980.0" y="418" text-anchor="middle" font-size="10" fill="#064e3b" font-family="JetBrains Mono, monospace">ACI 재설계</text>
+</svg>

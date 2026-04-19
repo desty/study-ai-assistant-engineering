@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 520" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#f1f5f9" stroke-width="0.5"/>
+    </pattern>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#6b7280"/></marker>
+    <marker id="arr-input" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#2563eb"/></marker>
+    <marker id="arr-llm" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ea580c"/></marker>
+    <marker id="arr-model" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#7c3aed"/></marker>
+    <marker id="arr-token" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-output" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-gate" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ca8a04"/></marker>
+    <marker id="arr-tool" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#0891b2"/></marker>
+    <marker id="arr-memory" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#db2777"/></marker>
+    <marker id="arr-error" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#dc2626"/></marker>
+  </defs>
+  <rect width="1080" height="520" fill="#ffffff"/>
+  <rect width="1080" height="520" fill="url(#grid)"/>
+  <text x="540" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">평가의 3층 — 어느 블록의 문제인지 지목한다</text>
+  <text x="540" y="58" text-anchor="middle" font-size="12" fill="#64748b">E2E만 보면 실패 원인이 안 보인다. 층별로 쪼개야 고칠 수 있다.</text>
+  <rect x="40" y="100" width="180" height="90" rx="10" fill="#ffffff"/>
+  <rect x="40" y="100" width="180" height="90" rx="10" fill="#cffafe" stroke="#0891b2" stroke-width="1.5"/>
+  <text x="130.0" y="141.0" text-anchor="middle" font-size="14" font-weight="700" fill="#083344">1. Retrieval</text>
+  <text x="130.0" y="157.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#0e7490">검색 품질</text>
+  <text x="130.0" y="173.0" text-anchor="middle" font-size="10" fill="#0e7490">필요한 문서를 가져왔는가?</text>
+  <rect x="260" y="100" width="180" height="90" rx="10" fill="#ffffff"/>
+  <rect x="260" y="100" width="180" height="90" rx="10" fill="#cffafe" stroke="#0891b2" stroke-width="1.5"/>
+  <text x="350.0" y="130" text-anchor="middle" font-size="15" font-weight="700" font-family="JetBrains Mono, monospace" fill="#083344">Recall@k</text>
+  <text x="350.0" y="156" text-anchor="middle" font-size="11" fill="#0e7490">top-k 안에</text>
+  <text x="350.0" y="172" text-anchor="middle" font-size="11" fill="#0e7490">정답 문서 있음</text>
+  <rect x="460" y="100" width="180" height="90" rx="10" fill="#ffffff"/>
+  <rect x="460" y="100" width="180" height="90" rx="10" fill="#cffafe" stroke="#0891b2" stroke-width="1.5"/>
+  <text x="550.0" y="130" text-anchor="middle" font-size="15" font-weight="700" font-family="JetBrains Mono, monospace" fill="#083344">MRR</text>
+  <text x="550.0" y="156" text-anchor="middle" font-size="11" fill="#0e7490">정답의 순위</text>
+  <text x="550.0" y="172" text-anchor="middle" font-size="11" fill="#0e7490">역수 평균</text>
+  <rect x="660" y="100" width="180" height="90" rx="10" fill="#ffffff"/>
+  <rect x="660" y="100" width="180" height="90" rx="10" fill="#cffafe" stroke="#0891b2" stroke-width="1.5"/>
+  <text x="750.0" y="130" text-anchor="middle" font-size="15" font-weight="700" font-family="JetBrains Mono, monospace" fill="#083344">nDCG</text>
+  <text x="750.0" y="156" text-anchor="middle" font-size="11" fill="#0e7490">관련도 가중</text>
+  <text x="750.0" y="172" text-anchor="middle" font-size="11" fill="#0e7490">랭킹 점수</text>
+  <rect x="40" y="220" width="180" height="90" rx="10" fill="#ffffff"/>
+  <rect x="40" y="220" width="180" height="90" rx="10" fill="#f3e8ff" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="130.0" y="261.0" text-anchor="middle" font-size="14" font-weight="700" fill="#4c1d95">2. Generation</text>
+  <text x="130.0" y="277.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#6d28d9">생성 품질</text>
+  <text x="130.0" y="293.0" text-anchor="middle" font-size="10" fill="#6d28d9">그 문서로 올바른 답을 만들었나?</text>
+  <rect x="260" y="220" width="180" height="90" rx="10" fill="#ffffff"/>
+  <rect x="260" y="220" width="180" height="90" rx="10" fill="#f3e8ff" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="350.0" y="250" text-anchor="middle" font-size="15" font-weight="700" font-family="JetBrains Mono, monospace" fill="#4c1d95">Faithfulness</text>
+  <text x="350.0" y="276" text-anchor="middle" font-size="11" fill="#6d28d9">답변이 문서에</text>
+  <text x="350.0" y="292" text-anchor="middle" font-size="11" fill="#6d28d9">근거하는 비율</text>
+  <rect x="460" y="220" width="180" height="90" rx="10" fill="#ffffff"/>
+  <rect x="460" y="220" width="180" height="90" rx="10" fill="#f3e8ff" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="550.0" y="250" text-anchor="middle" font-size="15" font-weight="700" font-family="JetBrains Mono, monospace" fill="#4c1d95">Correctness</text>
+  <text x="550.0" y="276" text-anchor="middle" font-size="11" fill="#6d28d9">정답과 의미</text>
+  <text x="550.0" y="292" text-anchor="middle" font-size="11" fill="#6d28d9">일치 여부</text>
+  <rect x="660" y="220" width="180" height="90" rx="10" fill="#ffffff"/>
+  <rect x="660" y="220" width="180" height="90" rx="10" fill="#f3e8ff" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="750.0" y="250" text-anchor="middle" font-size="15" font-weight="700" font-family="JetBrains Mono, monospace" fill="#4c1d95">Coherence</text>
+  <text x="750.0" y="276" text-anchor="middle" font-size="11" fill="#6d28d9">앞뒤 일관성 ·</text>
+  <text x="750.0" y="292" text-anchor="middle" font-size="11" fill="#6d28d9">가독성</text>
+  <rect x="40" y="340" width="180" height="90" rx="10" fill="#ffffff"/>
+  <rect x="40" y="340" width="180" height="90" rx="10" fill="#d1fae5" stroke="#059669" stroke-width="1.5"/>
+  <text x="130.0" y="381.0" text-anchor="middle" font-size="14" font-weight="700" fill="#064e3b">3. End-to-End</text>
+  <text x="130.0" y="397.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#047857">종합 · 사용자 체감</text>
+  <text x="130.0" y="413.0" text-anchor="middle" font-size="10" fill="#047857">사용자가 실제로 만족했나?</text>
+  <rect x="260" y="340" width="180" height="90" rx="10" fill="#ffffff"/>
+  <rect x="260" y="340" width="180" height="90" rx="10" fill="#d1fae5" stroke="#059669" stroke-width="1.5"/>
+  <text x="350.0" y="370" text-anchor="middle" font-size="15" font-weight="700" font-family="JetBrains Mono, monospace" fill="#064e3b">Helpfulness</text>
+  <text x="350.0" y="396" text-anchor="middle" font-size="11" fill="#047857">유용성 점수</text>
+  <text x="350.0" y="412" text-anchor="middle" font-size="11" fill="#047857">(judge/human)</text>
+  <rect x="460" y="340" width="180" height="90" rx="10" fill="#ffffff"/>
+  <rect x="460" y="340" width="180" height="90" rx="10" fill="#d1fae5" stroke="#059669" stroke-width="1.5"/>
+  <text x="550.0" y="370" text-anchor="middle" font-size="15" font-weight="700" font-family="JetBrains Mono, monospace" fill="#064e3b">Safety</text>
+  <text x="550.0" y="396" text-anchor="middle" font-size="11" fill="#047857">유해·오답 비율 ·</text>
+  <text x="550.0" y="412" text-anchor="middle" font-size="11" fill="#047857">거부율</text>
+  <rect x="660" y="340" width="180" height="90" rx="10" fill="#ffffff"/>
+  <rect x="660" y="340" width="180" height="90" rx="10" fill="#d1fae5" stroke="#059669" stroke-width="1.5"/>
+  <text x="750.0" y="370" text-anchor="middle" font-size="15" font-weight="700" font-family="JetBrains Mono, monospace" fill="#064e3b">Task Success</text>
+  <text x="750.0" y="396" text-anchor="middle" font-size="11" fill="#047857">의도한 과제</text>
+  <text x="750.0" y="412" text-anchor="middle" font-size="11" fill="#047857">완수율</text>
+  <rect x="40" y="475" width="1000" height="30" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="540.0" y="494" text-anchor="middle" font-size="12" fill="#334155">E2E가 낮은데 Retrieval은 괜찮다면 → Generation 문제. 반대라면 검색부터 고친다.</text>
+</svg>

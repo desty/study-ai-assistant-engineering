@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 220" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#f1f5f9" stroke-width="0.5"/>
+    </pattern>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#6b7280"/></marker>
+    <marker id="arr-input" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#2563eb"/></marker>
+    <marker id="arr-llm" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ea580c"/></marker>
+    <marker id="arr-model" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#7c3aed"/></marker>
+    <marker id="arr-token" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-output" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-gate" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ca8a04"/></marker>
+    <marker id="arr-tool" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#0891b2"/></marker>
+    <marker id="arr-memory" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#db2777"/></marker>
+    <marker id="arr-error" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#dc2626"/></marker>
+  </defs>
+  <rect width="960" height="220" fill="#ffffff"/>
+  <rect width="960" height="220" fill="url(#grid)"/>
+  <text x="480" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">각 블록의 기술 라벨</text>
+  <text x="480" y="58" text-anchor="middle" font-size="12" fill="#64748b">CODE · MODEL · RAG · EXT</text>
+  <path d="M 172,135 L 188,135" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 322,135 L 338,135" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 472,135 L 488,135" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 622,135 L 638,135" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 772,135 L 788,135" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <rect x="40" y="95" width="130" height="80" rx="10" fill="#ffffff"/>
+  <rect x="40" y="95" width="130" height="80" rx="10" fill="#e3f2fd" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="105.0" y="131.0" text-anchor="middle" font-size="14" font-weight="700" fill="#0d47a1">입력</text>
+  <text x="105.0" y="147.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#1e40af">CODE</text>
+  <rect x="190" y="95" width="130" height="80" rx="10" fill="#ffffff"/>
+  <rect x="190" y="95" width="130" height="80" rx="10" fill="#fef3e0" stroke="#ea580c" stroke-width="1.5"/>
+  <text x="255.0" y="131.0" text-anchor="middle" font-size="14" font-weight="700" fill="#9a3412">이해</text>
+  <text x="255.0" y="147.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#c2410c">MODEL</text>
+  <rect x="340" y="95" width="130" height="80" rx="10" fill="#ffffff"/>
+  <rect x="340" y="95" width="130" height="80" rx="10" fill="#cffafe" stroke="#0891b2" stroke-width="1.5"/>
+  <text x="405.0" y="131.0" text-anchor="middle" font-size="14" font-weight="700" fill="#083344">검색</text>
+  <text x="405.0" y="147.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#0e7490">RAG + EXT</text>
+  <rect x="490" y="95" width="130" height="80" rx="10" fill="#ffffff"/>
+  <rect x="490" y="95" width="130" height="80" rx="10" fill="#fef3e0" stroke="#ea580c" stroke-width="1.5"/>
+  <text x="555.0" y="131.0" text-anchor="middle" font-size="14" font-weight="700" fill="#9a3412">생성</text>
+  <text x="555.0" y="147.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#c2410c">MODEL</text>
+  <rect x="640" y="95" width="130" height="80" rx="10" fill="#ffffff"/>
+  <rect x="640" y="95" width="130" height="80" rx="10" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+  <text x="705.0" y="131.0" text-anchor="middle" font-size="14" font-weight="700" fill="#713f12">검증</text>
+  <text x="705.0" y="147.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#a16207">CODE + MODEL</text>
+  <rect x="790" y="95" width="130" height="80" rx="10" fill="#ffffff"/>
+  <rect x="790" y="95" width="130" height="80" rx="10" fill="#fce7f3" stroke="#db2777" stroke-width="1.5"/>
+  <text x="855.0" y="131.0" text-anchor="middle" font-size="14" font-weight="700" fill="#500724">저장</text>
+  <text x="855.0" y="147.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#be185d">EXT (DB)</text>
+</svg>

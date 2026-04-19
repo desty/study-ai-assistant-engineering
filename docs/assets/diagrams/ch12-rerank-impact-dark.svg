@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 460" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/>
+    </pattern>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#64748b"/></marker>
+    <marker id="arr-input" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#60a5fa"/></marker>
+    <marker id="arr-llm" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#fb923c"/></marker>
+    <marker id="arr-model" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#a78bfa"/></marker>
+    <marker id="arr-token" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#34d399"/></marker>
+    <marker id="arr-output" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#34d399"/></marker>
+    <marker id="arr-gate" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#fbbf24"/></marker>
+    <marker id="arr-tool" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#22d3ee"/></marker>
+    <marker id="arr-memory" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#f472b6"/></marker>
+    <marker id="arr-error" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#f87171"/></marker>
+  </defs>
+  <rect width="1000" height="460" fill="#020617"/>
+  <rect width="1000" height="460" fill="url(#grid)"/>
+  <text x="500" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#f1f5f9">Reranker의 효과 — 순위 재배열</text>
+  <text x="500" y="58" text-anchor="middle" font-size="12" fill="#94a3b8">ANN이 뽑은 top-10 중 "진짜 관련된" 5개로 재정렬</text>
+  <text x="270" y="100" text-anchor="middle" font-size="14" font-weight="700" fill="#f1f5f9">Dense ANN top-10 (raw)</text>
+  <rect x="100" y="116" width="340" height="26" rx="6" fill="rgba(52,211,153,0.15)" stroke="#34d399" stroke-width="1.2"/>
+  <text x="110" y="134" font-size="11" fill="#a7f3d0">1. doc-A · 환불은 7일 이내</text>
+  <text x="430" y="134" text-anchor="end" font-size="10" fill="#34d399" font-family="JetBrains Mono, monospace">0.82</text>
+  <rect x="100" y="148" width="340" height="26" rx="6" fill="rgba(248,113,113,0.15)" stroke="#f87171" stroke-width="1.2"/>
+  <text x="110" y="166" font-size="11" fill="#fecaca">2. doc-X · 배송 정책</text>
+  <text x="430" y="166" text-anchor="end" font-size="10" fill="#f87171" font-family="JetBrains Mono, monospace">0.81</text>
+  <rect x="100" y="180" width="340" height="26" rx="6" fill="rgba(52,211,153,0.15)" stroke="#34d399" stroke-width="1.2"/>
+  <text x="110" y="198" font-size="11" fill="#a7f3d0">3. doc-B · 환불 사유 기록</text>
+  <text x="430" y="198" text-anchor="end" font-size="10" fill="#34d399" font-family="JetBrains Mono, monospace">0.80</text>
+  <rect x="100" y="212" width="340" height="26" rx="6" fill="rgba(248,113,113,0.15)" stroke="#f87171" stroke-width="1.2"/>
+  <text x="110" y="230" font-size="11" fill="#fecaca">4. doc-Y · 포인트 적립</text>
+  <text x="430" y="230" text-anchor="end" font-size="10" fill="#f87171" font-family="JetBrains Mono, monospace">0.78</text>
+  <rect x="100" y="244" width="340" height="26" rx="6" fill="rgba(52,211,153,0.15)" stroke="#34d399" stroke-width="1.2"/>
+  <text x="110" y="262" font-size="11" fill="#a7f3d0">5. doc-C · 환불 승인 절차</text>
+  <text x="430" y="262" text-anchor="end" font-size="10" fill="#34d399" font-family="JetBrains Mono, monospace">0.77</text>
+  <rect x="100" y="276" width="340" height="26" rx="6" fill="rgba(248,113,113,0.15)" stroke="#f87171" stroke-width="1.2"/>
+  <text x="110" y="294" font-size="11" fill="#fecaca">6. doc-Z · 이벤트 쿠폰</text>
+  <text x="430" y="294" text-anchor="end" font-size="10" fill="#f87171" font-family="JetBrains Mono, monospace">0.76</text>
+  <rect x="100" y="308" width="340" height="26" rx="6" fill="rgba(52,211,153,0.15)" stroke="#34d399" stroke-width="1.2"/>
+  <text x="110" y="326" font-size="11" fill="#a7f3d0">7. doc-D · 환불 불가 품목</text>
+  <text x="430" y="326" text-anchor="end" font-size="10" fill="#34d399" font-family="JetBrains Mono, monospace">0.75</text>
+  <rect x="100" y="340" width="340" height="26" rx="6" fill="rgba(248,113,113,0.15)" stroke="#f87171" stroke-width="1.2"/>
+  <text x="110" y="358" font-size="11" fill="#fecaca">8. doc-W · 자주 묻는 질문</text>
+  <text x="430" y="358" text-anchor="end" font-size="10" fill="#f87171" font-family="JetBrains Mono, monospace">0.74</text>
+  <rect x="100" y="372" width="340" height="26" rx="6" fill="rgba(248,113,113,0.15)" stroke="#f87171" stroke-width="1.2"/>
+  <text x="110" y="390" font-size="11" fill="#fecaca">9. doc-V · 고객 센터 연락처</text>
+  <text x="430" y="390" text-anchor="end" font-size="10" fill="#f87171" font-family="JetBrains Mono, monospace">0.73</text>
+  <rect x="100" y="404" width="340" height="26" rx="6" fill="rgba(52,211,153,0.15)" stroke="#34d399" stroke-width="1.2"/>
+  <text x="110" y="422" font-size="11" fill="#a7f3d0">10. doc-E · 환불 시 배송비</text>
+  <text x="430" y="422" text-anchor="end" font-size="10" fill="#34d399" font-family="JetBrains Mono, monospace">0.72</text>
+  <text x="730" y="100" text-anchor="middle" font-size="14" font-weight="700" fill="#f1f5f9">Cross-encoder rerank top-5</text>
+  <rect x="560" y="116" width="340" height="26" rx="6" fill="rgba(52,211,153,0.2)" stroke="#34d399" stroke-width="1.5"/>
+  <text x="570" y="134" font-size="11" fill="#a7f3d0">1. doc-A · 환불은 7일 이내</text>
+  <text x="890" y="134" text-anchor="end" font-size="10" fill="#34d399" font-family="JetBrains Mono, monospace">0.94</text>
+  <rect x="560" y="148" width="340" height="26" rx="6" fill="rgba(52,211,153,0.2)" stroke="#34d399" stroke-width="1.5"/>
+  <text x="570" y="166" font-size="11" fill="#a7f3d0">2. doc-C · 환불 승인 절차</text>
+  <text x="890" y="166" text-anchor="end" font-size="10" fill="#34d399" font-family="JetBrains Mono, monospace">0.91</text>
+  <rect x="560" y="180" width="340" height="26" rx="6" fill="rgba(52,211,153,0.2)" stroke="#34d399" stroke-width="1.5"/>
+  <text x="570" y="198" font-size="11" fill="#a7f3d0">3. doc-B · 환불 사유 기록</text>
+  <text x="890" y="198" text-anchor="end" font-size="10" fill="#34d399" font-family="JetBrains Mono, monospace">0.88</text>
+  <rect x="560" y="212" width="340" height="26" rx="6" fill="rgba(52,211,153,0.2)" stroke="#34d399" stroke-width="1.5"/>
+  <text x="570" y="230" font-size="11" fill="#a7f3d0">4. doc-D · 환불 불가 품목</text>
+  <text x="890" y="230" text-anchor="end" font-size="10" fill="#34d399" font-family="JetBrains Mono, monospace">0.85</text>
+  <rect x="560" y="244" width="340" height="26" rx="6" fill="rgba(52,211,153,0.2)" stroke="#34d399" stroke-width="1.5"/>
+  <text x="570" y="262" font-size="11" fill="#a7f3d0">5. doc-E · 환불 시 배송비</text>
+  <text x="890" y="262" text-anchor="end" font-size="10" fill="#34d399" font-family="JetBrains Mono, monospace">0.79</text>
+  <rect x="100" y="430" width="14" height="14" rx="3" fill="#34d399"/>
+  <text x="120" y="441" font-size="11" fill="#cbd5e1">관련 문서 (gold)</text>
+  <rect x="250" y="430" width="14" height="14" rx="3" fill="#f87171"/>
+  <text x="270" y="441" font-size="11" fill="#cbd5e1">무관 문서 (noise)</text>
+</svg>

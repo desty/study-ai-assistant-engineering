@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 280" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/>
+    </pattern>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#64748b"/></marker>
+    <marker id="arr-input" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#60a5fa"/></marker>
+    <marker id="arr-llm" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#fb923c"/></marker>
+    <marker id="arr-model" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#a78bfa"/></marker>
+    <marker id="arr-token" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#34d399"/></marker>
+    <marker id="arr-output" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#34d399"/></marker>
+    <marker id="arr-gate" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#fbbf24"/></marker>
+    <marker id="arr-tool" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#22d3ee"/></marker>
+    <marker id="arr-memory" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#f472b6"/></marker>
+    <marker id="arr-error" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#f87171"/></marker>
+  </defs>
+  <rect width="1040" height="280" fill="#020617"/>
+  <rect width="1040" height="280" fill="url(#grid)"/>
+  <text x="520" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#f1f5f9">프롬프트의 해부</text>
+  <text x="520" y="58" text-anchor="middle" font-size="12" fill="#94a3b8">messages 배열의 구성 요소와 흐름</text>
+  <path d="M 234,157 L 254,157" stroke="#64748b" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 418,157 L 438,157" stroke="#64748b" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 602,157 L 622,157" stroke="#64748b" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 786,157 L 806,157" stroke="#64748b" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <rect x="72" y="100" width="160" height="115" rx="10" fill="#0f172a"/>
+  <rect x="72" y="100" width="160" height="115" rx="10" fill="rgba(96,165,250,0.15)" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="152.0" y="153.5" text-anchor="middle" font-size="14" font-weight="700" fill="#bfdbfe">시스템 지침</text>
+  <text x="152.0" y="169.5" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#60a5fa">system</text>
+  <text x="152.0" y="185.5" text-anchor="middle" font-size="10" fill="#60a5fa">역할·규칙·출력형식</text>
+  <rect x="256" y="100" width="160" height="115" rx="10" fill="#0f172a"/>
+  <rect x="256" y="100" width="160" height="115" rx="10" fill="rgba(244,114,182,0.15)" stroke="#f472b6" stroke-width="1.5"/>
+  <text x="336.0" y="153.5" text-anchor="middle" font-size="14" font-weight="700" fill="#fbcfe8">Few-shot 예시</text>
+  <text x="336.0" y="169.5" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#f472b6">optional</text>
+  <text x="336.0" y="185.5" text-anchor="middle" font-size="10" fill="#f472b6">Q-A 짝 1~3개</text>
+  <rect x="440" y="100" width="160" height="115" rx="10" fill="#0f172a"/>
+  <rect x="440" y="100" width="160" height="115" rx="10" fill="rgba(96,165,250,0.15)" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="520.0" y="153.5" text-anchor="middle" font-size="14" font-weight="700" fill="#bfdbfe">현재 질문</text>
+  <text x="520.0" y="169.5" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#60a5fa">user</text>
+  <text x="520.0" y="185.5" text-anchor="middle" font-size="10" fill="#60a5fa">실제 요청</text>
+  <rect x="624" y="100" width="160" height="115" rx="10" fill="#0f172a"/>
+  <rect x="624" y="100" width="160" height="115" rx="10" fill="rgba(167,139,250,0.15)" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="704.0" y="153.5" text-anchor="middle" font-size="14" font-weight="700" fill="#ddd6fe">LLM</text>
+  <text x="704.0" y="169.5" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#a78bfa">inference</text>
+  <text x="704.0" y="185.5" text-anchor="middle" font-size="10" fill="#a78bfa">토큰 생성</text>
+  <rect x="808" y="100" width="160" height="115" rx="10" fill="#0f172a"/>
+  <rect x="808" y="100" width="160" height="115" rx="10" fill="rgba(52,211,153,0.2)" stroke="#34d399" stroke-width="1.5"/>
+  <text x="888.0" y="153.5" text-anchor="middle" font-size="14" font-weight="700" fill="#a7f3d0">응답</text>
+  <text x="888.0" y="169.5" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#34d399">assistant</text>
+  <text x="888.0" y="185.5" text-anchor="middle" font-size="10" fill="#34d399">원하는 형식</text>
+</svg>

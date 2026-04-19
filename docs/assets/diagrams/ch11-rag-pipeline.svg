@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 500" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#f1f5f9" stroke-width="0.5"/>
+    </pattern>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#6b7280"/></marker>
+    <marker id="arr-input" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#2563eb"/></marker>
+    <marker id="arr-llm" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ea580c"/></marker>
+    <marker id="arr-model" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#7c3aed"/></marker>
+    <marker id="arr-token" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-output" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-gate" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ca8a04"/></marker>
+    <marker id="arr-tool" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#0891b2"/></marker>
+    <marker id="arr-memory" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#db2777"/></marker>
+    <marker id="arr-error" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#dc2626"/></marker>
+  </defs>
+  <rect width="1100" height="500" fill="#ffffff"/>
+  <rect width="1100" height="500" fill="url(#grid)"/>
+  <text x="550" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">RAG 파이프라인 — 두 단계</text>
+  <text x="550" y="58" text-anchor="middle" font-size="12" fill="#64748b">Indexing (준비) + Query (실행) · 둘은 벡터 DB로 연결됨</text>
+  <path d="M 260,175 L 282,175" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 446,175 L 468,175" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 632,175 L 654,175" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 818,175 L 840,175" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <rect x="98" y="130" width="160" height="90" rx="10" fill="#ffffff"/>
+  <rect x="98" y="130" width="160" height="90" rx="10" fill="#e3f2fd" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="178.0" y="171.0" text-anchor="middle" font-size="14" font-weight="700" fill="#0d47a1">문서</text>
+  <text x="178.0" y="187.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#1e40af">docs</text>
+  <rect x="284" y="130" width="160" height="90" rx="10" fill="#ffffff"/>
+  <rect x="284" y="130" width="160" height="90" rx="10" fill="#cffafe" stroke="#0891b2" stroke-width="1.5"/>
+  <text x="364.0" y="171.0" text-anchor="middle" font-size="14" font-weight="700" fill="#083344">로드</text>
+  <text x="364.0" y="187.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#0e7490">PDF/HTML/MD</text>
+  <rect x="470" y="130" width="160" height="90" rx="10" fill="#ffffff"/>
+  <rect x="470" y="130" width="160" height="90" rx="10" fill="#cffafe" stroke="#0891b2" stroke-width="1.5"/>
+  <text x="550.0" y="171.0" text-anchor="middle" font-size="14" font-weight="700" fill="#083344">Chunking</text>
+  <text x="550.0" y="187.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#0e7490">split</text>
+  <rect x="656" y="130" width="160" height="90" rx="10" fill="#ffffff"/>
+  <rect x="656" y="130" width="160" height="90" rx="10" fill="#f3e8ff" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="736.0" y="171.0" text-anchor="middle" font-size="14" font-weight="700" fill="#4c1d95">임베딩</text>
+  <text x="736.0" y="187.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#6d28d9">encoder</text>
+  <rect x="842" y="130" width="160" height="90" rx="10" fill="#ffffff"/>
+  <rect x="842" y="130" width="160" height="90" rx="10" fill="#fce7f3" stroke="#db2777" stroke-width="1.5"/>
+  <text x="922.0" y="171.0" text-anchor="middle" font-size="14" font-weight="700" fill="#500724">벡터 DB</text>
+  <text x="922.0" y="187.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#be185d">store</text>
+  <rect x="82" y="102" width="936" height="134" rx="12" fill="rgba(8,145,178,0.04)" stroke="#0891b2" stroke-width="1" stroke-dasharray="8,4"/>
+  <text x="94" y="120" font-size="10" font-weight="700" fill="#0891b2" font-family="JetBrains Mono, monospace">INDEXING (한 번, 문서 업데이트 시 재실행)</text>
+  <path d="M 260,385 L 282,385" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 446,385 L 468,385" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 632,385 L 654,385" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 818,385 L 840,385" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <rect x="98" y="340" width="160" height="90" rx="10" fill="#ffffff"/>
+  <rect x="98" y="340" width="160" height="90" rx="10" fill="#e3f2fd" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="178.0" y="381.0" text-anchor="middle" font-size="14" font-weight="700" fill="#0d47a1">질문</text>
+  <text x="178.0" y="397.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#1e40af">query</text>
+  <rect x="284" y="340" width="160" height="90" rx="10" fill="#ffffff"/>
+  <rect x="284" y="340" width="160" height="90" rx="10" fill="#f3e8ff" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="364.0" y="381.0" text-anchor="middle" font-size="14" font-weight="700" fill="#4c1d95">임베딩</text>
+  <text x="364.0" y="397.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#6d28d9">same encoder</text>
+  <rect x="470" y="340" width="160" height="90" rx="10" fill="#ffffff"/>
+  <rect x="470" y="340" width="160" height="90" rx="10" fill="#fce7f3" stroke="#db2777" stroke-width="1.5"/>
+  <text x="550.0" y="381.0" text-anchor="middle" font-size="14" font-weight="700" fill="#500724">검색 top-k</text>
+  <text x="550.0" y="397.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#be185d">ANN</text>
+  <rect x="656" y="340" width="160" height="90" rx="10" fill="#ffffff"/>
+  <rect x="656" y="340" width="160" height="90" rx="10" fill="#fef3e0" stroke="#ea580c" stroke-width="1.5"/>
+  <text x="736.0" y="381.0" text-anchor="middle" font-size="14" font-weight="700" fill="#9a3412">Augment</text>
+  <text x="736.0" y="397.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#c2410c">prompt + context</text>
+  <rect x="842" y="340" width="160" height="90" rx="10" fill="#ffffff"/>
+  <rect x="842" y="340" width="160" height="90" rx="10" fill="#d1fae5" stroke="#059669" stroke-width="1.5"/>
+  <text x="922.0" y="381.0" text-anchor="middle" font-size="14" font-weight="700" fill="#064e3b">생성 + 인용</text>
+  <text x="922.0" y="397.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#047857">LLM</text>
+  <rect x="82" y="312" width="936" height="134" rx="12" fill="rgba(234,88,12,0.04)" stroke="#ea580c" stroke-width="1" stroke-dasharray="8,4"/>
+  <text x="94" y="330" font-size="10" font-weight="700" fill="#ea580c" font-family="JetBrains Mono, monospace">QUERY (매 요청)</text>
+  <path d="M 922,248 L 922,280 L 550,280 L 550,312" stroke="#059669" stroke-width="1.5" fill="none" marker-end="url(#arr-token)" stroke-dasharray="5,3"/>
+  <rect x="700.0" y="259" width="72" height="18" rx="4" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.8"/>
+  <text x="736" y="272" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#475569">같은 벡터 공간</text>
+</svg>

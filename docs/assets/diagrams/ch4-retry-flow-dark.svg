@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 460" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/>
+    </pattern>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#64748b"/></marker>
+    <marker id="arr-input" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#60a5fa"/></marker>
+    <marker id="arr-llm" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#fb923c"/></marker>
+    <marker id="arr-model" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#a78bfa"/></marker>
+    <marker id="arr-token" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#34d399"/></marker>
+    <marker id="arr-output" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#34d399"/></marker>
+    <marker id="arr-gate" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#fbbf24"/></marker>
+    <marker id="arr-tool" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#22d3ee"/></marker>
+    <marker id="arr-memory" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#f472b6"/></marker>
+    <marker id="arr-error" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#f87171"/></marker>
+  </defs>
+  <rect width="1000" height="460" fill="#020617"/>
+  <rect width="1000" height="460" fill="url(#grid)"/>
+  <text x="500" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#f1f5f9">에러 처리와 재시도 전략</text>
+  <text x="500" y="58" text-anchor="middle" font-size="12" fill="#94a3b8">네트워크 이슈는 일상 — fallback 경로를 설계</text>
+  <path d="M 180,225 L 240,225" stroke="#64748b" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 380,195 L 460,125" stroke="#34d399" stroke-width="1.5" fill="none" marker-end="url(#arr-output)"/>
+  <rect x="391.0" y="133.0" width="58" height="18" rx="4" fill="#0f172a" stroke="#334155" stroke-width="0.8"/>
+  <text x="420.0" y="146.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#94a3b8">200 OK</text>
+  <path d="M 380,255 L 460,365" stroke="#fbbf24" stroke-width="1.5" fill="none" marker-end="url(#arr-gate)" stroke-dasharray="3,3"/>
+  <rect x="380.5" y="283.0" width="79" height="18" rx="4" fill="#0f172a" stroke="#334155" stroke-width="0.8"/>
+  <text x="420.0" y="296.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#94a3b8">429 / 5xx</text>
+  <path d="M 600,365 L 720,365" stroke="#f87171" stroke-width="1.8" fill="none" marker-end="url(#arr-error)"/>
+  <rect x="634.5" y="338.0" width="51" height="18" rx="4" fill="#0f172a" stroke="#334155" stroke-width="0.8"/>
+  <text x="660.0" y="351.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#94a3b8">N회 실패</text>
+  <path d="M 460,365 L 440,365 L 440,295 L 310,295 L 310,270" stroke="#34d399" stroke-width="1.5" fill="none" marker-end="url(#arr-token)" stroke-dasharray="5,3"/>
+  <rect x="347.5" y="331" width="65" height="18" rx="4" fill="#0f172a" stroke="#334155" stroke-width="0.8"/>
+  <text x="380" y="344" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#94a3b8">backoff</text>
+  <rect x="40" y="180" width="140" height="90" rx="10" fill="#0f172a"/>
+  <rect x="40" y="180" width="140" height="90" rx="10" fill="rgba(96,165,250,0.15)" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="110.0" y="221.0" text-anchor="middle" font-size="14" font-weight="700" fill="#bfdbfe">API 요청</text>
+  <text x="110.0" y="237.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#60a5fa">create()</text>
+  <rect x="240" y="180" width="140" height="90" rx="10" fill="#0f172a"/>
+  <rect x="240" y="180" width="140" height="90" rx="10" fill="rgba(251,191,36,0.15)" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="310.0" y="221.0" text-anchor="middle" font-size="14" font-weight="700" fill="#fde68a">응답 코드</text>
+  <text x="310.0" y="237.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#fbbf24">status check</text>
+  <rect x="460" y="80" width="140" height="90" rx="10" fill="#0f172a"/>
+  <rect x="460" y="80" width="140" height="90" rx="10" fill="rgba(52,211,153,0.2)" stroke="#34d399" stroke-width="1.5"/>
+  <text x="530.0" y="121.0" text-anchor="middle" font-size="14" font-weight="700" fill="#a7f3d0">성공</text>
+  <text x="530.0" y="137.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#34d399">response</text>
+  <rect x="460" y="320" width="140" height="90" rx="10" fill="#0f172a"/>
+  <rect x="460" y="320" width="140" height="90" rx="10" fill="rgba(244,114,182,0.15)" stroke="#f472b6" stroke-width="1.5"/>
+  <text x="530.0" y="361.0" text-anchor="middle" font-size="14" font-weight="700" fill="#fbcfe8">재시도</text>
+  <text x="530.0" y="377.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#f472b6">exp. backoff</text>
+  <rect x="720" y="320" width="140" height="90" rx="10" fill="#0f172a"/>
+  <rect x="720" y="320" width="140" height="90" rx="10" fill="rgba(248,113,113,0.15)" stroke="#f87171" stroke-width="1.5"/>
+  <text x="790.0" y="361.0" text-anchor="middle" font-size="14" font-weight="700" fill="#fecaca">최종 실패</text>
+  <text x="790.0" y="377.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#f87171">raise / log</text>
+</svg>

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/>
+    </pattern>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#64748b"/></marker>
+    <marker id="arr-input" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#60a5fa"/></marker>
+    <marker id="arr-llm" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#fb923c"/></marker>
+    <marker id="arr-model" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#a78bfa"/></marker>
+    <marker id="arr-token" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#34d399"/></marker>
+    <marker id="arr-output" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#34d399"/></marker>
+    <marker id="arr-gate" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#fbbf24"/></marker>
+    <marker id="arr-tool" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#22d3ee"/></marker>
+    <marker id="arr-memory" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#f472b6"/></marker>
+    <marker id="arr-error" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#f87171"/></marker>
+  </defs>
+  <rect width="800" height="200" fill="#020617"/>
+  <rect width="800" height="200" fill="url(#grid)"/>
+  <text x="400" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#f1f5f9">흔한 오해</text>
+  <text x="400" y="58" text-anchor="middle" font-size="12" fill="#94a3b8">"Assistant = 프롬프트 하나"</text>
+  <path d="M 304,130 L 328,130" stroke="#64748b" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 472,130 L 496,130" stroke="#64748b" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <rect x="162" y="90" width="140" height="80" rx="10" fill="#0f172a"/>
+  <rect x="162" y="90" width="140" height="80" rx="10" fill="rgba(96,165,250,0.15)" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="232.0" y="126.0" text-anchor="middle" font-size="14" font-weight="700" fill="#bfdbfe">사용자</text>
+  <text x="232.0" y="142.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#60a5fa">message</text>
+  <rect x="330" y="90" width="140" height="80" rx="10" fill="#0f172a"/>
+  <rect x="330" y="90" width="140" height="80" rx="10" fill="rgba(167,139,250,0.15)" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="400.0" y="126.0" text-anchor="middle" font-size="14" font-weight="700" fill="#ddd6fe">LLM</text>
+  <text x="400.0" y="142.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#a78bfa">one call</text>
+  <rect x="498" y="90" width="140" height="80" rx="10" fill="#0f172a"/>
+  <rect x="498" y="90" width="140" height="80" rx="10" fill="rgba(52,211,153,0.2)" stroke="#34d399" stroke-width="1.5"/>
+  <text x="568.0" y="126.0" text-anchor="middle" font-size="14" font-weight="700" fill="#a7f3d0">응답</text>
+  <text x="568.0" y="142.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#34d399">done</text>
+</svg>

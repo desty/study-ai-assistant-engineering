@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 460" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#f1f5f9" stroke-width="0.5"/>
+    </pattern>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#6b7280"/></marker>
+    <marker id="arr-input" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#2563eb"/></marker>
+    <marker id="arr-llm" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ea580c"/></marker>
+    <marker id="arr-model" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#7c3aed"/></marker>
+    <marker id="arr-token" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-output" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-gate" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ca8a04"/></marker>
+    <marker id="arr-tool" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#0891b2"/></marker>
+    <marker id="arr-memory" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#db2777"/></marker>
+    <marker id="arr-error" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#dc2626"/></marker>
+  </defs>
+  <rect width="1040" height="460" fill="#ffffff"/>
+  <rect width="1040" height="460" fill="url(#grid)"/>
+  <text x="520" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">Coverage Matrix — 난이도 × 도메인 균형</text>
+  <text x="520" y="58" text-anchor="middle" font-size="12" fill="#64748b">쉬운 FAQ만 모으면 E2E 점수는 올라가지만 실제 품질은 제자리.</text>
+  <text x="270.0" y="104" text-anchor="middle" font-size="13" font-weight="700" fill="#0f172a">FAQ</text>
+  <text x="410.0" y="104" text-anchor="middle" font-size="13" font-weight="700" fill="#0f172a">정책</text>
+  <text x="550.0" y="104" text-anchor="middle" font-size="13" font-weight="700" fill="#0f172a">장애대응</text>
+  <text x="690.0" y="104" text-anchor="middle" font-size="13" font-weight="700" fill="#0f172a">수치·계산</text>
+  <text x="186" y="159.0" text-anchor="end" font-size="13" font-weight="700" fill="#0f172a">쉬움</text>
+  <rect x="200" y="120" width="134" height="64" rx="6" fill="#d1fae5" stroke="#059669" stroke-width="1"/>
+  <text x="267.0" y="156" text-anchor="middle" font-size="22" font-weight="700" font-family="JetBrains Mono, monospace" fill="#064e3b">10</text>
+  <text x="267.0" y="175" text-anchor="middle" font-size="10" fill="#047857">건</text>
+  <rect x="340" y="120" width="134" height="64" rx="6" fill="#d1fae5" stroke="#059669" stroke-width="1"/>
+  <text x="407.0" y="156" text-anchor="middle" font-size="22" font-weight="700" font-family="JetBrains Mono, monospace" fill="#064e3b">8</text>
+  <text x="407.0" y="175" text-anchor="middle" font-size="10" fill="#047857">건</text>
+  <rect x="480" y="120" width="134" height="64" rx="6" fill="#d1fae5" stroke="#059669" stroke-width="1"/>
+  <text x="547.0" y="156" text-anchor="middle" font-size="22" font-weight="700" font-family="JetBrains Mono, monospace" fill="#064e3b">6</text>
+  <text x="547.0" y="175" text-anchor="middle" font-size="10" fill="#047857">건</text>
+  <rect x="620" y="120" width="134" height="64" rx="6" fill="#d1fae5" stroke="#059669" stroke-width="1"/>
+  <text x="687.0" y="156" text-anchor="middle" font-size="22" font-weight="700" font-family="JetBrains Mono, monospace" fill="#064e3b">4</text>
+  <text x="687.0" y="175" text-anchor="middle" font-size="10" fill="#047857">건</text>
+  <text x="186" y="229.0" text-anchor="end" font-size="13" font-weight="700" fill="#0f172a">보통</text>
+  <rect x="200" y="190" width="134" height="64" rx="6" fill="#fef9c3" stroke="#ca8a04" stroke-width="1"/>
+  <text x="267.0" y="226" text-anchor="middle" font-size="22" font-weight="700" font-family="JetBrains Mono, monospace" fill="#713f12">8</text>
+  <text x="267.0" y="245" text-anchor="middle" font-size="10" fill="#a16207">건</text>
+  <rect x="340" y="190" width="134" height="64" rx="6" fill="#fef9c3" stroke="#ca8a04" stroke-width="1"/>
+  <text x="407.0" y="226" text-anchor="middle" font-size="22" font-weight="700" font-family="JetBrains Mono, monospace" fill="#713f12">10</text>
+  <text x="407.0" y="245" text-anchor="middle" font-size="10" fill="#a16207">건</text>
+  <rect x="480" y="190" width="134" height="64" rx="6" fill="#fef9c3" stroke="#ca8a04" stroke-width="1"/>
+  <text x="547.0" y="226" text-anchor="middle" font-size="22" font-weight="700" font-family="JetBrains Mono, monospace" fill="#713f12">10</text>
+  <text x="547.0" y="245" text-anchor="middle" font-size="10" fill="#a16207">건</text>
+  <rect x="620" y="190" width="134" height="64" rx="6" fill="#fef9c3" stroke="#ca8a04" stroke-width="1"/>
+  <text x="687.0" y="226" text-anchor="middle" font-size="22" font-weight="700" font-family="JetBrains Mono, monospace" fill="#713f12">8</text>
+  <text x="687.0" y="245" text-anchor="middle" font-size="10" fill="#a16207">건</text>
+  <text x="186" y="299.0" text-anchor="end" font-size="13" font-weight="700" fill="#0f172a">어려움</text>
+  <rect x="200" y="260" width="134" height="64" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="1"/>
+  <text x="267.0" y="296" text-anchor="middle" font-size="22" font-weight="700" font-family="JetBrains Mono, monospace" fill="#7f1d1d">4</text>
+  <text x="267.0" y="315" text-anchor="middle" font-size="10" fill="#b91c1c">건</text>
+  <rect x="340" y="260" width="134" height="64" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="1"/>
+  <text x="407.0" y="296" text-anchor="middle" font-size="22" font-weight="700" font-family="JetBrains Mono, monospace" fill="#7f1d1d">6</text>
+  <text x="407.0" y="315" text-anchor="middle" font-size="10" fill="#b91c1c">건</text>
+  <rect x="480" y="260" width="134" height="64" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="1"/>
+  <text x="547.0" y="296" text-anchor="middle" font-size="22" font-weight="700" font-family="JetBrains Mono, monospace" fill="#7f1d1d">10</text>
+  <text x="547.0" y="315" text-anchor="middle" font-size="10" fill="#b91c1c">건</text>
+  <rect x="620" y="260" width="134" height="64" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="1"/>
+  <text x="687.0" y="296" text-anchor="middle" font-size="22" font-weight="700" font-family="JetBrains Mono, monospace" fill="#7f1d1d">16</text>
+  <text x="687.0" y="315" text-anchor="middle" font-size="10" fill="#b91c1c">건</text>
+  <text x="520.0" y="366" text-anchor="middle" font-size="13" font-weight="700" fill="#0f172a">합계 = 100건 (분류 태스크 기준 예시)</text>
+  <text x="790" y="120" font-size="11" font-weight="700" fill="#475569" font-family="JetBrains Mono, monospace">✓ 쉬움 30%</text>
+  <text x="790" y="134" font-size="10" fill="#334155">회귀 테스트 용</text>
+  <text x="790" y="146" font-size="11" font-weight="700" fill="#475569" font-family="JetBrains Mono, monospace">✓ 보통 36%</text>
+  <text x="790" y="160" font-size="10" fill="#334155">일반 사용자 케이스</text>
+  <text x="790" y="172" font-size="11" font-weight="700" fill="#475569" font-family="JetBrains Mono, monospace">✓ 어려움 36%</text>
+  <text x="790" y="186" font-size="10" fill="#334155">실제 실패가 나오는 구간</text>
+  <text x="790" y="224" font-size="11" font-weight="700" fill="#475569" font-family="JetBrains Mono, monospace">편향 주의</text>
+  <text x="790" y="238" font-size="10" fill="#334155">한 셀이 0 이면 그 영역은 평가 불가</text>
+  <text x="790" y="250" font-size="11" font-weight="700" fill="#475569" font-family="JetBrains Mono, monospace">시간 균형</text>
+  <text x="790" y="264" font-size="10" fill="#334155">분기마다 로그에서 신규 샘플 추가</text>
+</svg>

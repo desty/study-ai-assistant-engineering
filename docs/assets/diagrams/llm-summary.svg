@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 200" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#f1f5f9" stroke-width="0.5"/>
+    </pattern>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#6b7280"/></marker>
+    <marker id="arr-input" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#2563eb"/></marker>
+    <marker id="arr-llm" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ea580c"/></marker>
+    <marker id="arr-model" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#7c3aed"/></marker>
+    <marker id="arr-token" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-output" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-gate" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ca8a04"/></marker>
+    <marker id="arr-tool" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#0891b2"/></marker>
+    <marker id="arr-memory" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#db2777"/></marker>
+    <marker id="arr-error" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#dc2626"/></marker>
+  </defs>
+  <rect width="1200" height="200" fill="#ffffff"/>
+  <rect width="1200" height="200" fill="url(#grid)"/>
+  <text x="600" y="30" text-anchor="middle" font-size="17" font-weight="700" fill="#0f172a">LLM 한 번의 호출, 전체 흐름</text>
+  <path d="M 192,115 L 208,115" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 352,115 L 368,115" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 512,115 L 528,115" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 672,115 L 688,115" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 832,115 L 848,115" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 992,115 L 1008,115" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <rect x="50" y="75" width="140" height="80" rx="10" fill="#ffffff"/>
+  <rect x="50" y="75" width="140" height="80" rx="10" fill="#e3f2fd" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="120.0" y="111.0" text-anchor="middle" font-size="14" font-weight="700" fill="#0d47a1">텍스트</text>
+  <text x="120.0" y="127.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#1e40af">raw input</text>
+  <rect x="210" y="75" width="140" height="80" rx="10" fill="#ffffff"/>
+  <rect x="210" y="75" width="140" height="80" rx="10" fill="#e3f2fd" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="280.0" y="111.0" text-anchor="middle" font-size="14" font-weight="700" fill="#0d47a1">토큰화</text>
+  <text x="280.0" y="127.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#1e40af">tokenize</text>
+  <rect x="370" y="75" width="140" height="80" rx="10" fill="#ffffff"/>
+  <rect x="370" y="75" width="140" height="80" rx="10" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+  <text x="440.0" y="111.0" text-anchor="middle" font-size="14" font-weight="700" fill="#713f12">컨텍스트 체크</text>
+  <text x="440.0" y="127.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#a16207">window fit?</text>
+  <rect x="530" y="75" width="140" height="80" rx="10" fill="#ffffff"/>
+  <rect x="530" y="75" width="140" height="80" rx="10" fill="#f3e8ff" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="600.0" y="111.0" text-anchor="middle" font-size="14" font-weight="700" fill="#4c1d95">LLM</text>
+  <text x="600.0" y="127.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#6d28d9">probability</text>
+  <rect x="690" y="75" width="140" height="80" rx="10" fill="#ffffff"/>
+  <rect x="690" y="75" width="140" height="80" rx="10" fill="#f3e8ff" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="760.0" y="111.0" text-anchor="middle" font-size="14" font-weight="700" fill="#4c1d95">샘플링</text>
+  <text x="760.0" y="127.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#6d28d9">temperature</text>
+  <rect x="850" y="75" width="140" height="80" rx="10" fill="#ffffff"/>
+  <rect x="850" y="75" width="140" height="80" rx="10" fill="#dcfce7" stroke="#059669" stroke-width="1.5"/>
+  <text x="920.0" y="111.0" text-anchor="middle" font-size="14" font-weight="700" fill="#064e3b">다음 토큰</text>
+  <text x="920.0" y="127.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#047857">append / loop</text>
+  <rect x="1010" y="75" width="140" height="80" rx="10" fill="#ffffff"/>
+  <rect x="1010" y="75" width="140" height="80" rx="10" fill="#d1fae5" stroke="#059669" stroke-width="1.5"/>
+  <text x="1080.0" y="111.0" text-anchor="middle" font-size="14" font-weight="700" fill="#064e3b">최종 응답</text>
+  <text x="1080.0" y="127.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#047857">assistant</text>
+</svg>

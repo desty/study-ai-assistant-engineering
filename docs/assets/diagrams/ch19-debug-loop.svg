@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 380" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#f1f5f9" stroke-width="0.5"/>
+    </pattern>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#6b7280"/></marker>
+    <marker id="arr-input" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#2563eb"/></marker>
+    <marker id="arr-llm" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ea580c"/></marker>
+    <marker id="arr-model" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#7c3aed"/></marker>
+    <marker id="arr-token" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-output" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-gate" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ca8a04"/></marker>
+    <marker id="arr-tool" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#0891b2"/></marker>
+    <marker id="arr-memory" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#db2777"/></marker>
+    <marker id="arr-error" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#dc2626"/></marker>
+  </defs>
+  <rect width="1000" height="380" fill="#ffffff"/>
+  <rect width="1000" height="380" fill="url(#grid)"/>
+  <text x="500" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">Debug Loop — 실패 한 건에서 시작해 평가셋을 키운다</text>
+  <text x="500" y="58" text-anchor="middle" font-size="12" fill="#64748b">한 건의 실패 → 분류 → 수정 → 평가셋 합류 → 다음 라운드 회귀 방지</text>
+  <rect x="60" y="170" width="180" height="115" rx="10" fill="#ffffff"/>
+  <rect x="60" y="170" width="180" height="115" rx="10" fill="#cffafe" stroke="#0891b2" stroke-width="1.5"/>
+  <circle cx="150.0" cy="192" r="13" fill="#0891b2"/>
+  <text x="150.0" y="197" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff" font-family="JetBrains Mono, monospace">1</text>
+  <text x="150.0" y="224" text-anchor="middle" font-size="14" font-weight="700" fill="#083344">Trace</text>
+  <text x="150.0" y="242" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#0e7490">LangSmith /
+Langfuse</text>
+  <text x="150.0" y="256" text-anchor="middle" font-size="10" fill="#0e7490">입력·검색·생성 전 과정</text>
+  <rect x="300" y="170" width="180" height="115" rx="10" fill="#ffffff"/>
+  <rect x="300" y="170" width="180" height="115" rx="10" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+  <circle cx="390.0" cy="192" r="13" fill="#ca8a04"/>
+  <text x="390.0" y="197" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff" font-family="JetBrains Mono, monospace">2</text>
+  <text x="390.0" y="224" text-anchor="middle" font-size="14" font-weight="700" fill="#713f12">Classify</text>
+  <text x="390.0" y="242" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#a16207">5 택소노미</text>
+  <text x="390.0" y="256" text-anchor="middle" font-size="10" fill="#a16207">prompt · retrieval · data
+generation · tool</text>
+  <rect x="540" y="170" width="180" height="115" rx="10" fill="#ffffff"/>
+  <rect x="540" y="170" width="180" height="115" rx="10" fill="#e3f2fd" stroke="#2563eb" stroke-width="1.5"/>
+  <circle cx="630.0" cy="192" r="13" fill="#2563eb"/>
+  <text x="630.0" y="197" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff" font-family="JetBrains Mono, monospace">3</text>
+  <text x="630.0" y="224" text-anchor="middle" font-size="14" font-weight="700" fill="#0d47a1">Fix</text>
+  <text x="630.0" y="242" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#1e40af">root cause 수정</text>
+  <text x="630.0" y="256" text-anchor="middle" font-size="10" fill="#1e40af">한 층만 · 측정 가능</text>
+  <rect x="780" y="170" width="180" height="115" rx="10" fill="#ffffff"/>
+  <rect x="780" y="170" width="180" height="115" rx="10" fill="#d1fae5" stroke="#059669" stroke-width="1.5"/>
+  <circle cx="870.0" cy="192" r="13" fill="#059669"/>
+  <text x="870.0" y="197" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff" font-family="JetBrains Mono, monospace">4</text>
+  <text x="870.0" y="224" text-anchor="middle" font-size="14" font-weight="700" fill="#064e3b">Verify</text>
+  <text x="870.0" y="242" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#047857">evalset 에 추가</text>
+  <text x="870.0" y="256" text-anchor="middle" font-size="10" fill="#047857">회귀 테스트 · 재현 보장</text>
+  <path d="M 242,227.5 L 298,227.5" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 482,227.5 L 538,227.5" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 722,227.5 L 778,227.5" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 870.0 287 C 870.0 367, 150.0 367, 150.0 168" stroke="#059669" stroke-width="1.5" fill="none" marker-end="url(#arr-token)" stroke-dasharray="5,3"/>
+  <rect x="394.0" y="360" width="212" height="18" rx="4" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.8"/>
+  <text x="500.0" y="373" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#475569">다음 실패 트리거 시 같은 루프 반복 (영구 개선)</text>
+</svg>

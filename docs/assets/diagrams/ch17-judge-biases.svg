@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 460" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#f1f5f9" stroke-width="0.5"/>
+    </pattern>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#6b7280"/></marker>
+    <marker id="arr-input" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#2563eb"/></marker>
+    <marker id="arr-llm" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ea580c"/></marker>
+    <marker id="arr-model" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#7c3aed"/></marker>
+    <marker id="arr-token" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-output" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-gate" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ca8a04"/></marker>
+    <marker id="arr-tool" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#0891b2"/></marker>
+    <marker id="arr-memory" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#db2777"/></marker>
+    <marker id="arr-error" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#dc2626"/></marker>
+  </defs>
+  <rect width="1080" height="460" fill="#ffffff"/>
+  <rect width="1080" height="460" fill="url(#grid)"/>
+  <text x="540" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">Judge 의 4가지 편향 — 인지하고 보정한다</text>
+  <text x="540" y="58" text-anchor="middle" font-size="12" fill="#64748b">순진하게 Judge 를 쓰면 실제 품질이 아니라 편향이 점수가 된다.</text>
+  <rect x="40" y="100" width="480" height="140" rx="10" fill="#ffffff"/>
+  <rect x="40" y="100" width="480" height="140" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="60" y="128" font-size="15" font-weight="700" fill="#7f1d1d">1. Position Bias</text>
+  <text x="60" y="148" font-size="12" font-family="JetBrains Mono, monospace" fill="#b91c1c">A·B 순서에 따라 결과가 달라짐</text>
+  <text x="60" y="176" font-size="11" fill="#b91c1c">• Judge 가 첫 번째 응답을 선호하는 경향</text>
+  <text x="60" y="196" font-size="11" fill="#b91c1c">• 완화: A·B 순서 뒤집어 2회 → 평균</text>
+  <text x="60" y="216" font-size="11" fill="#b91c1c">• 측정: 뒤집기 전후 결정 일치율 (&lt;0.8 주의)</text>
+  <rect x="560" y="100" width="480" height="140" rx="10" fill="#ffffff"/>
+  <rect x="560" y="100" width="480" height="140" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="580" y="128" font-size="15" font-weight="700" fill="#7f1d1d">2. Length Bias</text>
+  <text x="580" y="148" font-size="12" font-family="JetBrains Mono, monospace" fill="#b91c1c">긴 응답을 품질 좋다고 착각</text>
+  <text x="580" y="176" font-size="11" fill="#b91c1c">• 토큰 많을수록 "자세해 보인다"로 가중</text>
+  <text x="580" y="196" font-size="11" fill="#b91c1c">• 완화: rubric 에 "간결성도 점수" 명시</text>
+  <text x="580" y="216" font-size="11" fill="#b91c1c">• 측정: 응답 길이 vs 점수 상관관계 확인</text>
+  <rect x="40" y="270" width="480" height="140" rx="10" fill="#ffffff"/>
+  <rect x="40" y="270" width="480" height="140" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="60" y="298" font-size="15" font-weight="700" fill="#7f1d1d">3. Self-Preference</text>
+  <text x="60" y="318" font-size="12" font-family="JetBrains Mono, monospace" fill="#b91c1c">Judge 가 자기 계열 모델을 편애</text>
+  <text x="60" y="346" font-size="11" fill="#b91c1c">• Claude Judge 가 Claude 응답 선호 경향</text>
+  <text x="60" y="366" font-size="11" fill="#b91c1c">• 완화: Judge 모델과 평가 대상 모델 분리</text>
+  <text x="60" y="386" font-size="11" fill="#b91c1c">• 측정: 같은 응답을 다른 Judge 로도 평가 비교</text>
+  <rect x="560" y="270" width="480" height="140" rx="10" fill="#ffffff"/>
+  <rect x="560" y="270" width="480" height="140" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="580" y="298" font-size="15" font-weight="700" fill="#7f1d1d">4. Verbosity / Confidence Bias</text>
+  <text x="580" y="318" font-size="12" font-family="JetBrains Mono, monospace" fill="#b91c1c">자신감 있게 쓴 걸 맞다고 판정</text>
+  <text x="580" y="346" font-size="11" fill="#b91c1c">• hedging 없는 단정적 어조 선호</text>
+  <text x="580" y="366" font-size="11" fill="#b91c1c">• 완화: rubric 에 "근거 제시 여부" 포함</text>
+  <text x="580" y="386" font-size="11" fill="#b91c1c">• 측정: 의도적 오답(자신감↑) 섞어 판별력 확인</text>
+  <rect x="40" y="400" width="1000" height="40" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="540.0" y="419" text-anchor="middle" font-size="12" fill="#334155">각 편향은 독립이 아니라 섞여 나타난다. 1·2 는 pairwise 고유 · 3·4 는 rubric 에서도 발생.</text>
+  <text x="540.0" y="433" text-anchor="middle" font-size="11" fill="#64748b">주기적 human sample (&gt;= 주 10건) 으로 drift 모니터링</text>
+</svg>
