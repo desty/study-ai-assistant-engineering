@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 520" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#f1f5f9" stroke-width="0.5"/>
+    </pattern>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#6b7280"/></marker>
+    <marker id="arr-input" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#2563eb"/></marker>
+    <marker id="arr-llm" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ea580c"/></marker>
+    <marker id="arr-model" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#7c3aed"/></marker>
+    <marker id="arr-token" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-output" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-gate" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ca8a04"/></marker>
+    <marker id="arr-tool" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#0891b2"/></marker>
+    <marker id="arr-memory" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#db2777"/></marker>
+    <marker id="arr-error" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#dc2626"/></marker>
+  </defs>
+  <rect width="1120" height="520" fill="#ffffff"/>
+  <rect width="1120" height="520" fill="url(#grid)"/>
+  <text x="560" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">ACI Anatomy — 잘 설계된 Tool 의 5요소</text>
+  <text x="560" y="58" text-anchor="middle" font-size="12" fill="#64748b">LLM 은 이 5가지로만 툴을 이해한다. 하나라도 모호하면 실패.</text>
+  <rect x="40" y="90" width="480" height="380" rx="12" fill="#cffafe" stroke="#0891b2" stroke-width="1.8"/>
+  <text x="60" y="118" font-size="14" font-weight="700" fill="#083344" font-family="JetBrains Mono, monospace">tool_schema.json</text>
+  <line x1="40" y1="132" x2="520" y2="132" stroke="#0891b2" stroke-width="1"/>
+  <text x="72" y="152" font-size="12" font-family="JetBrains Mono, monospace" fill="#083344">{</text>
+  <circle cx="54" cy="168" r="9" fill="#0891b2"/>
+  <text x="54" y="172" text-anchor="middle" font-size="10" font-weight="700" fill="#ffffff">①</text>
+  <text x="72" y="172" font-size="12" font-family="JetBrains Mono, monospace" fill="#083344">  "name": "get_order",</text>
+  <circle cx="54" cy="188" r="9" fill="#0891b2"/>
+  <text x="54" y="192" text-anchor="middle" font-size="10" font-weight="700" fill="#ffffff">②</text>
+  <text x="72" y="192" font-size="12" font-family="JetBrains Mono, monospace" fill="#083344">  "description": "주문 id 로 주문 상세 정보(상태 · 일수 ·</text>
+  <text x="72" y="212" font-size="12" font-family="JetBrains Mono, monospace" fill="#083344">                 사용 여부)를 조회한다. 환불 가능 여부</text>
+  <text x="72" y="232" font-size="12" font-family="JetBrains Mono, monospace" fill="#083344">                 판단 시 필수."</text>
+  <circle cx="54" cy="248" r="9" fill="#0891b2"/>
+  <text x="54" y="252" text-anchor="middle" font-size="10" font-weight="700" fill="#ffffff">③</text>
+  <text x="72" y="252" font-size="12" font-family="JetBrains Mono, monospace" fill="#083344">  "input_schema": {</text>
+  <text x="72" y="272" font-size="12" font-family="JetBrains Mono, monospace" fill="#083344">    "type": "object",</text>
+  <text x="72" y="292" font-size="12" font-family="JetBrains Mono, monospace" fill="#083344">    "properties": {</text>
+  <text x="72" y="312" font-size="12" font-family="JetBrains Mono, monospace" fill="#083344">      "order_id": {</text>
+  <text x="72" y="332" font-size="12" font-family="JetBrains Mono, monospace" fill="#083344">        "type": "string",</text>
+  <text x="72" y="352" font-size="12" font-family="JetBrains Mono, monospace" fill="#083344">        "pattern": "^O-[0-9]{4}$"</text>
+  <text x="72" y="372" font-size="12" font-family="JetBrains Mono, monospace" fill="#083344">      }</text>
+  <text x="72" y="392" font-size="12" font-family="JetBrains Mono, monospace" fill="#083344">    },</text>
+  <text x="72" y="412" font-size="12" font-family="JetBrains Mono, monospace" fill="#083344">    "required": ["order_id"]</text>
+  <text x="72" y="432" font-size="12" font-family="JetBrains Mono, monospace" fill="#083344">  }</text>
+  <text x="72" y="452" font-size="12" font-family="JetBrains Mono, monospace" fill="#083344">}</text>
+  <circle cx="588" cy="114" r="16" fill="#2563eb"/>
+  <text x="588" y="119" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">①</text>
+  <text x="614" y="110" font-size="14" font-weight="700" fill="#0d47a1">Name</text>
+  <text x="614" y="126" font-size="11" font-family="JetBrains Mono, monospace" fill="#1e40af">snake_case · 동사 중심</text>
+  <text x="614" y="144" font-size="11" fill="#1e40af">• 겹치지 않게 · 의미가 name 에 드러나야</text>
+  <circle cx="588" cy="186" r="16" fill="#ca8a04"/>
+  <text x="588" y="191" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">②</text>
+  <text x="614" y="182" font-size="14" font-weight="700" fill="#713f12">Description</text>
+  <text x="614" y="198" font-size="11" font-family="JetBrains Mono, monospace" fill="#a16207">"무엇을 · 언제 쓰는지"</text>
+  <text x="614" y="216" font-size="11" fill="#a16207">• 1~3 문장 · 선택 기준 포함 · LLM 이 이걸로 고름</text>
+  <circle cx="588" cy="258" r="16" fill="#db2777"/>
+  <text x="588" y="263" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">③</text>
+  <text x="614" y="254" font-size="14" font-weight="700" fill="#500724">Input Schema</text>
+  <text x="614" y="270" font-size="11" font-family="JetBrains Mono, monospace" fill="#be185d">JSON Schema · type/pattern</text>
+  <text x="614" y="288" font-size="11" fill="#be185d">• required 명시 · pattern 으로 형식 강제</text>
+  <circle cx="588" cy="330" r="16" fill="#059669"/>
+  <text x="588" y="335" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">④</text>
+  <text x="614" y="326" font-size="14" font-weight="700" fill="#064e3b">Return Shape</text>
+  <text x="614" y="342" font-size="11" font-family="JetBrains Mono, monospace" fill="#047857">간결한 dict/str</text>
+  <text x="614" y="360" font-size="11" fill="#047857">• 2KB 내외 · 불필요 필드 제거 · 토큰 아끼기</text>
+  <circle cx="588" cy="402" r="16" fill="#dc2626"/>
+  <text x="588" y="407" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">⑤</text>
+  <text x="614" y="398" font-size="14" font-weight="700" fill="#7f1d1d">Error Contract</text>
+  <text x="614" y="414" font-size="11" font-family="JetBrains Mono, monospace" fill="#b91c1c">ERROR: <원인> 문자열</text>
+  <text x="614" y="432" font-size="11" fill="#b91c1c">• raise 금지 · LLM 이 보고 재시도 가능하게</text>
+</svg>

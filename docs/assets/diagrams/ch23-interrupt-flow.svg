@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1160 440" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#f1f5f9" stroke-width="0.5"/>
+    </pattern>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#6b7280"/></marker>
+    <marker id="arr-input" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#2563eb"/></marker>
+    <marker id="arr-llm" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ea580c"/></marker>
+    <marker id="arr-model" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#7c3aed"/></marker>
+    <marker id="arr-token" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-output" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-gate" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ca8a04"/></marker>
+    <marker id="arr-tool" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#0891b2"/></marker>
+    <marker id="arr-memory" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#db2777"/></marker>
+    <marker id="arr-error" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#dc2626"/></marker>
+  </defs>
+  <rect width="1160" height="440" fill="#ffffff"/>
+  <rect width="1160" height="440" fill="url(#grid)"/>
+  <text x="580" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">Interrupt · Checkpoint · Resume — 인간 게이트 패턴</text>
+  <text x="580" y="58" text-anchor="middle" font-size="12" fill="#64748b">Agent 를 일시 중지, 상태 저장, 외부 이벤트로 재개. LangGraph 의 킬러 기능.</text>
+  <rect x="50" y="150" width="140" height="95" rx="10" fill="#ffffff"/>
+  <rect x="50" y="150" width="140" height="95" rx="10" fill="#e3f2fd" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="120.0" y="174" text-anchor="middle" font-size="12" font-weight="700" fill="#0d47a1">user 요청</text>
+  <text x="120.0" y="230" text-anchor="middle" font-size="10" font-family="JetBrains Mono, monospace" fill="#1e40af">"환불해줘"</text>
+  <rect x="230" y="150" width="140" height="95" rx="10" fill="#ffffff"/>
+  <rect x="230" y="150" width="140" height="95" rx="10" fill="#f3e8ff" stroke="#7c3aed" stroke-width="1.5"/>
+  <circle cx="300.0" cy="168" r="13" fill="#7c3aed"/>
+  <text x="300.0" y="173" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff" font-family="JetBrains Mono, monospace">1</text>
+  <text x="300.0" y="196" text-anchor="middle" font-size="12" font-weight="700" fill="#4c1d95">LLM</text>
+  <text x="300.0" y="223" text-anchor="middle" font-size="10" font-family="JetBrains Mono, monospace" fill="#6d28d9">의도 분류</text>
+  <text x="300.0" y="237" text-anchor="middle" font-size="10" font-family="JetBrains Mono, monospace" fill="#6d28d9">→ refund</text>
+  <rect x="420" y="150" width="140" height="95" rx="10" fill="#ffffff"/>
+  <rect x="420" y="150" width="140" height="95" rx="10" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+  <circle cx="490.0" cy="168" r="13" fill="#ca8a04"/>
+  <text x="490.0" y="173" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff" font-family="JetBrains Mono, monospace">2</text>
+  <text x="490.0" y="196" text-anchor="middle" font-size="12" font-weight="700" fill="#713f12">refund_check</text>
+  <text x="490.0" y="210" text-anchor="middle" font-size="12" font-weight="700" fill="#713f12">node</text>
+  <text x="490.0" y="223" text-anchor="middle" font-size="10" font-family="JetBrains Mono, monospace" fill="#a16207">risky →</text>
+  <text x="490.0" y="237" text-anchor="middle" font-size="10" font-family="JetBrains Mono, monospace" fill="#a16207">interrupt()</text>
+  <rect x="620" y="150" width="140" height="95" rx="10" fill="#ffffff"/>
+  <rect x="620" y="150" width="140" height="95" rx="10" fill="#fce7f3" stroke="#db2777" stroke-width="1.5"/>
+  <circle cx="690.0" cy="168" r="13" fill="#db2777"/>
+  <text x="690.0" y="173" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff" font-family="JetBrains Mono, monospace">3</text>
+  <text x="690.0" y="196" text-anchor="middle" font-size="12" font-weight="700" fill="#500724">Checkpoint</text>
+  <text x="690.0" y="223" text-anchor="middle" font-size="10" font-family="JetBrains Mono, monospace" fill="#be185d">state 저장</text>
+  <text x="690.0" y="237" text-anchor="middle" font-size="10" font-family="JetBrains Mono, monospace" fill="#be185d">thread_id=abc</text>
+  <rect x="810" y="150" width="140" height="95" rx="10" fill="#ffffff"/>
+  <rect x="810" y="150" width="140" height="95" rx="10" fill="#fce7f3" stroke="#db2777" stroke-width="1.5"/>
+  <text x="880.0" y="174" text-anchor="middle" font-size="12" font-weight="700" fill="#500724">Human</text>
+  <text x="880.0" y="188" text-anchor="middle" font-size="12" font-weight="700" fill="#500724">승인</text>
+  <text x="880.0" y="223" text-anchor="middle" font-size="10" font-family="JetBrains Mono, monospace" fill="#be185d">Slack · 대시보드</text>
+  <text x="880.0" y="237" text-anchor="middle" font-size="10" font-family="JetBrains Mono, monospace" fill="#be185d">승인 버튼</text>
+  <rect x="990" y="150" width="140" height="95" rx="10" fill="#ffffff"/>
+  <rect x="990" y="150" width="140" height="95" rx="10" fill="#d1fae5" stroke="#059669" stroke-width="1.5"/>
+  <circle cx="1060.0" cy="168" r="13" fill="#059669"/>
+  <text x="1060.0" y="173" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff" font-family="JetBrains Mono, monospace">4</text>
+  <text x="1060.0" y="196" text-anchor="middle" font-size="12" font-weight="700" fill="#064e3b">Resume</text>
+  <text x="1060.0" y="223" text-anchor="middle" font-size="10" font-family="JetBrains Mono, monospace" fill="#047857">invoke(thread=</text>
+  <text x="1060.0" y="237" text-anchor="middle" font-size="10" font-family="JetBrains Mono, monospace" fill="#047857"> abc) 재개</text>
+  <path d="M 192,197.5 L 228,197.5" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 372,197.5 L 418,197.5" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 562,197.5 L 618,197.5" stroke="#dc2626" stroke-width="1.8" fill="none" marker-end="url(#arr-error)"/>
+  <rect x="564.5" y="170.5" width="51" height="18" rx="4" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.8"/>
+  <text x="590.0" y="183.5" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#475569">pause</text>
+  <path d="M 762,197.5 L 808,197.5" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 952,197.5 L 988,197.5" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <ellipse cx="690.0" cy="285" rx="25" ry="8" fill="#db2777"/>
+  <rect x="665.0" y="277" width="50" height="20" fill="#db2777"/>
+  <ellipse cx="690.0" cy="297" rx="25" ry="8" fill="#db2777"/>
+  <text x="690.0" y="325" text-anchor="middle" font-size="10" font-family="JetBrains Mono, monospace" fill="#be185d">SqliteSaver</text>
+  <text x="690.0" y="339" text-anchor="middle" font-size="10" font-family="JetBrains Mono, monospace" fill="#be185d">PostgresSaver</text>
+  <line x1="690.0" y1="250" x2="690.0" y2="275" stroke="#db2777" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <line x1="40" y1="345" x2="1120" y2="345" stroke="#4b5563" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="40" y="360" font-size="10" fill="#334155" font-family="JetBrains Mono, monospace">t₀</text>
+  <text x="1120" y="360" text-anchor="end" font-size="10" fill="#334155" font-family="JetBrains Mono, monospace">시간</text>
+</svg>

@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1160 460" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#f1f5f9" stroke-width="0.5"/>
+    </pattern>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#6b7280"/></marker>
+    <marker id="arr-input" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#2563eb"/></marker>
+    <marker id="arr-llm" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ea580c"/></marker>
+    <marker id="arr-model" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#7c3aed"/></marker>
+    <marker id="arr-token" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-output" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-gate" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ca8a04"/></marker>
+    <marker id="arr-tool" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#0891b2"/></marker>
+    <marker id="arr-memory" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#db2777"/></marker>
+    <marker id="arr-error" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#dc2626"/></marker>
+  </defs>
+  <rect width="1160" height="460" fill="#ffffff"/>
+  <rect width="1160" height="460" fill="url(#grid)"/>
+  <text x="580" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">Approval Flow — 고위험 Action 툴의 human-in-loop</text>
+  <text x="580" y="58" text-anchor="middle" font-size="12" fill="#64748b">Data 툴은 자동 · Action 툴은 승인 · Orchestration 은 상황에 따라</text>
+  <rect x="40" y="180" width="130" height="60" rx="10" fill="#ffffff"/>
+  <rect x="40" y="180" width="130" height="60" rx="10" fill="#e3f2fd" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="105.0" y="206.0" text-anchor="middle" font-size="14" font-weight="700" fill="#0d47a1">User</text>
+  <text x="105.0" y="222.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#1e40af">request</text>
+  <rect x="230" y="180" width="130" height="80" rx="10" fill="#ffffff"/>
+  <rect x="230" y="180" width="130" height="80" rx="10" fill="#f3e8ff" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="295.0" y="216.0" text-anchor="middle" font-size="14" font-weight="700" fill="#4c1d95">LLM</text>
+  <text x="295.0" y="232.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#6d28d9">tool 선택</text>
+  <text x="295.0" y="248.0" text-anchor="middle" font-size="10" fill="#6d28d9">risk 분류</text>
+  <rect x="510" y="90" width="130" height="60" rx="10" fill="#ffffff"/>
+  <rect x="510" y="90" width="130" height="60" rx="10" fill="#cffafe" stroke="#0891b2" stroke-width="1.5"/>
+  <text x="575.0" y="116.0" text-anchor="middle" font-size="14" font-weight="700" fill="#083344">Data Tool</text>
+  <text x="575.0" y="132.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#0e7490">auto · safe</text>
+  <rect x="680" y="90" width="130" height="60" rx="10" fill="#ffffff"/>
+  <rect x="680" y="90" width="130" height="60" rx="10" fill="#d1fae5" stroke="#059669" stroke-width="1.5"/>
+  <text x="745.0" y="116.0" text-anchor="middle" font-size="14" font-weight="700" fill="#064e3b">실행</text>
+  <text x="745.0" y="132.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#047857">즉시</text>
+  <rect x="510" y="200" width="130" height="60" rx="10" fill="#ffffff"/>
+  <rect x="510" y="200" width="130" height="60" rx="10" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+  <text x="575.0" y="226.0" text-anchor="middle" font-size="14" font-weight="700" fill="#713f12">Action Tool</text>
+  <text x="575.0" y="242.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#a16207">승인 필요</text>
+  <rect x="680" y="200" width="130" height="60" rx="10" fill="#ffffff"/>
+  <rect x="680" y="200" width="130" height="60" rx="10" fill="#fce7f3" stroke="#db2777" stroke-width="1.5"/>
+  <text x="745.0" y="226.0" text-anchor="middle" font-size="14" font-weight="700" fill="#500724">Approval</text>
+  <text x="745.0" y="242.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#be185d">queue</text>
+  <rect x="850" y="200" width="130" height="60" rx="10" fill="#ffffff"/>
+  <rect x="850" y="200" width="130" height="60" rx="10" fill="#fce7f3" stroke="#db2777" stroke-width="1.5"/>
+  <text x="915.0" y="226.0" text-anchor="middle" font-size="14" font-weight="700" fill="#500724">Human</text>
+  <text x="915.0" y="242.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#be185d">승인/거부</text>
+  <rect x="1020" y="200" width="130" height="60" rx="10" fill="#ffffff"/>
+  <rect x="1020" y="200" width="130" height="60" rx="10" fill="#d1fae5" stroke="#059669" stroke-width="1.5"/>
+  <text x="1085.0" y="226.0" text-anchor="middle" font-size="14" font-weight="700" fill="#064e3b">실행</text>
+  <text x="1085.0" y="242.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#047857">승인 후</text>
+  <rect x="510" y="310" width="130" height="60" rx="10" fill="#ffffff"/>
+  <rect x="510" y="310" width="130" height="60" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="575.0" y="336.0" text-anchor="middle" font-size="14" font-weight="700" fill="#7f1d1d">거부</text>
+  <text x="575.0" y="352.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#b91c1c">LLM 에 알림</text>
+  <path d="M 172,210.0 L 230,220.0" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 362,200 L 510,120.0" stroke="#059669" stroke-width="1.5" fill="none" marker-end="url(#arr-output)"/>
+  <rect x="414.0" y="133.0" width="44" height="18" rx="4" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.8"/>
+  <text x="436.0" y="146.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#475569">safe</text>
+  <path d="M 642,120.0 L 680,120.0" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 362,220.0 L 510,230.0" stroke="#ca8a04" stroke-width="1.5" fill="none" marker-end="url(#arr-gate)" stroke-dasharray="3,3"/>
+  <rect x="410.5" y="198.0" width="51" height="18" rx="4" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.8"/>
+  <text x="436.0" y="211.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#475569">risky</text>
+  <path d="M 642,230.0 L 680,230.0" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 812,230.0 L 850,230.0" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 982,230.0 L 1020,230.0" stroke="#059669" stroke-width="1.5" fill="none" marker-end="url(#arr-output)"/>
+  <rect x="968.5" y="203.0" width="65" height="18" rx="4" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.8"/>
+  <text x="1001.0" y="216.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#475569">approve</text>
+  <path d="M 915.0,262 L 640,340.0" stroke="#dc2626" stroke-width="1.8" fill="none" marker-end="url(#arr-error)"/>
+  <rect x="748.5" y="274.0" width="58" height="18" rx="4" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.8"/>
+  <text x="777.5" y="287.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#475569">reject</text>
+  <path d="M 745.0 152 C 745.0 240, 295.0 310, 295.0 262" stroke="#059669" stroke-width="1.5" fill="none" marker-end="url(#arr-token)" stroke-dasharray="5,3"/>
+  <rect x="40" y="400" width="1080" height="40" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="580.0" y="420" text-anchor="middle" font-size="12" fill="#334155">Data 툴 (조회 · 안전) = 자동. Action 툴 (결제 · 삭제 · 전송) = 승인 큐 경유. 룰은 tool metadata 에 박아둔다.</text>
+  <text x="580.0" y="434" text-anchor="middle" font-size="11" fill="#64748b">승인 대기 중 agent 는 일시중지 (LangGraph interrupt · Ch 23)</text>
+</svg>

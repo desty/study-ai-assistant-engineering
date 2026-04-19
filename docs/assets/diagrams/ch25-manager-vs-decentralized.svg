@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1160 500" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#f1f5f9" stroke-width="0.5"/>
+    </pattern>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#6b7280"/></marker>
+    <marker id="arr-input" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#2563eb"/></marker>
+    <marker id="arr-llm" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ea580c"/></marker>
+    <marker id="arr-model" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#7c3aed"/></marker>
+    <marker id="arr-token" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-output" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-gate" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ca8a04"/></marker>
+    <marker id="arr-tool" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#0891b2"/></marker>
+    <marker id="arr-memory" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#db2777"/></marker>
+    <marker id="arr-error" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#dc2626"/></marker>
+  </defs>
+  <rect width="1160" height="500" fill="#ffffff"/>
+  <rect width="1160" height="500" fill="url(#grid)"/>
+  <text x="580" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">Multi-Agent 2패턴 — Manager vs Decentralized</text>
+  <text x="580" y="58" text-anchor="middle" font-size="12" fill="#64748b">중앙이 지시하냐(Manager) / 동료끼리 넘기냐(Decentralized). 트레이드오프 다름.</text>
+  <rect x="60" y="90" width="500" height="360" rx="12" fill="rgba(124,58,237,0.04)" stroke="#7c3aed" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="72" y="108" font-size="10" font-weight="700" fill="#7c3aed" font-family="JetBrains Mono, monospace">MANAGER · 중앙 지시</text>
+  <rect x="600" y="90" width="500" height="360" rx="12" fill="rgba(234,88,12,0.04)" stroke="#ea580c" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="612" y="108" font-size="10" font-weight="700" fill="#ea580c" font-family="JetBrains Mono, monospace">DECENTRALIZED · 피어 핸드오프</text>
+  <rect x="260" y="150" width="100" height="50" rx="10" fill="#ffffff"/>
+  <rect x="260" y="150" width="100" height="50" rx="10" fill="#f3e8ff" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="310.0" y="171.0" text-anchor="middle" font-size="14" font-weight="700" fill="#4c1d95">Manager</text>
+  <text x="310.0" y="187.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#6d28d9">계획·합치기</text>
+  <rect x="140" y="280" width="100" height="50" rx="10" fill="#ffffff"/>
+  <rect x="140" y="280" width="100" height="50" rx="10" fill="#cffafe" stroke="#0891b2" stroke-width="1.5"/>
+  <text x="190.0" y="301.0" text-anchor="middle" font-size="14" font-weight="700" fill="#083344">Researcher</text>
+  <text x="190.0" y="317.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#0e7490">worker</text>
+  <rect x="260" y="280" width="100" height="50" rx="10" fill="#ffffff"/>
+  <rect x="260" y="280" width="100" height="50" rx="10" fill="#e3f2fd" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="310.0" y="301.0" text-anchor="middle" font-size="14" font-weight="700" fill="#0d47a1">Writer</text>
+  <text x="310.0" y="317.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#1e40af">worker</text>
+  <rect x="380" y="280" width="100" height="50" rx="10" fill="#ffffff"/>
+  <rect x="380" y="280" width="100" height="50" rx="10" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+  <text x="430.0" y="301.0" text-anchor="middle" font-size="14" font-weight="700" fill="#713f12">Critic</text>
+  <text x="430.0" y="317.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#a16207">worker</text>
+  <path d="M 310.0,202 L 190.0,278" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 190.0,332 L 310.0,260" stroke="#059669" stroke-width="1.5" fill="none" marker-end="url(#arr-token)" stroke-dasharray="5,3"/>
+  <path d="M 310.0,202 L 310.0,278" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 310.0,332 L 310.0,260" stroke="#059669" stroke-width="1.5" fill="none" marker-end="url(#arr-token)" stroke-dasharray="5,3"/>
+  <path d="M 310.0,202 L 430.0,278" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 430.0,332 L 310.0,260" stroke="#059669" stroke-width="1.5" fill="none" marker-end="url(#arr-token)" stroke-dasharray="5,3"/>
+  <rect x="260" y="420" width="100" height="50" rx="10" fill="#ffffff"/>
+  <rect x="260" y="420" width="100" height="50" rx="10" fill="#d1fae5" stroke="#059669" stroke-width="1.5"/>
+  <text x="310.0" y="441.0" text-anchor="middle" font-size="14" font-weight="700" fill="#064e3b">응답</text>
+  <text x="310.0" y="457.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#047857">Manager 통합</text>
+  <path d="M 310.0,275 L 310.0,418" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <text x="80" y="370" font-size="11" fill="#6d28d9">✓ 디버깅 쉬움 (중앙 로그)</text>
+  <text x="80" y="388" font-size="11" fill="#6d28d9">✓ 실패 격리 용이</text>
+  <text x="80" y="406" font-size="11" fill="#6d28d9">✗ Manager 병목 (모든 토큰 통과)</text>
+  <text x="80" y="424" font-size="11" fill="#6d28d9">✗ 창발적 협업 제한</text>
+  <rect x="660" y="220" width="100" height="50" rx="10" fill="#ffffff"/>
+  <rect x="660" y="220" width="100" height="50" rx="10" fill="#cffafe" stroke="#0891b2" stroke-width="1.5"/>
+  <text x="710.0" y="241.0" text-anchor="middle" font-size="14" font-weight="700" fill="#083344">Researcher</text>
+  <text x="710.0" y="257.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#0e7490">peer</text>
+  <rect x="790" y="220" width="100" height="50" rx="10" fill="#ffffff"/>
+  <rect x="790" y="220" width="100" height="50" rx="10" fill="#e3f2fd" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="840.0" y="241.0" text-anchor="middle" font-size="14" font-weight="700" fill="#0d47a1">Writer</text>
+  <text x="840.0" y="257.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#1e40af">peer</text>
+  <rect x="920" y="220" width="100" height="50" rx="10" fill="#ffffff"/>
+  <rect x="920" y="220" width="100" height="50" rx="10" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+  <text x="970.0" y="241.0" text-anchor="middle" font-size="14" font-weight="700" fill="#713f12">Critic</text>
+  <text x="970.0" y="257.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#a16207">peer</text>
+  <path d="M 762,245.0 L 790,245.0" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <rect x="743.5" y="218.0" width="65" height="18" rx="4" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.8"/>
+  <text x="776.0" y="231.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#475569">handoff</text>
+  <path d="M 892,245.0 L 920,245.0" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <rect x="873.5" y="218.0" width="65" height="18" rx="4" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.8"/>
+  <text x="906.0" y="231.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#475569">handoff</text>
+  <path d="M 970.0 272 C 970.0 330, 840.0 330, 840.0 272" stroke="#059669" stroke-width="1.5" fill="none" marker-end="url(#arr-token)" stroke-dasharray="5,3"/>
+  <rect x="876.0" y="333" width="58" height="18" rx="4" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.8"/>
+  <text x="905.0" y="346" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#475569">재작성 요청</text>
+  <rect x="630" y="400" width="100" height="50" rx="10" fill="#ffffff"/>
+  <rect x="630" y="400" width="100" height="50" rx="10" fill="#e3f2fd" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="680.0" y="421.0" text-anchor="middle" font-size="14" font-weight="700" fill="#0d47a1">User</text>
+  <text x="680.0" y="437.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#1e40af">요청</text>
+  <path d="M 732,425.0 L 690.0,278" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <rect x="970" y="400" width="100" height="50" rx="10" fill="#ffffff"/>
+  <rect x="970" y="400" width="100" height="50" rx="10" fill="#d1fae5" stroke="#059669" stroke-width="1.5"/>
+  <text x="1020.0" y="421.0" text-anchor="middle" font-size="14" font-weight="700" fill="#064e3b">응답</text>
+  <text x="1020.0" y="437.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#047857">Critic 승인 후</text>
+  <path d="M 990.0,278 L 1010.0,420.0" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <text x="620" y="370" font-size="11" fill="#c2410c">✓ 각 agent 독립 · 병목 없음</text>
+  <text x="620" y="388" font-size="11" fill="#c2410c">✓ 창발적 협업 · 유연</text>
+  <text x="620" y="406" font-size="11" fill="#c2410c">✗ 무한 토스 루프 위험</text>
+  <text x="620" y="424" font-size="11" fill="#c2410c">✗ 누가 끝낼지 불명확</text>
+  <rect x="40" y="460" width="1080" height="32" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="580.0" y="481" text-anchor="middle" font-size="12" fill="#334155">의심되면 Manager. Decentralized 는 문제에 대한 확신이 있을 때만.</text>
+</svg>

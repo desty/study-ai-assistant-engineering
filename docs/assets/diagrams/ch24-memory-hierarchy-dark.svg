@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1160 480" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/>
+    </pattern>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#64748b"/></marker>
+    <marker id="arr-input" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#60a5fa"/></marker>
+    <marker id="arr-llm" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#fb923c"/></marker>
+    <marker id="arr-model" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#a78bfa"/></marker>
+    <marker id="arr-token" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#34d399"/></marker>
+    <marker id="arr-output" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#34d399"/></marker>
+    <marker id="arr-gate" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#fbbf24"/></marker>
+    <marker id="arr-tool" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#22d3ee"/></marker>
+    <marker id="arr-memory" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#f472b6"/></marker>
+    <marker id="arr-error" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#f87171"/></marker>
+  </defs>
+  <rect width="1160" height="480" fill="#020617"/>
+  <rect width="1160" height="480" fill="url(#grid)"/>
+  <text x="580" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#f1f5f9">Agent 메모리 4계층 — 보존 기간 × 크기 × 용도</text>
+  <text x="580" y="58" text-anchor="middle" font-size="12" fill="#94a3b8">인간 기억 구조에서 빌려옴. LLM agent 도 이 계층을 섞어 쓴다.</text>
+  <rect x="27" y="100" width="260" height="310" rx="12" fill="#0f172a"/>
+  <rect x="27" y="100" width="260" height="310" rx="12" fill="rgba(96,165,250,0.15)" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="157.0" y="132" text-anchor="middle" font-size="17" font-weight="700" fill="#bfdbfe">① Sensory</text>
+  <text x="45" y="166" font-size="11" font-weight="700" font-family="JetBrains Mono, monospace" fill="#60a5fa">보존: ~초</text>
+  <text x="45" y="184" font-size="11" font-weight="700" font-family="JetBrains Mono, monospace" fill="#60a5fa">크기: 원시 입력</text>
+  <line x1="45" y1="200" x2="269" y2="200" stroke="#60a5fa" stroke-width="0.8" stroke-dasharray="3,2"/>
+  <text x="45" y="220" font-size="11" font-weight="700" fill="#bfdbfe">예시:</text>
+  <text x="55" y="240" font-size="11" fill="#60a5fa">• 사용자 방금 발화</text>
+  <text x="55" y="260" font-size="11" fill="#60a5fa">• tool 방금 결과</text>
+  <text x="55" y="280" font-size="11" fill="#60a5fa">• 즉시 버려짐</text>
+  <rect x="41" y="348" width="232" height="48" rx="6" fill="#0f172a" stroke="#60a5fa" stroke-width="0.8" stroke-dasharray="3,2"/>
+  <text x="157.0" y="368" text-anchor="middle" font-size="10" font-weight="700" fill="#bfdbfe" font-family="JetBrains Mono, monospace">구현</text>
+  <text x="157.0" y="384" text-anchor="middle" font-size="10" fill="#60a5fa" font-family="JetBrains Mono, monospace">컨텍스트 직전 토큰</text>
+  <rect x="309" y="100" width="260" height="310" rx="12" fill="#0f172a"/>
+  <rect x="309" y="100" width="260" height="310" rx="12" fill="rgba(167,139,250,0.15)" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="439.0" y="132" text-anchor="middle" font-size="17" font-weight="700" fill="#ddd6fe">② Working</text>
+  <text x="327" y="166" font-size="11" font-weight="700" font-family="JetBrains Mono, monospace" fill="#a78bfa">보존: 세션</text>
+  <text x="327" y="184" font-size="11" font-weight="700" font-family="JetBrains Mono, monospace" fill="#a78bfa">크기: 수 KB ~ 수십 KB</text>
+  <line x1="327" y1="200" x2="551" y2="200" stroke="#a78bfa" stroke-width="0.8" stroke-dasharray="3,2"/>
+  <text x="327" y="220" font-size="11" font-weight="700" fill="#ddd6fe">예시:</text>
+  <text x="337" y="240" font-size="11" fill="#a78bfa">• 현재 대화 messages</text>
+  <text x="337" y="260" font-size="11" fill="#a78bfa">• state 필드 (intent 등)</text>
+  <text x="337" y="280" font-size="11" fill="#a78bfa">• scratchpad</text>
+  <rect x="323" y="348" width="232" height="48" rx="6" fill="#0f172a" stroke="#a78bfa" stroke-width="0.8" stroke-dasharray="3,2"/>
+  <text x="439.0" y="368" text-anchor="middle" font-size="10" font-weight="700" fill="#ddd6fe" font-family="JetBrains Mono, monospace">구현</text>
+  <text x="439.0" y="384" text-anchor="middle" font-size="10" fill="#a78bfa" font-family="JetBrains Mono, monospace">LangGraph thread state</text>
+  <rect x="591" y="100" width="260" height="310" rx="12" fill="#0f172a"/>
+  <rect x="591" y="100" width="260" height="310" rx="12" fill="rgba(244,114,182,0.15)" stroke="#f472b6" stroke-width="1.5"/>
+  <text x="721.0" y="132" text-anchor="middle" font-size="17" font-weight="700" fill="#fbcfe8">③ Episodic</text>
+  <text x="609" y="166" font-size="11" font-weight="700" font-family="JetBrains Mono, monospace" fill="#f472b6">보존: 수 주 ~ 수 개월</text>
+  <text x="609" y="184" font-size="11" font-weight="700" font-family="JetBrains Mono, monospace" fill="#f472b6">크기: 이벤트당 수 KB</text>
+  <line x1="609" y1="200" x2="833" y2="200" stroke="#f472b6" stroke-width="0.8" stroke-dasharray="3,2"/>
+  <text x="609" y="220" font-size="11" font-weight="700" fill="#fbcfe8">예시:</text>
+  <text x="619" y="240" font-size="11" fill="#f472b6">• 과거 대화 로그</text>
+  <text x="619" y="260" font-size="11" fill="#f472b6">• 특정 사건 (환불 건)</text>
+  <text x="619" y="280" font-size="11" fill="#f472b6">• 시간 정보 포함</text>
+  <rect x="605" y="348" width="232" height="48" rx="6" fill="#0f172a" stroke="#f472b6" stroke-width="0.8" stroke-dasharray="3,2"/>
+  <text x="721.0" y="368" text-anchor="middle" font-size="10" font-weight="700" fill="#fbcfe8" font-family="JetBrains Mono, monospace">구현</text>
+  <text x="721.0" y="384" text-anchor="middle" font-size="10" fill="#f472b6" font-family="JetBrains Mono, monospace">Store · DB · vectorstore</text>
+  <rect x="873" y="100" width="260" height="310" rx="12" fill="#0f172a"/>
+  <rect x="873" y="100" width="260" height="310" rx="12" fill="rgba(52,211,153,0.15)" stroke="#34d399" stroke-width="1.5"/>
+  <text x="1003.0" y="132" text-anchor="middle" font-size="17" font-weight="700" fill="#a7f3d0">④ Semantic</text>
+  <text x="891" y="166" font-size="11" font-weight="700" font-family="JetBrains Mono, monospace" fill="#34d399">보존: 영구</text>
+  <text x="891" y="184" font-size="11" font-weight="700" font-family="JetBrains Mono, monospace" fill="#34d399">크기: 지식 · 선호</text>
+  <line x1="891" y1="200" x2="1115" y2="200" stroke="#34d399" stroke-width="0.8" stroke-dasharray="3,2"/>
+  <text x="891" y="220" font-size="11" font-weight="700" fill="#a7f3d0">예시:</text>
+  <text x="901" y="240" font-size="11" fill="#34d399">• "사용자는 한국어 선호"</text>
+  <text x="901" y="260" font-size="11" fill="#34d399">• 도메인 규칙</text>
+  <text x="901" y="280" font-size="11" fill="#34d399">• 재사용 가능한 사실</text>
+  <rect x="887" y="348" width="232" height="48" rx="6" fill="#0f172a" stroke="#34d399" stroke-width="0.8" stroke-dasharray="3,2"/>
+  <text x="1003.0" y="368" text-anchor="middle" font-size="10" font-weight="700" fill="#a7f3d0" font-family="JetBrains Mono, monospace">구현</text>
+  <text x="1003.0" y="384" text-anchor="middle" font-size="10" fill="#34d399" font-family="JetBrains Mono, monospace">Store (key-value) · 프로필</text>
+  <line x1="27" y1="435" x2="1133" y2="435" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="27" y="453" font-size="11" font-weight="700" fill="#f1f5f9">짧음 · 휘발</text>
+  <text x="1133" y="453" text-anchor="end" font-size="11" font-weight="700" fill="#f1f5f9">길게 · 영구</text>
+</svg>
