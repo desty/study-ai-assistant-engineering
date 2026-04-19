@@ -16,7 +16,7 @@ LLM · RAG · Agent · 모델 · 파인튜닝을 **책처럼 읽고, 실습으�
 </div>
 
 <div class="card" markdown>
-#### :material-google-colab: Colab 원클릭
+#### :simple-googlecolab: Colab 원클릭
 모든 실습은 브라우저에서 바로 실행.
 </div>
 

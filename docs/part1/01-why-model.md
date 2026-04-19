@@ -1,5 +1,9 @@
 # 왜 모델이 필요한가
 
+<a class="colab-badge" href="https://colab.research.google.com/github/desty/study-ai-assistant-engineering/blob/main/notebooks/part1/ch01_why_model.ipynb" target="_blank">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab">
+</a>
+
 !!! abstract "이 챕터에서 배우는 것"
     - **규칙(if-else) 로 풀 문제**와 **모델로 풀 문제**를 구분하는 직관
     - AI Assistant 프로젝트를 시작하기 전 반드시 통과해야 하는 **3가지 판단 기준** (OpenAI 권장)

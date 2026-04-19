@@ -1,6 +1,6 @@
 # Ch 14. LangChain 실전 + 멀티모달 RAG
 
-<a class="colab-badge" href="https://colab.research.google.com/" target="_blank">
+<a class="colab-badge" href="https://colab.research.google.com/github/desty/study-ai-assistant-engineering/blob/main/notebooks/part3/ch14_langchain_multimodal.ipynb" target="_blank">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab">
 </a>
 

@@ -1,6 +1,6 @@
 # Ch 8. Tool Calling 기초
 
-<a class="colab-badge" href="https://colab.research.google.com/" target="_blank">
+<a class="colab-badge" href="https://colab.research.google.com/github/desty/study-ai-assistant-engineering/blob/main/notebooks/part2/ch08_tool_calling.ipynb" target="_blank">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab">
 </a>
 

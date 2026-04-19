@@ -1,6 +1,6 @@
 # Ch 16. 평가셋 만들기
 
-<a class="colab-badge" href="https://colab.research.google.com/" target="_blank">
+<a class="colab-badge" href="https://colab.research.google.com/github/desty/study-ai-assistant-engineering/blob/main/notebooks/part4/ch16_evalset.ipynb" target="_blank">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab">
 </a>
 

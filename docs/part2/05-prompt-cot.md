@@ -1,6 +1,6 @@
 # Ch 5. 프롬프트 엔지니어링 + CoT 기초
 
-<a class="colab-badge" href="https://colab.research.google.com/" target="_blank">
+<a class="colab-badge" href="https://colab.research.google.com/github/desty/study-ai-assistant-engineering/blob/main/notebooks/part2/ch05_prompt_cot.ipynb" target="_blank">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab">
 </a>
 

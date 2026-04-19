@@ -57,7 +57,7 @@ LaTeX 수식 렌더링. 모델·파인튜닝 챕터에 필수.
 </div>
 
 <div class="card" markdown>
-#### :material-google-colab: Colab 배지
+#### :simple-googlecolab: Colab 배지
 모든 실습은 브라우저에서 바로. GPU도 무료.
 </div>
 

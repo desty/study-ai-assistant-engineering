@@ -1,5 +1,9 @@
 # AI Assistant 시스템 개요
 
+<a class="colab-badge" href="https://colab.research.google.com/github/desty/study-ai-assistant-engineering/blob/main/notebooks/part1/ch03_assistant_overview.ipynb" target="_blank">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab">
+</a>
+
 !!! abstract "이 챕터에서 배우는 것"
     - 프로덕션 AI Assistant를 이루는 **8개의 블록** — 입력·이해·검색·생성·검증·저장·모니터링·휴먼 핸드오프
     - 각 블록이 **코드·모델·RAG·외부시스템** 중 무엇으로 구현되는지 구분하기
