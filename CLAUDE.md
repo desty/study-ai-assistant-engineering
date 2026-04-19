@@ -20,45 +20,33 @@
 ```
 _study/
 ├── CLAUDE.md                    ← 이 파일 (자동 로드)
-├── mkdocs.yml                   ← 사이트 설정
+├── README.md                    ← 공개 레포 랜딩
+├── mkdocs.yml                   ← 사이트 설정 (GA · site_url 포함)
 ├── requirements.txt             ← mkdocs-material 등
-├── .venv/                       ← 로컬 빌드용
+├── .venv/                       ← 로컬 빌드용 (gitignore)
 ├── .gitignore
 ├── .github/workflows/deploy.yml ← GitHub Pages 자동 배포
 ├── .claude/skills/              ← 프로젝트 로컬 스킬
 │   ├── diagram-svg/             ← SVG 다이어그램 생성 규칙
 │   └── research-capture/        ← 외부 자료 저장 규칙
-├── _tools/                      ← 🆕 Python 유틸 (diagram 제너레이터)
+├── _tools/                      ← Python 유틸 (diagram 제너레이터)
 │   ├── svg_prim.py              ← 공용 primitives (node/arrow/group/legend)
-│   ├── gen_ch3_8blocks.py       ← Ch 3 다이어그램
-│   └── gen_part1_diagrams.py    ← Part 1 + about/ 11개 일괄 생성
-├── docs/                        ← 공개되는 책 본문
+│   └── gen_partN_diagrams.py    ← Part 별 제너레이터
+├── docs/                        ← 공개되는 책 본문 (MkDocs source)
 │   ├── index.md
-│   ├── stylesheets/extra.css    ← .diagram 컴포넌트 · infocards 정의
+│   ├── stylesheets/extra.css    ← infocards · colab-badge 스타일
 │   ├── javascripts/mathjax.js
 │   ├── about/
 │   │   ├── system.md            ← 학습 시스템 (사이트 설계·챕터 템플릿)
 │   │   └── curriculum.md        ← 학습 내용 (Part 1~7 목차)
-│   ├── assets/diagrams/         ← 챕터 대표 SVG (diagram-svg 스킬 출력)
-│   ├── part1/                   ← ✅ 본문 완성
-│   │   ├── 01-why-model.md
-│   │   ├── 02-what-is-llm.md
-│   │   └── 03-assistant-overview.md
-│   ├── part2/ ~ part7/          ← 스텁 (본문 집필 전, Draft 표시)
+│   ├── assets/diagrams/         ← 챕터 대표 SVG (light + dark 페어)
+│   ├── part1/ ~ part7/          ← 본문 또는 스텁 (Draft 표시)
 │   └── capstone/
-│       └── self-improving.md    ← 스텁
-├── _plans/                      ← 🆕 집필 계획 · 이어하기 용 (비공개)
-│   ├── README.md                ← 전체 상태 대시보드
-│   ├── writing-log.md           ← 세션별 작업 로그
-│   ├── part2-plan.md ~ part7-plan.md
-│   └── capstone-plan.md
-└── _research/                   ← 참고자료 아카이브 (비공개)
-    ├── README.md
-    ├── stanford-cs329a.md · stanford-cme295.md
-    ├── anthropic-building-effective-agents.md
-    ├── openai-practical-guide-to-agents.md
-    ├── langgraph-persistence.md
-    └── cocoon-architecture-diagram-skill.md  ← 검토만·미채택
+│       └── self-improving.md
+├── notebooks/                   ← Colab 용 Jupyter 노트북 (챕터별)
+│   └── part1/ ~ part5/          ← chNN_<slug>.ipynb
+├── _plans/                      ← 집필 계획 · 이어하기 용 (gitignore · 비공개)
+└── _research/                   ← 외부 자료 요약 아카이브 (gitignore · 비공개)
 ```
 
 ## 3. 로컬 개발
@@ -153,6 +141,30 @@ docs/assets/diagrams/*.png  (verification only · git 제외)
   - **흐름·화살표·계층** → **`.diagram`** 또는 **SVG**
   - **강조가 필요한 단일 줄** → 인라인 코드 또는 `<mark>`
 - 판별법: "이 블록이 깨지면 의미가 안 전달되는가?" → Yes면 표·`.diagram`·SVG로.
+
+### 저작권 · 인용 규칙 (중요)
+
+**원칙**: 출처 표기를 빼는 것이 아니라 **명확히 하는 것**이 안전하다.
+
+- **참조를 표시한다고 저작권 위험이 커지지 않는다.** 오히려 정반대 — 출처 없이 원작의 아이디어/구조를 쓰는 게 표절·침해다.
+- 공정이용(fair use) 안에서 쓸 수 있는 것:
+  - 논문·책·공식 가이드의 **제목·저자·요지 한두 줄 요약**
+  - 개념 이름, 정의 한 문장 (Anthropic 의 5패턴, OpenAI 의 3요소 같은)
+  - 결과 수치·표 (출처 명시하면)
+- **하지 말 것**:
+  - 원문 문단을 통째로 번역해 본문에 섞기
+  - 원본 다이어그램·스크린샷·아이콘 사용 (모든 다이어그램은 `_tools/gen_*.py` 로 자체 생성)
+  - 코드 예제를 공식 문서에서 **토씨까지 그대로** 복붙 (SDK 사용 패턴은 원래 표현 제한적이지만 변수명·주석 바꿔 재작성)
+- **권장 형태**:
+  - 개념 소개: "Anthropic Building Effective Agents 는 5가지 워크플로우 패턴을 정의한다" 수준
+  - 직접 인용이 필요하면 `>` blockquote + 짧게 (한두 문장) + 출처 명시
+  - 각 챕터 `## 원전` 섹션에 최소 1개 출처 (이미 관례)
+- **_research/ 내부 요약본**은 공개 안 됨 (gitignore). 이 안에서는 더 자세한 요약이 허용되지만, `docs/` 본문으로 옮길 때는 위 규칙 재적용.
+
+**헷갈릴 때 판별법**:
+1. "이 문장을 저자가 읽으면 '내 문장 가져갔네'라고 느낄까?" → Yes면 재작성
+2. "출처 빼고 보면 내가 직접 쓴 것 같은가?" → 아니면 출처 명시 필수
+3. "이게 누구나 쓸 수 있는 사실 서술인가, 특정 저자의 표현인가?" → 후자면 인용 형식
 
 ## 5. 커리큘럼 상태 (2026-04-18)
 

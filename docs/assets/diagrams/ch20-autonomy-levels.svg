@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 420" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#f1f5f9" stroke-width="0.5"/>
+    </pattern>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#6b7280"/></marker>
+    <marker id="arr-input" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#2563eb"/></marker>
+    <marker id="arr-llm" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ea580c"/></marker>
+    <marker id="arr-model" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#7c3aed"/></marker>
+    <marker id="arr-token" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-output" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-gate" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ca8a04"/></marker>
+    <marker id="arr-tool" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#0891b2"/></marker>
+    <marker id="arr-memory" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#db2777"/></marker>
+    <marker id="arr-error" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#dc2626"/></marker>
+  </defs>
+  <rect width="1080" height="420" fill="#ffffff"/>
+  <rect width="1080" height="420" fill="url(#grid)"/>
+  <text x="540" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">자율성 스펙트럼 — Agent 는 단일 용어가 아니다</text>
+  <text x="540" y="58" text-anchor="middle" font-size="12" fill="#64748b">왼쪽으로 갈수록 제어·예측 가능 · 오른쪽으로 갈수록 자율적·복잡</text>
+  <rect x="75" y="110" width="210" height="180" rx="12" fill="#ffffff"/>
+  <rect x="75" y="110" width="210" height="180" rx="12" fill="#e3f2fd" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="180.0" y="142" text-anchor="middle" font-size="15" font-weight="700" fill="#0d47a1">① Rule-based</text>
+  <text x="180.0" y="164" text-anchor="middle" font-size="12" font-family="JetBrains Mono, monospace" fill="#1e40af">if-else · 스크립트</text>
+  <text x="95" y="202" font-size="11" fill="#1e40af">• 완전 결정론</text>
+  <text x="95" y="224" font-size="11" fill="#1e40af">• 변경=코드 변경</text>
+  <text x="95" y="246" font-size="11" fill="#1e40af">• 디버깅 최강</text>
+  <rect x="315" y="110" width="210" height="180" rx="12" fill="#ffffff"/>
+  <rect x="315" y="110" width="210" height="180" rx="12" fill="#f3e8ff" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="420.0" y="142" text-anchor="middle" font-size="15" font-weight="700" fill="#4c1d95">② LLM Call</text>
+  <text x="420.0" y="164" text-anchor="middle" font-size="12" font-family="JetBrains Mono, monospace" fill="#6d28d9">단일 호출 · RAG</text>
+  <text x="335" y="202" font-size="11" fill="#6d28d9">• 프롬프트 = 로직</text>
+  <text x="335" y="224" font-size="11" fill="#6d28d9">• 결과 확률적</text>
+  <text x="335" y="246" font-size="11" fill="#6d28d9">• Ch 4 ~ 14</text>
+  <rect x="555" y="110" width="210" height="180" rx="12" fill="#ffffff"/>
+  <rect x="555" y="110" width="210" height="180" rx="12" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+  <text x="660.0" y="142" text-anchor="middle" font-size="15" font-weight="700" fill="#713f12">③ Workflow</text>
+  <text x="660.0" y="164" text-anchor="middle" font-size="12" font-family="JetBrains Mono, monospace" fill="#a16207">LLM + 정해진 경로</text>
+  <text x="575" y="202" font-size="11" fill="#a16207">• 개발자가 단계 지정</text>
+  <text x="575" y="224" font-size="11" fill="#a16207">• routing · chaining</text>
+  <text x="575" y="246" font-size="11" fill="#a16207">• Ch 21 패턴</text>
+  <rect x="795" y="110" width="210" height="180" rx="12" fill="#ffffff"/>
+  <rect x="795" y="110" width="210" height="180" rx="12" fill="#fef3e0" stroke="#ea580c" stroke-width="1.5"/>
+  <text x="900.0" y="142" text-anchor="middle" font-size="15" font-weight="700" fill="#9a3412">④ Agent</text>
+  <text x="900.0" y="164" text-anchor="middle" font-size="12" font-family="JetBrains Mono, monospace" fill="#c2410c">LLM 이 경로 결정</text>
+  <text x="815" y="202" font-size="11" fill="#c2410c">• while loop · tool use</text>
+  <text x="815" y="224" font-size="11" fill="#c2410c">• ReAct · planner</text>
+  <text x="815" y="246" font-size="11" fill="#c2410c">• 예측 불가 · 비용↑</text>
+  <line x1="75" y1="330" x2="1005" y2="330" stroke="#4b5563" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="75" y="350" font-size="12" font-weight="700" fill="#0f172a">통제·예측 가능</text>
+  <text x="1005" y="350" text-anchor="end" font-size="12" font-weight="700" fill="#0f172a">자율성·복잡성</text>
+  <text x="540.0" y="375" text-anchor="middle" font-size="11" fill="#334155">대부분 제품은 ②③ 로 충분. ④ 를 선택하기 전, 문제가 정말 비결정적인지 먼저 묻는다.</text>
+</svg>

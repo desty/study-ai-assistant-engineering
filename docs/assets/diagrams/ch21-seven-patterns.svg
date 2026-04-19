@@ -1,0 +1,189 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#f1f5f9" stroke-width="0.5"/>
+    </pattern>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#6b7280"/></marker>
+    <marker id="arr-input" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#2563eb"/></marker>
+    <marker id="arr-llm" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ea580c"/></marker>
+    <marker id="arr-model" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#7c3aed"/></marker>
+    <marker id="arr-token" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-output" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-gate" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ca8a04"/></marker>
+    <marker id="arr-tool" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#0891b2"/></marker>
+    <marker id="arr-memory" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#db2777"/></marker>
+    <marker id="arr-error" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#dc2626"/></marker>
+  </defs>
+  <rect width="1200" height="700" fill="#ffffff"/>
+  <rect width="1200" height="700" fill="url(#grid)"/>
+  <text x="600" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">Agent 패턴 7종 — Anthropic 5 + OpenAI 2</text>
+  <text x="600" y="58" text-anchor="middle" font-size="12" fill="#64748b">워크플로우 5개(결정론적) + 에이전트 2개(자율). 기본은 단일 호출 + RAG.</text>
+  <rect x="33" y="90" width="270" height="270" rx="10" fill="#ffffff"/>
+  <rect x="33" y="90" width="270" height="270" rx="10" fill="#e3f2fd" stroke="#2563eb" stroke-width="1.5"/>
+  <rect x="213" y="100" width="80" height="18" rx="9" fill="#ca8a04"/>
+  <text x="253" y="113" text-anchor="middle" font-size="10" font-weight="700" fill="#ffffff" font-family="JetBrains Mono, monospace">Workflow</text>
+  <text x="49" y="118" font-size="14" font-weight="700" fill="#0d47a1">① Prompt Chaining</text>
+  <text x="49" y="136" font-size="11" font-family="JetBrains Mono, monospace" fill="#1e40af">LLM → LLM → LLM</text>
+  <rect x="53" y="216.0" width="28" height="18" rx="3" fill="#e3f2fd" stroke="#2563eb" stroke-width="0.8"/>
+  <text x="67.0" y="228.0" text-anchor="middle" font-size="8" font-family="JetBrains Mono, monospace" fill="#0d47a1">LLM</text>
+  <rect x="103" y="216.0" width="28" height="18" rx="3" fill="#e3f2fd" stroke="#2563eb" stroke-width="0.8"/>
+  <text x="117.0" y="228.0" text-anchor="middle" font-size="8" font-family="JetBrains Mono, monospace" fill="#0d47a1">LLM</text>
+  <rect x="153" y="216.0" width="28" height="18" rx="3" fill="#e3f2fd" stroke="#2563eb" stroke-width="0.8"/>
+  <text x="167.0" y="228.0" text-anchor="middle" font-size="8" font-family="JetBrains Mono, monospace" fill="#0d47a1">LLM</text>
+  <rect x="203" y="216.0" width="28" height="18" rx="3" fill="#e3f2fd" stroke="#2563eb" stroke-width="0.8"/>
+  <text x="217.0" y="228.0" text-anchor="middle" font-size="8" font-family="JetBrains Mono, monospace" fill="#0d47a1">LLM</text>
+  <rect x="253" y="216.0" width="28" height="18" rx="3" fill="#e3f2fd" stroke="#2563eb" stroke-width="0.8"/>
+  <text x="267.0" y="228.0" text-anchor="middle" font-size="8" font-family="JetBrains Mono, monospace" fill="#0d47a1">LLM</text>
+  <line x1="81" y1="225.0" x2="103" y2="225.0" stroke="#6b7280" stroke-width="0.8" marker-end="url(#arr)"/>
+  <line x1="131" y1="225.0" x2="153" y2="225.0" stroke="#6b7280" stroke-width="0.8" marker-end="url(#arr)"/>
+  <line x1="181" y1="225.0" x2="203" y2="225.0" stroke="#6b7280" stroke-width="0.8" marker-end="url(#arr)"/>
+  <line x1="231" y1="225.0" x2="253" y2="225.0" stroke="#6b7280" stroke-width="0.8" marker-end="url(#arr)"/>
+  <text x="49" y="315" font-size="11" fill="#1e40af">한 출력이 다음 입력. 직선 파이프.</text>
+  <text x="49" y="340" font-size="10" font-family="JetBrains Mono, monospace" fill="#0d47a1">쓸 때: 단계별 변환 (초안→교정→요약)</text>
+  <rect x="321" y="90" width="270" height="270" rx="10" fill="#ffffff"/>
+  <rect x="321" y="90" width="270" height="270" rx="10" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+  <rect x="501" y="100" width="80" height="18" rx="9" fill="#ca8a04"/>
+  <text x="541" y="113" text-anchor="middle" font-size="10" font-weight="700" fill="#ffffff" font-family="JetBrains Mono, monospace">Workflow</text>
+  <text x="337" y="118" font-size="14" font-weight="700" fill="#713f12">② Routing</text>
+  <text x="337" y="136" font-size="11" font-family="JetBrains Mono, monospace" fill="#a16207">Classifier → 전문 LLM</text>
+  <rect x="341" y="216.0" width="36" height="18" rx="3" fill="#fef9c3" stroke="#ca8a04" stroke-width="0.8"/>
+  <text x="359.0" y="228.0" text-anchor="middle" font-size="8" font-family="JetBrains Mono, monospace" fill="#713f12">Router</text>
+  <rect x="501" y="176.0" width="28" height="18" rx="3" fill="#fef9c3" stroke="#ca8a04" stroke-width="0.8"/>
+  <text x="515.0" y="188.0" text-anchor="middle" font-size="8" font-family="JetBrains Mono, monospace" fill="#713f12">L1</text>
+  <line x1="377" y1="225.0" x2="501" y2="185.0" stroke="#6b7280" stroke-width="0.8" marker-end="url(#arr)"/>
+  <rect x="501" y="216.0" width="28" height="18" rx="3" fill="#fef9c3" stroke="#ca8a04" stroke-width="0.8"/>
+  <text x="515.0" y="228.0" text-anchor="middle" font-size="8" font-family="JetBrains Mono, monospace" fill="#713f12">L2</text>
+  <line x1="377" y1="225.0" x2="501" y2="225.0" stroke="#6b7280" stroke-width="0.8" marker-end="url(#arr)"/>
+  <rect x="501" y="256.0" width="28" height="18" rx="3" fill="#fef9c3" stroke="#ca8a04" stroke-width="0.8"/>
+  <text x="515.0" y="268.0" text-anchor="middle" font-size="8" font-family="JetBrains Mono, monospace" fill="#713f12">L3</text>
+  <line x1="377" y1="225.0" x2="501" y2="265.0" stroke="#6b7280" stroke-width="0.8" marker-end="url(#arr)"/>
+  <text x="337" y="315" font-size="11" fill="#a16207">입력 유형 분류 후 적합한 경로로.</text>
+  <text x="337" y="340" font-size="10" font-family="JetBrains Mono, monospace" fill="#713f12">쓸 때: FAQ·결제·버그 유형별 응답</text>
+  <rect x="609" y="90" width="270" height="270" rx="10" fill="#ffffff"/>
+  <rect x="609" y="90" width="270" height="270" rx="10" fill="#dcfce7" stroke="#059669" stroke-width="1.5"/>
+  <rect x="789" y="100" width="80" height="18" rx="9" fill="#ca8a04"/>
+  <text x="829" y="113" text-anchor="middle" font-size="10" font-weight="700" fill="#ffffff" font-family="JetBrains Mono, monospace">Workflow</text>
+  <text x="625" y="118" font-size="14" font-weight="700" fill="#064e3b">③ Parallelization</text>
+  <text x="625" y="136" font-size="11" font-family="JetBrains Mono, monospace" fill="#047857">N 호출 병렬</text>
+  <rect x="689" y="176.0" width="28" height="18" rx="3" fill="#dcfce7" stroke="#059669" stroke-width="0.8"/>
+  <text x="703.0" y="188.0" text-anchor="middle" font-size="8" font-family="JetBrains Mono, monospace" fill="#064e3b">LLM</text>
+  <rect x="689" y="201.0" width="28" height="18" rx="3" fill="#dcfce7" stroke="#059669" stroke-width="0.8"/>
+  <text x="703.0" y="213.0" text-anchor="middle" font-size="8" font-family="JetBrains Mono, monospace" fill="#064e3b">LLM</text>
+  <rect x="689" y="231.0" width="28" height="18" rx="3" fill="#dcfce7" stroke="#059669" stroke-width="0.8"/>
+  <text x="703.0" y="243.0" text-anchor="middle" font-size="8" font-family="JetBrains Mono, monospace" fill="#064e3b">LLM</text>
+  <rect x="689" y="256.0" width="28" height="18" rx="3" fill="#dcfce7" stroke="#059669" stroke-width="0.8"/>
+  <text x="703.0" y="268.0" text-anchor="middle" font-size="8" font-family="JetBrains Mono, monospace" fill="#064e3b">LLM</text>
+  <rect x="629" y="216.0" width="28" height="18" rx="3" fill="#dcfce7" stroke="#059669" stroke-width="0.8"/>
+  <text x="643.0" y="228.0" text-anchor="middle" font-size="8" font-family="JetBrains Mono, monospace" fill="#064e3b">Q</text>
+  <rect x="809" y="216.0" width="36" height="18" rx="3" fill="#dcfce7" stroke="#059669" stroke-width="0.8"/>
+  <text x="827.0" y="228.0" text-anchor="middle" font-size="8" font-family="JetBrains Mono, monospace" fill="#064e3b">merge</text>
+  <line x1="657" y1="225.0" x2="689" y2="185.0" stroke="#6b7280" stroke-width="0.8" marker-end="url(#arr)"/>
+  <line x1="717" y1="185.0" x2="809" y2="225.0" stroke="#6b7280" stroke-width="0.8" marker-end="url(#arr)"/>
+  <line x1="657" y1="225.0" x2="689" y2="210.0" stroke="#6b7280" stroke-width="0.8" marker-end="url(#arr)"/>
+  <line x1="717" y1="210.0" x2="809" y2="225.0" stroke="#6b7280" stroke-width="0.8" marker-end="url(#arr)"/>
+  <line x1="657" y1="225.0" x2="689" y2="240.0" stroke="#6b7280" stroke-width="0.8" marker-end="url(#arr)"/>
+  <line x1="717" y1="240.0" x2="809" y2="225.0" stroke="#6b7280" stroke-width="0.8" marker-end="url(#arr)"/>
+  <line x1="657" y1="225.0" x2="689" y2="265.0" stroke="#6b7280" stroke-width="0.8" marker-end="url(#arr)"/>
+  <line x1="717" y1="265.0" x2="809" y2="225.0" stroke="#6b7280" stroke-width="0.8" marker-end="url(#arr)"/>
+  <text x="625" y="315" font-size="11" fill="#047857">독립 작업 동시에 → 합침 (voting/가중).</text>
+  <text x="625" y="340" font-size="10" font-family="JetBrains Mono, monospace" fill="#064e3b">쓸 때: 다중 관점 리뷰 · self-consistency</text>
+  <rect x="897" y="90" width="270" height="270" rx="10" fill="#ffffff"/>
+  <rect x="897" y="90" width="270" height="270" rx="10" fill="#f3e8ff" stroke="#7c3aed" stroke-width="1.5"/>
+  <rect x="1077" y="100" width="80" height="18" rx="9" fill="#ca8a04"/>
+  <text x="1117" y="113" text-anchor="middle" font-size="10" font-weight="700" fill="#ffffff" font-family="JetBrains Mono, monospace">Workflow</text>
+  <text x="913" y="118" font-size="14" font-weight="700" fill="#4c1d95">④ Orchestrator-Workers</text>
+  <text x="913" y="136" font-size="11" font-family="JetBrains Mono, monospace" fill="#6d28d9">Planner → Worker×N</text>
+  <rect x="1012" y="165" width="40" height="18" rx="3" fill="#f3e8ff" stroke="#7c3aed" stroke-width="0.8"/>
+  <text x="1032.0" y="177.0" text-anchor="middle" font-size="8" font-family="JetBrains Mono, monospace" fill="#4c1d95">Plan</text>
+  <rect x="937" y="230" width="28" height="18" rx="3" fill="#f3e8ff" stroke="#7c3aed" stroke-width="0.8"/>
+  <text x="951.0" y="242.0" text-anchor="middle" font-size="8" font-family="JetBrains Mono, monospace" fill="#4c1d95">W1</text>
+  <line x1="1032" y1="183" x2="951" y2="230" stroke="#6b7280" stroke-width="0.8" marker-end="url(#arr)"/>
+  <rect x="1007" y="230" width="28" height="18" rx="3" fill="#f3e8ff" stroke="#7c3aed" stroke-width="0.8"/>
+  <text x="1021.0" y="242.0" text-anchor="middle" font-size="8" font-family="JetBrains Mono, monospace" fill="#4c1d95">W2</text>
+  <line x1="1032" y1="183" x2="1021" y2="230" stroke="#6b7280" stroke-width="0.8" marker-end="url(#arr)"/>
+  <rect x="1077" y="230" width="28" height="18" rx="3" fill="#f3e8ff" stroke="#7c3aed" stroke-width="0.8"/>
+  <text x="1091.0" y="242.0" text-anchor="middle" font-size="8" font-family="JetBrains Mono, monospace" fill="#4c1d95">W3</text>
+  <line x1="1032" y1="183" x2="1091" y2="230" stroke="#6b7280" stroke-width="0.8" marker-end="url(#arr)"/>
+  <rect x="1012" y="280" width="40" height="18" rx="3" fill="#f3e8ff" stroke="#7c3aed" stroke-width="0.8"/>
+  <text x="1032.0" y="292.0" text-anchor="middle" font-size="8" font-family="JetBrains Mono, monospace" fill="#4c1d95">Merge</text>
+  <line x1="951" y1="248" x2="1032" y2="280" stroke="#6b7280" stroke-width="0.8" marker-end="url(#arr)"/>
+  <line x1="1021" y1="248" x2="1032" y2="280" stroke="#6b7280" stroke-width="0.8" marker-end="url(#arr)"/>
+  <line x1="1091" y1="248" x2="1032" y2="280" stroke="#6b7280" stroke-width="0.8" marker-end="url(#arr)"/>
+  <text x="913" y="315" font-size="11" fill="#6d28d9">상위 LLM 이 작업 쪼개 지시.</text>
+  <text x="913" y="340" font-size="10" font-family="JetBrains Mono, monospace" fill="#4c1d95">쓸 때: 복잡 리서치·멀티스텝 코딩</text>
+  <rect x="33" y="378" width="270" height="270" rx="10" fill="#ffffff"/>
+  <rect x="33" y="378" width="270" height="270" rx="10" fill="#fce7f3" stroke="#db2777" stroke-width="1.5"/>
+  <rect x="213" y="388" width="80" height="18" rx="9" fill="#ca8a04"/>
+  <text x="253" y="401" text-anchor="middle" font-size="10" font-weight="700" fill="#ffffff" font-family="JetBrains Mono, monospace">Workflow</text>
+  <text x="49" y="406" font-size="14" font-weight="700" fill="#500724">⑤ Evaluator-Optimizer</text>
+  <text x="49" y="424" font-size="11" font-family="JetBrains Mono, monospace" fill="#be185d">Gen ↔ Critic 루프</text>
+  <rect x="73" y="504.0" width="50" height="18" rx="3" fill="#fce7f3" stroke="#db2777" stroke-width="0.8"/>
+  <text x="98.0" y="516.0" text-anchor="middle" font-size="8" font-family="JetBrains Mono, monospace" fill="#500724">Gen</text>
+  <rect x="193" y="504.0" width="50" height="18" rx="3" fill="#fce7f3" stroke="#db2777" stroke-width="0.8"/>
+  <text x="218.0" y="516.0" text-anchor="middle" font-size="8" font-family="JetBrains Mono, monospace" fill="#500724">Critic</text>
+  <line x1="123" y1="511.0" x2="193" y2="511.0" stroke="#6b7280" stroke-width="0.8" marker-end="url(#arr)"/>
+  <path d="M 193 520.0 C 193 553.0, 123 553.0, 123 520.0" stroke="#059669" stroke-width="0.8" fill="none" stroke-dasharray="3,2" marker-end="url(#arr-token)"/>
+  <text x="49" y="603" font-size="11" fill="#be185d">생성 → 평가 → 재생성. 품질 수렴.</text>
+  <text x="49" y="628" font-size="10" font-family="JetBrains Mono, monospace" fill="#500724">쓸 때: 번역·코드 개선·글쓰기</text>
+  <rect x="321" y="378" width="270" height="270" rx="10" fill="#ffffff"/>
+  <rect x="321" y="378" width="270" height="270" rx="10" fill="#fef3e0" stroke="#ea580c" stroke-width="1.5"/>
+  <rect x="501" y="388" width="80" height="18" rx="9" fill="#ea580c"/>
+  <text x="541" y="401" text-anchor="middle" font-size="10" font-weight="700" fill="#ffffff" font-family="JetBrains Mono, monospace">Agent</text>
+  <text x="337" y="406" font-size="14" font-weight="700" fill="#9a3412">⑥ Single Agent</text>
+  <text x="337" y="424" font-size="11" font-family="JetBrains Mono, monospace" fill="#c2410c">LLM + Tools loop</text>
+  <rect x="421" y="504.0" width="40" height="18" rx="3" fill="#fef3e0" stroke="#ea580c" stroke-width="0.8"/>
+  <text x="441.0" y="516.0" text-anchor="middle" font-size="8" font-family="JetBrains Mono, monospace" fill="#9a3412">LLM</text>
+  <rect x="501" y="504.0" width="40" height="18" rx="3" fill="#fef3e0" stroke="#ea580c" stroke-width="0.8"/>
+  <text x="521.0" y="516.0" text-anchor="middle" font-size="8" font-family="JetBrains Mono, monospace" fill="#9a3412">Tool</text>
+  <line x1="461" y1="511.0" x2="501" y2="511.0" stroke="#6b7280" stroke-width="0.8" marker-end="url(#arr)"/>
+  <path d="M 501 520.0 C 501 553.0, 461 553.0, 461 520.0" stroke="#059669" stroke-width="0.8" fill="none" stroke-dasharray="3,2" marker-end="url(#arr-token)"/>
+  <rect x="351" y="504.0" width="28" height="18" rx="3" fill="#fef3e0" stroke="#ea580c" stroke-width="0.8"/>
+  <text x="365.0" y="516.0" text-anchor="middle" font-size="8" font-family="JetBrains Mono, monospace" fill="#9a3412">U</text>
+  <line x1="379" y1="511.0" x2="421" y2="511.0" stroke="#6b7280" stroke-width="0.8" marker-end="url(#arr)"/>
+  <text x="337" y="603" font-size="11" fill="#c2410c">Ch 20 의 기본 agent. 하나가 루프 주도.</text>
+  <text x="337" y="628" font-size="10" font-family="JetBrains Mono, monospace" fill="#9a3412">쓸 때: 고객지원·데이터 탐색</text>
+  <rect x="609" y="378" width="270" height="270" rx="10" fill="#ffffff"/>
+  <rect x="609" y="378" width="270" height="270" rx="10" fill="#fef3e0" stroke="#ea580c" stroke-width="1.5"/>
+  <rect x="789" y="388" width="80" height="18" rx="9" fill="#ea580c"/>
+  <text x="829" y="401" text-anchor="middle" font-size="10" font-weight="700" fill="#ffffff" font-family="JetBrains Mono, monospace">Agent</text>
+  <text x="625" y="406" font-size="14" font-weight="700" fill="#9a3412">⑦ Multi-Agent</text>
+  <text x="625" y="424" font-size="11" font-family="JetBrains Mono, monospace" fill="#c2410c">Manager / Decentralized</text>
+  <rect x="724" y="453" width="40" height="18" rx="3" fill="#fef3e0" stroke="#ea580c" stroke-width="0.8"/>
+  <text x="744.0" y="465.0" text-anchor="middle" font-size="8" font-family="JetBrains Mono, monospace" fill="#9a3412">Mgr</text>
+  <rect x="649" y="528" width="28" height="18" rx="3" fill="#fef3e0" stroke="#ea580c" stroke-width="0.8"/>
+  <text x="663.0" y="540.0" text-anchor="middle" font-size="8" font-family="JetBrains Mono, monospace" fill="#9a3412">Res</text>
+  <line x1="744" y1="471" x2="663" y2="528" stroke="#6b7280" stroke-width="0.8" marker-end="url(#arr)"/>
+  <line x1="663" y1="546" x2="744" y2="558" stroke="#6b7280" stroke-width="0.8" marker-end="url(#arr)"/>
+  <rect x="719" y="528" width="28" height="18" rx="3" fill="#fef3e0" stroke="#ea580c" stroke-width="0.8"/>
+  <text x="733.0" y="540.0" text-anchor="middle" font-size="8" font-family="JetBrains Mono, monospace" fill="#9a3412">Plan</text>
+  <line x1="744" y1="471" x2="733" y2="528" stroke="#6b7280" stroke-width="0.8" marker-end="url(#arr)"/>
+  <line x1="733" y1="546" x2="744" y2="558" stroke="#6b7280" stroke-width="0.8" marker-end="url(#arr)"/>
+  <rect x="789" y="528" width="28" height="18" rx="3" fill="#fef3e0" stroke="#ea580c" stroke-width="0.8"/>
+  <text x="803.0" y="540.0" text-anchor="middle" font-size="8" font-family="JetBrains Mono, monospace" fill="#9a3412">Crit</text>
+  <line x1="744" y1="471" x2="803" y2="528" stroke="#6b7280" stroke-width="0.8" marker-end="url(#arr)"/>
+  <line x1="803" y1="546" x2="744" y2="558" stroke="#6b7280" stroke-width="0.8" marker-end="url(#arr)"/>
+  <rect x="724" y="568" width="40" height="18" rx="3" fill="#fef3e0" stroke="#ea580c" stroke-width="0.8"/>
+  <text x="744.0" y="580.0" text-anchor="middle" font-size="8" font-family="JetBrains Mono, monospace" fill="#9a3412">Out</text>
+  <text x="625" y="603" font-size="11" fill="#c2410c">여러 에이전트 역할 분담 (Ch 25).</text>
+  <text x="625" y="628" font-size="10" font-family="JetBrains Mono, monospace" fill="#9a3412">쓸 때: 연구→작성·planner→executor</text>
+  <rect x="897" y="378" width="270" height="270" rx="10" fill="#ffffff"/>
+  <rect x="897" y="378" width="270" height="270" rx="10" fill="#d1fae5" stroke="#059669" stroke-width="1.5"/>
+  <rect x="1077" y="388" width="80" height="18" rx="9" fill="#059669"/>
+  <text x="1117" y="401" text-anchor="middle" font-size="10" font-weight="700" fill="#ffffff" font-family="JetBrains Mono, monospace">Default</text>
+  <text x="913" y="406" font-size="14" font-weight="700" fill="#064e3b">⓪ 기본 — 단일 LLM + RAG</text>
+  <text x="913" y="424" font-size="11" font-family="JetBrains Mono, monospace" fill="#047857">패턴 도입 전 먼저</text>
+  <rect x="917" y="504.0" width="28" height="18" rx="3" fill="#d1fae5" stroke="#059669" stroke-width="0.8"/>
+  <text x="931.0" y="516.0" text-anchor="middle" font-size="8" font-family="JetBrains Mono, monospace" fill="#064e3b">U</text>
+  <rect x="977" y="504.0" width="36" height="18" rx="3" fill="#d1fae5" stroke="#059669" stroke-width="0.8"/>
+  <text x="995.0" y="516.0" text-anchor="middle" font-size="8" font-family="JetBrains Mono, monospace" fill="#064e3b">LLM</text>
+  <rect x="1053" y="504.0" width="36" height="18" rx="3" fill="#d1fae5" stroke="#059669" stroke-width="0.8"/>
+  <text x="1071.0" y="516.0" text-anchor="middle" font-size="8" font-family="JetBrains Mono, monospace" fill="#064e3b">RAG</text>
+  <rect x="1127" y="504.0" width="28" height="18" rx="3" fill="#d1fae5" stroke="#059669" stroke-width="0.8"/>
+  <text x="1141.0" y="516.0" text-anchor="middle" font-size="8" font-family="JetBrains Mono, monospace" fill="#064e3b">Out</text>
+  <line x1="945" y1="511.0" x2="977" y2="511.0" stroke="#6b7280" stroke-width="0.8" marker-end="url(#arr)"/>
+  <line x1="1013" y1="511.0" x2="1053" y2="511.0" stroke="#6b7280" stroke-width="0.8" marker-end="url(#arr)"/>
+  <line x1="1089" y1="511.0" x2="1127" y2="511.0" stroke="#6b7280" stroke-width="0.8" marker-end="url(#arr)"/>
+  <text x="913" y="603" font-size="11" fill="#047857">대부분 문제는 단일 호출 + 좋은 프롬프트 + 문서로 충분.</text>
+  <text x="913" y="628" font-size="10" font-family="JetBrains Mono, monospace" fill="#064e3b">쓸 때: 의심되면 먼저 이걸 시도</text>
+  <text x="600.0" y="682" text-anchor="middle" font-size="11" fill="#334155">패턴 = 해결책 X · 패턴 = 어휘. 문제 먼저, 어휘는 나중. 기본은 항상 ⓪</text>
+</svg>

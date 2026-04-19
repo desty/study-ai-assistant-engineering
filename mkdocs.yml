@@ -46,6 +46,11 @@ theme:
 extra_css:
   - stylesheets/extra.css
 
+extra:
+  analytics:
+    provider: google
+    property: G-4L031NBC3Z
+
 markdown_extensions:
   - admonition
   - attr_list
