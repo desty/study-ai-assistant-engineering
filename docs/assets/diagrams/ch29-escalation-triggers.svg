@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 540" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#f1f5f9" stroke-width="0.5"/>
+    </pattern>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#6b7280"/></marker>
+    <marker id="arr-input" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#2563eb"/></marker>
+    <marker id="arr-llm" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ea580c"/></marker>
+    <marker id="arr-model" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#7c3aed"/></marker>
+    <marker id="arr-token" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-output" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-gate" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ca8a04"/></marker>
+    <marker id="arr-tool" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#0891b2"/></marker>
+    <marker id="arr-memory" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#db2777"/></marker>
+    <marker id="arr-error" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#dc2626"/></marker>
+  </defs>
+  <rect width="1200" height="540" fill="#ffffff"/>
+  <rect width="1200" height="540" fill="url(#grid)"/>
+  <text x="600" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">휴먼 개입 — 두 가지 트리거</text>
+  <text x="600" y="58" text-anchor="middle" font-size="12" fill="#64748b">실패 임계 초과(자동) · 고위험 액션(사전 정책). 둘 다 같은 승인 큐로 흘러야 감사 추적이 한 곳에 모인다.</text>
+  <rect x="60" y="110" width="230" height="100" rx="12" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="175.0" y="138" text-anchor="middle" font-size="14" font-weight="700" fill="#7f1d1d">① 실패 임계 초과</text>
+  <text x="74" y="162" font-size="11" fill="#b91c1c">• retry 5회 실패</text>
+  <text x="74" y="180" font-size="11" fill="#b91c1c">• guardrail escalate</text>
+  <text x="74" y="198" font-size="11" fill="#b91c1c">• low confidence (&lt; 0.6)</text>
+  <rect x="60" y="290" width="230" height="100" rx="12" fill="#fef9c3" stroke="#ca8a04" stroke-width="2"/>
+  <text x="175.0" y="318" text-anchor="middle" font-size="14" font-weight="700" fill="#713f12">② 고위험 액션</text>
+  <text x="74" y="342" font-size="11" fill="#a16207">• 큰 금액 환불 (&gt; ₩100k)</text>
+  <text x="74" y="360" font-size="11" fill="#a16207">• 비가역 (계정 삭제)</text>
+  <text x="74" y="378" font-size="11" fill="#a16207">• 외부 메시지 (이메일)</text>
+  <rect x="460" y="200" width="240" height="150" rx="14" fill="#fce7f3" stroke="#db2777" stroke-width="2"/>
+  <text x="580.0" y="230" text-anchor="middle" font-size="15" font-weight="700" fill="#500724">Approval Queue</text>
+  <text x="580.0" y="252" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#be185d">pending · TTL · context</text>
+  <rect x="480" y="270" width="200" height="18" rx="3" fill="#f8fafc" stroke="#db2777" stroke-width="0.8"/>
+  <text x="490" y="283" font-size="10" font-family="JetBrains Mono, monospace" fill="#be185d">case_1 · fail · 2m ago</text>
+  <rect x="480" y="294" width="200" height="18" rx="3" fill="#f8fafc" stroke="#db2777" stroke-width="0.8"/>
+  <text x="490" y="307" font-size="10" font-family="JetBrains Mono, monospace" fill="#be185d">case_2 · risk · 2m ago</text>
+  <rect x="480" y="318" width="200" height="18" rx="3" fill="#f8fafc" stroke="#db2777" stroke-width="0.8"/>
+  <text x="490" y="331" font-size="10" font-family="JetBrains Mono, monospace" fill="#be185d">case_3 · fail · 2m ago</text>
+  <path d="M 292,160.0 L 458,250" stroke="#dc2626" stroke-width="1.8" fill="none" marker-end="url(#arr-error)"/>
+  <rect x="353.0" y="178.0" width="44" height="18" rx="4" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.8"/>
+  <text x="375.0" y="191.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#475569">auto</text>
+  <path d="M 292,340.0 L 458,300" stroke="#ca8a04" stroke-width="1.5" fill="none" marker-end="url(#arr-gate)" stroke-dasharray="3,3"/>
+  <rect x="346.0" y="293.0" width="58" height="18" rx="4" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.8"/>
+  <text x="375.0" y="306.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#475569">policy</text>
+  <rect x="870" y="110" width="220" height="100" rx="10" fill="#ffffff"/>
+  <rect x="870" y="110" width="220" height="100" rx="10" fill="#cffafe" stroke="#0891b2" stroke-width="1.5"/>
+  <text x="980.0" y="156.0" text-anchor="middle" font-size="14" font-weight="700" fill="#083344">Reviewer (Slack/Dashboard)</text>
+  <text x="980.0" y="172.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#0e7490">approve · reject · edit</text>
+  <rect x="870" y="290" width="220" height="100" rx="12" fill="#dcfce7" stroke="#059669" stroke-width="1.5"/>
+  <text x="980.0" y="320" text-anchor="middle" font-size="14" font-weight="700" fill="#064e3b">Audit Log (immutable)</text>
+  <text x="884" y="346" font-size="11" font-family="JetBrains Mono, monospace" fill="#047857">case_id · who · when</text>
+  <text x="884" y="366" font-size="11" font-family="JetBrains Mono, monospace" fill="#047857">decision · diff · trace_id</text>
+  <path d="M 702,240 L 868,160.0" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <rect x="756.0" y="173.0" width="58" height="18" rx="4" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.8"/>
+  <text x="785.0" y="186.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#475569">notify</text>
+  <path d="M 980.0,212 L 980.0,288" stroke="#059669" stroke-width="1.5" fill="none" marker-end="url(#arr-token)" stroke-dasharray="5,3"/>
+  <rect x="961.5" y="223.0" width="37" height="18" rx="4" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.8"/>
+  <text x="980.0" y="236.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#475569">log</text>
+  <path d="M 580.0 352 Q 680.0 420, 900 340.0" stroke="#059669" stroke-width="1.5" fill="none" marker-end="url(#arr-token)" stroke-dasharray="5,3"/>
+  <rect x="674.0" y="371" width="72" height="18" rx="4" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.8"/>
+  <text x="710.0" y="384" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#475569">enqueued</text>
+  <path d="M 880 212 C 880 270, 580.0 140, 580.0 198" stroke="#059669" stroke-width="1.5" fill="none" marker-end="url(#arr-output)"/>
+  <rect x="729.5" y="241" width="121" height="18" rx="4" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.8"/>
+  <text x="790" y="254" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#475569">resume / reject</text>
+  <rect x="40" y="505" width="1120" height="22" rx="4" fill="#f8fafc" stroke="#e2e8f0" stroke-width="0.8"/>
+  <text x="600.0" y="521" text-anchor="middle" font-size="11" fill="#334155">①은 자동 트리거 · ②는 사전 정책. 모든 결정은 Audit Log 에 기록되어 사후 감사·법적 근거가 된다.</text>
+</svg>

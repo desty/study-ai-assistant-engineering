@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 540" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#f1f5f9" stroke-width="0.5"/>
+    </pattern>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#6b7280"/></marker>
+    <marker id="arr-input" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#2563eb"/></marker>
+    <marker id="arr-llm" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ea580c"/></marker>
+    <marker id="arr-model" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#7c3aed"/></marker>
+    <marker id="arr-token" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-output" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-gate" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ca8a04"/></marker>
+    <marker id="arr-tool" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#0891b2"/></marker>
+    <marker id="arr-memory" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#db2777"/></marker>
+    <marker id="arr-error" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#dc2626"/></marker>
+  </defs>
+  <rect width="1200" height="540" fill="#ffffff"/>
+  <rect width="1200" height="540" fill="url(#grid)"/>
+  <text x="600" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">학습 3단계 — 같은 모델, 세 번 다듬는다</text>
+  <text x="600" y="58" text-anchor="middle" font-size="12" fill="#64748b">Base 모델은 다음 토큰만 예측. 사람이 쓰기 좋게 만드는 건 SFT 와 정렬(RLHF/DPO).</text>
+  <rect x="90" y="100" width="320" height="320" rx="14" fill="#e3f2fd" stroke="#2563eb" stroke-width="2"/>
+  <rect x="106" y="116" width="70" height="22" rx="4" fill="#2563eb"/>
+  <text x="141" y="132" text-anchor="middle" font-size="11" font-weight="700" fill="#ffffff" font-family="JetBrains Mono, monospace">Stage 1</text>
+  <text x="250.0" y="164" text-anchor="middle" font-size="17" font-weight="700" fill="#0d47a1">Pretraining</text>
+  <text x="250.0" y="186" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#1e40af">대규모 텍스트 · 다음 토큰 예측</text>
+  <text x="114" y="224" font-size="11" fill="#1e40af">데이터: web · code · 책 (수T tokens)</text>
+  <text x="114" y="246" font-size="11" fill="#1e40af">결과: Base 모델</text>
+  <text x="114" y="268" font-size="11" fill="#1e40af">비용: 수십M~수억 $</text>
+  <text x="114" y="290" font-size="11" fill="#1e40af">주체: 모델 회사 (OpenAI · Anthropic · Meta)</text>
+  <line x1="110" y1="326" x2="390" y2="326" stroke="#2563eb" stroke-width="0.8" stroke-dasharray="3,2"/>
+  <text x="114" y="346" font-size="11" fill="#0d47a1">문법·세상 지식이 들어옴.</text>
+  <text x="114" y="364" font-size="11" fill="#0d47a1">Chat 처럼 응답하지 않음.</text>
+  <rect x="440" y="100" width="320" height="320" rx="14" fill="#fef9c3" stroke="#ca8a04" stroke-width="2"/>
+  <rect x="456" y="116" width="70" height="22" rx="4" fill="#ca8a04"/>
+  <text x="491" y="132" text-anchor="middle" font-size="11" font-weight="700" fill="#ffffff" font-family="JetBrains Mono, monospace">Stage 2</text>
+  <text x="600.0" y="164" text-anchor="middle" font-size="17" font-weight="700" fill="#713f12">SFT (Supervised FT)</text>
+  <text x="600.0" y="186" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#a16207">지시-응답 쌍 학습</text>
+  <text x="464" y="224" font-size="11" fill="#a16207">데이터: 수만~수십만 (q,a)</text>
+  <text x="464" y="246" font-size="11" fill="#a16207">결과: Instruct 모델</text>
+  <text x="464" y="268" font-size="11" fill="#a16207">비용: 수K~수십K $</text>
+  <text x="464" y="290" font-size="11" fill="#a16207">주체: 모델 회사 + 우리 (도메인 SFT)</text>
+  <line x1="460" y1="326" x2="740" y2="326" stroke="#ca8a04" stroke-width="0.8" stroke-dasharray="3,2"/>
+  <text x="464" y="346" font-size="11" fill="#713f12">"질문하면 답한다" 가 들어옴.</text>
+  <text x="464" y="364" font-size="11" fill="#713f12">LoRA 로 가능 (Ch 33).</text>
+  <rect x="790" y="100" width="320" height="320" rx="14" fill="#d1fae5" stroke="#059669" stroke-width="2"/>
+  <rect x="806" y="116" width="70" height="22" rx="4" fill="#059669"/>
+  <text x="841" y="132" text-anchor="middle" font-size="11" font-weight="700" fill="#ffffff" font-family="JetBrains Mono, monospace">Stage 3</text>
+  <text x="950.0" y="164" text-anchor="middle" font-size="17" font-weight="700" fill="#064e3b">RLHF / DPO</text>
+  <text x="950.0" y="186" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#047857">인간 선호로 정렬</text>
+  <text x="814" y="224" font-size="11" fill="#047857">데이터: 수K (chosen, rejected) 쌍</text>
+  <text x="814" y="246" font-size="11" fill="#047857">결과: Chat / Aligned 모델</text>
+  <text x="814" y="268" font-size="11" fill="#047857">비용: 수K $ (DPO) ~ 수십K (RLHF)</text>
+  <text x="814" y="290" font-size="11" fill="#047857">주체: 모델 회사 (대부분)</text>
+  <line x1="810" y1="326" x2="1090" y2="326" stroke="#059669" stroke-width="0.8" stroke-dasharray="3,2"/>
+  <text x="814" y="346" font-size="11" fill="#064e3b">안전·톤·사실성 정렬.</text>
+  <text x="814" y="364" font-size="11" fill="#064e3b">DPO 는 reward model 불필요.</text>
+  <path d="M 412,260.0 L 438,260.0" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 762,260.0 L 788,260.0" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <rect x="90" y="450" width="1020" height="50" rx="10" fill="#fce7f3" stroke="#db2777" stroke-width="1.5"/>
+  <text x="600.0" y="472" text-anchor="middle" font-size="13" font-weight="700" fill="#500724">우리가 직접 건드릴 수 있는 단계</text>
+  <text x="600.0" y="490" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#be185d">Pretraining ✗  ·  SFT (LoRA) ✓  ·  DPO ✓ (소량 데이터로) → Ch 33·34</text>
+</svg>

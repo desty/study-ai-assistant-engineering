@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#f1f5f9" stroke-width="0.5"/>
+    </pattern>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#6b7280"/></marker>
+    <marker id="arr-input" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#2563eb"/></marker>
+    <marker id="arr-llm" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ea580c"/></marker>
+    <marker id="arr-model" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#7c3aed"/></marker>
+    <marker id="arr-token" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-output" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-gate" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ca8a04"/></marker>
+    <marker id="arr-tool" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#0891b2"/></marker>
+    <marker id="arr-memory" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#db2777"/></marker>
+    <marker id="arr-error" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#dc2626"/></marker>
+  </defs>
+  <rect width="1200" height="520" fill="#ffffff"/>
+  <rect width="1200" height="520" fill="url(#grid)"/>
+  <text x="600" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">관측성의 3 신호 — Logs · Metrics · Traces</text>
+  <text x="600" y="58" text-anchor="middle" font-size="12" fill="#64748b">하나만 보면 장애의 1/3 만 보인다. 셋이 같은 trace_id 로 묶여야 디버깅이 한 번에 끝난다.</text>
+  <rect x="80" y="110" width="320" height="270" rx="14" fill="#dcfce7" stroke="#059669" stroke-width="2"/>
+  <text x="240.0" y="142" text-anchor="middle" font-size="18" font-weight="700" fill="#064e3b">Logs</text>
+  <text x="240.0" y="164" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#047857">structured · per event</text>
+  <text x="240.0" y="190" text-anchor="middle" font-size="13" font-style="italic" fill="#047857">"무슨 일이 일어났나"</text>
+  <text x="104" y="224" font-size="12" fill="#047857">• request 시작/끝</text>
+  <text x="104" y="246" font-size="12" fill="#047857">• 에러 stack trace</text>
+  <text x="104" y="268" font-size="12" fill="#047857">• 사용자 액션</text>
+  <text x="104" y="290" font-size="12" fill="#047857">• 가드레일 위반</text>
+  <line x1="100" y1="330" x2="380" y2="330" stroke="#059669" stroke-width="0.8" stroke-dasharray="3,2"/>
+  <text x="240.0" y="352" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#064e3b">searchable · ELK · CloudWatch</text>
+  <rect x="440" y="110" width="320" height="270" rx="14" fill="#fef9c3" stroke="#ca8a04" stroke-width="2"/>
+  <text x="600.0" y="142" text-anchor="middle" font-size="18" font-weight="700" fill="#713f12">Metrics</text>
+  <text x="600.0" y="164" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#a16207">aggregated · timeseries</text>
+  <text x="600.0" y="190" text-anchor="middle" font-size="13" font-style="italic" fill="#a16207">"얼마나 자주 / 얼마나 빨리"</text>
+  <text x="464" y="224" font-size="12" fill="#a16207">• p50/p95/p99 latency</text>
+  <text x="464" y="246" font-size="12" fill="#a16207">• req/sec · error rate</text>
+  <text x="464" y="268" font-size="12" fill="#a16207">• cost · token usage</text>
+  <text x="464" y="290" font-size="12" fill="#a16207">• cache hit rate</text>
+  <line x1="460" y1="330" x2="740" y2="330" stroke="#ca8a04" stroke-width="0.8" stroke-dasharray="3,2"/>
+  <text x="600.0" y="352" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#713f12">Prometheus · Datadog</text>
+  <rect x="800" y="110" width="320" height="270" rx="14" fill="#fef3e0" stroke="#ea580c" stroke-width="2"/>
+  <text x="960.0" y="142" text-anchor="middle" font-size="18" font-weight="700" fill="#9a3412">Traces</text>
+  <text x="960.0" y="164" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#c2410c">causal · across spans</text>
+  <text x="960.0" y="190" text-anchor="middle" font-size="13" font-style="italic" fill="#c2410c">"어디서 어디로 흘렀나"</text>
+  <text x="824" y="224" font-size="12" fill="#c2410c">• span tree (Ch 27 §1)</text>
+  <text x="824" y="246" font-size="12" fill="#c2410c">• cross-service 호출</text>
+  <text x="824" y="268" font-size="12" fill="#c2410c">• prompt + response</text>
+  <text x="824" y="290" font-size="12" fill="#c2410c">• cost per span</text>
+  <line x1="820" y1="330" x2="1100" y2="330" stroke="#ea580c" stroke-width="0.8" stroke-dasharray="3,2"/>
+  <text x="960.0" y="352" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#9a3412">LangSmith · Langfuse · OTel</text>
+  <rect x="80" y="420" width="1040" height="60" rx="12" fill="#fce7f3" stroke="#db2777" stroke-width="1.5"/>
+  <text x="600.0" y="446" text-anchor="middle" font-size="14" font-weight="700" fill="#500724">공통 trace_id · user_id · request_id</text>
+  <text x="600.0" y="466" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#be185d">셋을 묶는 키. 한 ID 로 검색하면 logs · metrics · traces 가 동시에 떨어져야 한다.</text>
+  <path d="M 240.0,382 L 240.0,418" stroke="#059669" stroke-width="1.5" fill="none" marker-end="url(#arr-token)" stroke-dasharray="5,3"/>
+  <path d="M 600.0,382 L 600.0,418" stroke="#059669" stroke-width="1.5" fill="none" marker-end="url(#arr-token)" stroke-dasharray="5,3"/>
+  <path d="M 960.0,382 L 960.0,418" stroke="#059669" stroke-width="1.5" fill="none" marker-end="url(#arr-token)" stroke-dasharray="5,3"/>
+</svg>

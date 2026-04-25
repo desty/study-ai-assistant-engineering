@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 660" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#f1f5f9" stroke-width="0.5"/>
+    </pattern>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#6b7280"/></marker>
+    <marker id="arr-input" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#2563eb"/></marker>
+    <marker id="arr-llm" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ea580c"/></marker>
+    <marker id="arr-model" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#7c3aed"/></marker>
+    <marker id="arr-token" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-output" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-gate" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ca8a04"/></marker>
+    <marker id="arr-tool" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#0891b2"/></marker>
+    <marker id="arr-memory" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#db2777"/></marker>
+    <marker id="arr-error" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#dc2626"/></marker>
+  </defs>
+  <rect width="1240" height="660" fill="#ffffff"/>
+  <rect width="1240" height="660" fill="url(#grid)"/>
+  <text x="620" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">Self-Improving Assistant — 폐쇄 루프</text>
+  <text x="620" y="58" text-anchor="middle" font-size="12" fill="#64748b">사용자 피드백이 평가셋이 되고, 평가셋이 학습 데이터가 되고, 학습이 다시 사용자에게로.</text>
+  <path d="M 620.0 110.0 Q 755.7645019878171 173.4314575050762 959.4112549695428 168.57864376269052" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 959.4112549695428 168.57864376269052 Q 947.7645019878171 253.4314575050762 1100.0 310.0" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 1100.0 310.0 Q 947.7645019878171 366.5685424949238 959.4112549695428 451.4213562373095" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 959.4112549695428 451.4213562373095 Q 755.7645019878171 446.5685424949238 620.0 510.0" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 620.0 510.0 Q 484.23549801218286 446.5685424949238 280.58874503045723 451.4213562373095" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 280.58874503045723 451.4213562373095 Q 292.2354980121829 366.5685424949238 140.0 310.0" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 140.0 310.0 Q 292.23549801218286 253.4314575050762 280.5887450304571 168.57864376269052" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 280.5887450304571 168.57864376269052 Q 484.23549801218286 173.4314575050762 620.0 110.0" stroke="#059669" stroke-width="1.5" fill="none" marker-end="url(#arr-output)"/>
+  <rect x="545.0" y="70.0" width="150" height="80" rx="10" fill="#ffffff"/>
+  <rect x="545.0" y="70.0" width="150" height="80" rx="10" fill="#e3f2fd" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="620.0" y="106.0" text-anchor="middle" font-size="14" font-weight="700" fill="#0d47a1">① User</text>
+  <text x="620.0" y="122.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#1e40af">feedback 👍👎</text>
+  <text x="620.0" y="164.0" text-anchor="middle" font-size="10" font-family="JetBrains Mono, monospace" fill="#334155">Part 6 Ch 29</text>
+  <rect x="884.4112549695428" y="128.57864376269052" width="150" height="80" rx="10" fill="#ffffff"/>
+  <rect x="884.4112549695428" y="128.57864376269052" width="150" height="80" rx="10" fill="#fef3e0" stroke="#ea580c" stroke-width="1.5"/>
+  <text x="959.4112549695428" y="164.57864376269052" text-anchor="middle" font-size="14" font-weight="700" fill="#9a3412">② Assistant</text>
+  <text x="959.4112549695428" y="180.57864376269052" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#c2410c">RAG + Agent</text>
+  <text x="959.4112549695428" y="222.57864376269052" text-anchor="middle" font-size="10" font-family="JetBrains Mono, monospace" fill="#334155">Part 3·5</text>
+  <rect x="1025.0" y="270.0" width="150" height="80" rx="10" fill="#ffffff"/>
+  <rect x="1025.0" y="270.0" width="150" height="80" rx="10" fill="#fce7f3" stroke="#db2777" stroke-width="1.5"/>
+  <text x="1100.0" y="306.0" text-anchor="middle" font-size="14" font-weight="700" fill="#500724">③ Trace + Log</text>
+  <text x="1100.0" y="322.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#be185d">trace_id · score</text>
+  <text x="1100.0" y="364.0" text-anchor="middle" font-size="10" font-family="JetBrains Mono, monospace" fill="#334155">Part 6 Ch 27</text>
+  <rect x="884.4112549695428" y="411.4213562373095" width="150" height="80" rx="10" fill="#ffffff"/>
+  <rect x="884.4112549695428" y="411.4213562373095" width="150" height="80" rx="10" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+  <text x="959.4112549695428" y="447.4213562373095" text-anchor="middle" font-size="14" font-weight="700" fill="#713f12">④ Failure Classifier</text>
+  <text x="959.4112549695428" y="463.4213562373095" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#a16207">taxonomy 5 · Judge</text>
+  <text x="959.4112549695428" y="505.4213562373095" text-anchor="middle" font-size="10" font-family="JetBrains Mono, monospace" fill="#334155">Part 4 Ch 17·19</text>
+  <rect x="545.0" y="470.0" width="150" height="80" rx="10" fill="#ffffff"/>
+  <rect x="545.0" y="470.0" width="150" height="80" rx="10" fill="#dcfce7" stroke="#059669" stroke-width="1.5"/>
+  <text x="620.0" y="506.0" text-anchor="middle" font-size="14" font-weight="700" fill="#064e3b">⑤ DPO Data</text>
+  <text x="620.0" y="522.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#047857">(✓, ✗) 쌍 생성</text>
+  <text x="620.0" y="564.0" text-anchor="middle" font-size="10" font-family="JetBrains Mono, monospace" fill="#334155">Part 7 Ch 34</text>
+  <rect x="205.58874503045723" y="411.4213562373095" width="150" height="80" rx="10" fill="#ffffff"/>
+  <rect x="205.58874503045723" y="411.4213562373095" width="150" height="80" rx="10" fill="#d1fae5" stroke="#059669" stroke-width="1.5"/>
+  <text x="280.58874503045723" y="447.4213562373095" text-anchor="middle" font-size="14" font-weight="700" fill="#064e3b">⑥ Retrain (LoRA)</text>
+  <text x="280.58874503045723" y="463.4213562373095" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#047857">주간 스케줄</text>
+  <text x="280.58874503045723" y="505.4213562373095" text-anchor="middle" font-size="10" font-family="JetBrains Mono, monospace" fill="#334155">Part 7 Ch 33</text>
+  <rect x="65.0" y="270.0" width="150" height="80" rx="10" fill="#ffffff"/>
+  <rect x="65.0" y="270.0" width="150" height="80" rx="10" fill="#d1fae5" stroke="#059669" stroke-width="1.5"/>
+  <text x="140.0" y="306.0" text-anchor="middle" font-size="14" font-weight="700" fill="#064e3b">⑦ Eval Gate</text>
+  <text x="140.0" y="322.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#047857">baseline + Δ</text>
+  <text x="140.0" y="364.0" text-anchor="middle" font-size="10" font-family="JetBrains Mono, monospace" fill="#334155">Part 4 Ch 16</text>
+  <rect x="205.58874503045712" y="128.57864376269052" width="150" height="80" rx="10" fill="#ffffff"/>
+  <rect x="205.58874503045712" y="128.57864376269052" width="150" height="80" rx="10" fill="#cffafe" stroke="#0891b2" stroke-width="1.5"/>
+  <text x="280.5887450304571" y="164.57864376269052" text-anchor="middle" font-size="14" font-weight="700" fill="#083344">⑧ Deploy</text>
+  <text x="280.5887450304571" y="180.57864376269052" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#0e7490">adapter swap</text>
+  <text x="280.5887450304571" y="222.57864376269052" text-anchor="middle" font-size="10" font-family="JetBrains Mono, monospace" fill="#334155">Part 6 Ch 26·30</text>
+  <text x="620.0" y="304.0" text-anchor="middle" font-size="20" font-weight="700" fill="#0f172a">Self-Improving</text>
+  <text x="620.0" y="326.0" text-anchor="middle" font-size="20" font-weight="700" fill="#0f172a">Loop</text>
+  <text x="620.0" y="352.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#64748b">분기 1회 · 평가셋 통과 시만 배포</text>
+  <rect x="40" y="625" width="1160" height="22" rx="4" fill="#f8fafc" stroke="#e2e8f0" stroke-width="0.8"/>
+  <text x="620.0" y="641" text-anchor="middle" font-size="11" fill="#334155">루프가 닫히는 것이 핵심. 한 단계만 빠져도 자기 개선이 정지한다.</text>
+</svg>

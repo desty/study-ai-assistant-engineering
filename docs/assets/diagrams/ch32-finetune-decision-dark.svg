@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/>
+    </pattern>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#64748b"/></marker>
+    <marker id="arr-input" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#60a5fa"/></marker>
+    <marker id="arr-llm" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#fb923c"/></marker>
+    <marker id="arr-model" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#a78bfa"/></marker>
+    <marker id="arr-token" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#34d399"/></marker>
+    <marker id="arr-output" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#34d399"/></marker>
+    <marker id="arr-gate" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#fbbf24"/></marker>
+    <marker id="arr-tool" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#22d3ee"/></marker>
+    <marker id="arr-memory" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#f472b6"/></marker>
+    <marker id="arr-error" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#f87171"/></marker>
+  </defs>
+  <rect width="1200" height="600" fill="#020617"/>
+  <rect width="1200" height="600" fill="url(#grid)"/>
+  <text x="600" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#f1f5f9">파인튜닝 결정 트리 — 4 단계 게이트</text>
+  <text x="600" y="58" text-anchor="middle" font-size="12" fill="#94a3b8">대부분의 "AI 프로젝트 = 파인튜닝" 가정은 틀린다. 4 게이트 모두 통과해야 비로소 검토 시작.</text>
+  <rect x="410" y="100" width="380" height="70" rx="10" fill="rgba(251,191,36,0.15)" stroke="#fbbf24" stroke-width="2"/>
+  <text x="600.0" y="140.0" text-anchor="middle" font-size="14" font-weight="700" fill="#fde68a">① Prompt + RAG 로 풀리나?</text>
+  <rect x="180" y="110.0" width="200" height="50" rx="8" fill="rgba(248,113,113,0.15)" stroke="#f87171" stroke-width="1.5"/>
+  <text x="280.0" y="132.0" text-anchor="middle" font-size="11" font-weight="700" fill="#fecaca">→ Yes</text>
+  <text x="280.0" y="148.0" text-anchor="middle" font-size="10" font-family="JetBrains Mono, monospace" fill="#f87171">Prompt/RAG 만 (Ch 4·11)</text>
+  <path d="M 410,135.0 L 382,135.0" stroke="#fbbf24" stroke-width="1.5" fill="none" marker-end="url(#arr-gate)" stroke-dasharray="3,3"/>
+  <rect x="377.5" y="108.0" width="37" height="18" rx="4" fill="#0f172a" stroke="#334155" stroke-width="0.8"/>
+  <text x="396.0" y="121.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#94a3b8">Yes</text>
+  <path d="M 600.0,172 L 600.0,218" stroke="#64748b" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <rect x="585.0" y="168.0" width="30" height="18" rx="4" fill="#0f172a" stroke="#334155" stroke-width="0.8"/>
+  <text x="600.0" y="181.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#94a3b8">No</text>
+  <rect x="410" y="220" width="380" height="70" rx="10" fill="rgba(251,191,36,0.15)" stroke="#fbbf24" stroke-width="2"/>
+  <text x="600.0" y="260.0" text-anchor="middle" font-size="14" font-weight="700" fill="#fde68a">② 평가셋이 충분한가? (수K+)</text>
+  <rect x="180" y="230.0" width="200" height="50" rx="8" fill="rgba(248,113,113,0.15)" stroke="#f87171" stroke-width="1.5"/>
+  <text x="280.0" y="252.0" text-anchor="middle" font-size="11" font-weight="700" fill="#fecaca">→ No</text>
+  <text x="280.0" y="268.0" text-anchor="middle" font-size="10" font-family="JetBrains Mono, monospace" fill="#f87171">평가셋부터 (Ch 16)</text>
+  <path d="M 410,255.0 L 382,255.0" stroke="#fbbf24" stroke-width="1.5" fill="none" marker-end="url(#arr-gate)" stroke-dasharray="3,3"/>
+  <rect x="381.0" y="228.0" width="30" height="18" rx="4" fill="#0f172a" stroke="#334155" stroke-width="0.8"/>
+  <text x="396.0" y="241.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#94a3b8">No</text>
+  <path d="M 600.0,292 L 600.0,338" stroke="#64748b" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <rect x="581.5" y="288.0" width="37" height="18" rx="4" fill="#0f172a" stroke="#334155" stroke-width="0.8"/>
+  <text x="600.0" y="301.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#94a3b8">Yes</text>
+  <rect x="410" y="340" width="380" height="70" rx="10" fill="rgba(251,191,36,0.15)" stroke="#fbbf24" stroke-width="2"/>
+  <text x="600.0" y="380.0" text-anchor="middle" font-size="14" font-weight="700" fill="#fde68a">③ 데이터 수집·라벨 비용 &lt; 절감?</text>
+  <rect x="180" y="350.0" width="200" height="50" rx="8" fill="rgba(248,113,113,0.15)" stroke="#f87171" stroke-width="1.5"/>
+  <text x="280.0" y="372.0" text-anchor="middle" font-size="11" font-weight="700" fill="#fecaca">→ No</text>
+  <text x="280.0" y="388.0" text-anchor="middle" font-size="10" font-family="JetBrains Mono, monospace" fill="#f87171">비용 모델 재검토 (Ch 30)</text>
+  <path d="M 410,375.0 L 382,375.0" stroke="#fbbf24" stroke-width="1.5" fill="none" marker-end="url(#arr-gate)" stroke-dasharray="3,3"/>
+  <rect x="381.0" y="348.0" width="30" height="18" rx="4" fill="#0f172a" stroke="#334155" stroke-width="0.8"/>
+  <text x="396.0" y="361.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#94a3b8">No</text>
+  <path d="M 600.0,412 L 600.0,458" stroke="#64748b" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <rect x="581.5" y="408.0" width="37" height="18" rx="4" fill="#0f172a" stroke="#334155" stroke-width="0.8"/>
+  <text x="600.0" y="421.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#94a3b8">Yes</text>
+  <rect x="410" y="460" width="380" height="70" rx="10" fill="rgba(251,191,36,0.15)" stroke="#fbbf24" stroke-width="2"/>
+  <text x="600.0" y="500.0" text-anchor="middle" font-size="14" font-weight="700" fill="#fde68a">④ 매 분기 재학습 운영 가능?</text>
+  <rect x="180" y="470.0" width="200" height="50" rx="8" fill="rgba(248,113,113,0.15)" stroke="#f87171" stroke-width="1.5"/>
+  <text x="280.0" y="492.0" text-anchor="middle" font-size="11" font-weight="700" fill="#fecaca">→ No</text>
+  <text x="280.0" y="508.0" text-anchor="middle" font-size="10" font-family="JetBrains Mono, monospace" fill="#f87171">API + prompt 로 (Ch 7·30)</text>
+  <path d="M 410,495.0 L 382,495.0" stroke="#fbbf24" stroke-width="1.5" fill="none" marker-end="url(#arr-gate)" stroke-dasharray="3,3"/>
+  <rect x="381.0" y="468.0" width="30" height="18" rx="4" fill="#0f172a" stroke="#334155" stroke-width="0.8"/>
+  <text x="396.0" y="481.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#94a3b8">No</text>
+  <rect x="370" y="580" width="460" height="70" rx="12" fill="rgba(52,211,153,0.2)" stroke="#34d399" stroke-width="2"/>
+  <text x="600.0" y="610" text-anchor="middle" font-size="15" font-weight="700" fill="#a7f3d0">✓ 파인튜닝 검토 시작</text>
+  <text x="600.0" y="632" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#34d399">SFT (Ch 33) → 필요 시 DPO (Ch 34)</text>
+  <path d="M 600.0,532 L 600.0,578" stroke="#34d399" stroke-width="1.5" fill="none" marker-end="url(#arr-output)"/>
+  <rect x="581.5" y="528.0" width="37" height="18" rx="4" fill="#0f172a" stroke="#334155" stroke-width="0.8"/>
+  <text x="600.0" y="541.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#94a3b8">Yes</text>
+  <rect x="40" y="565" width="1120" height="22" rx="4" fill="#0f172a" stroke="#334155" stroke-width="0.8"/>
+  <text x="600.0" y="581" text-anchor="middle" font-size="11" fill="#cbd5e1">한 게이트만 막혀도 파인튜닝은 보류. 통과 후에도 PoC 로 효과 측정한 뒤 본 학습.</text>
+</svg>

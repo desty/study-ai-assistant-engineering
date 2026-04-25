@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 600" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/>
+    </pattern>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#64748b"/></marker>
+    <marker id="arr-input" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#60a5fa"/></marker>
+    <marker id="arr-llm" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#fb923c"/></marker>
+    <marker id="arr-model" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#a78bfa"/></marker>
+    <marker id="arr-token" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#34d399"/></marker>
+    <marker id="arr-output" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#34d399"/></marker>
+    <marker id="arr-gate" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#fbbf24"/></marker>
+    <marker id="arr-tool" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#22d3ee"/></marker>
+    <marker id="arr-memory" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#f472b6"/></marker>
+    <marker id="arr-error" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#f87171"/></marker>
+  </defs>
+  <rect width="1180" height="600" fill="#020617"/>
+  <rect width="1180" height="600" fill="url(#grid)"/>
+  <text x="590" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#f1f5f9">Transformer 블록 — 단순화 해부도</text>
+  <text x="590" y="58" text-anchor="middle" font-size="12" fill="#94a3b8">입력 토큰이 임베딩 → N개 블록(self-attention + FFN) → 다음 토큰 분포로 변환된다.</text>
+  <rect x="60" y="110" width="160" height="56" rx="10" fill="#0f172a"/>
+  <rect x="60" y="110" width="160" height="56" rx="10" fill="rgba(96,165,250,0.15)" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="140.0" y="134.0" text-anchor="middle" font-size="14" font-weight="700" fill="#bfdbfe">Tokens</text>
+  <text x="140.0" y="150.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#60a5fa">"안녕 세계" → [101, 5023, ...]</text>
+  <rect x="60" y="200" width="160" height="56" rx="10" fill="#0f172a"/>
+  <rect x="60" y="200" width="160" height="56" rx="10" fill="rgba(52,211,153,0.15)" stroke="#34d399" stroke-width="1.5"/>
+  <text x="140.0" y="224.0" text-anchor="middle" font-size="14" font-weight="700" fill="#a7f3d0">Token Embedding</text>
+  <text x="140.0" y="240.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#34d399">dim = d_model</text>
+  <rect x="60" y="290" width="160" height="56" rx="10" fill="#0f172a"/>
+  <rect x="60" y="290" width="160" height="56" rx="10" fill="rgba(52,211,153,0.15)" stroke="#34d399" stroke-width="1.5"/>
+  <text x="140.0" y="314.0" text-anchor="middle" font-size="14" font-weight="700" fill="#a7f3d0">+ Position (RoPE)</text>
+  <text x="140.0" y="330.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#34d399">순서 정보 주입</text>
+  <path d="M 140.0,168 L 140.0,198" stroke="#64748b" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 140.0,258 L 140.0,288" stroke="#64748b" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <rect x="320" y="90" width="540" height="380" rx="12" fill="rgba(167,139,250,0.05)" stroke="#a78bfa" stroke-width="1" stroke-dasharray="8,4"/>
+  <text x="332" y="108" font-size="10" font-weight="700" fill="#a78bfa" font-family="JetBrains Mono, monospace">TRANSFORMER BLOCK × N (e.g. N=32)</text>
+  <rect x="420" y="140" width="220" height="60" rx="10" fill="#0f172a"/>
+  <rect x="420" y="140" width="220" height="60" rx="10" fill="rgba(251,191,36,0.15)" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="530.0" y="166.0" text-anchor="middle" font-size="14" font-weight="700" fill="#fde68a">LayerNorm</text>
+  <text x="530.0" y="182.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#fbbf24">안정화</text>
+  <rect x="420" y="222" width="220" height="60" rx="10" fill="#0f172a"/>
+  <rect x="420" y="222" width="220" height="60" rx="10" fill="rgba(251,146,60,0.15)" stroke="#fb923c" stroke-width="1.5"/>
+  <text x="530.0" y="248.0" text-anchor="middle" font-size="14" font-weight="700" fill="#fed7aa">Multi-Head Self-Attention</text>
+  <text x="530.0" y="264.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#fb923c">토큰끼리 정보 교환</text>
+  <rect x="420" y="304" width="220" height="60" rx="10" fill="#0f172a"/>
+  <rect x="420" y="304" width="220" height="60" rx="10" fill="rgba(251,191,36,0.15)" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="530.0" y="330.0" text-anchor="middle" font-size="14" font-weight="700" fill="#fde68a">LayerNorm</text>
+  <text x="530.0" y="346.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#fbbf24">안정화</text>
+  <rect x="420" y="386" width="220" height="60" rx="10" fill="#0f172a"/>
+  <rect x="420" y="386" width="220" height="60" rx="10" fill="rgba(167,139,250,0.15)" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="530.0" y="412.0" text-anchor="middle" font-size="14" font-weight="700" fill="#ddd6fe">Feed-Forward (FFN/MoE)</text>
+  <text x="530.0" y="428.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#a78bfa">비선형 변환</text>
+  <path d="M 530.0,202 L 530.0,220" stroke="#64748b" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 530.0,284 L 530.0,302" stroke="#64748b" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 530.0,366 L 530.0,384" stroke="#64748b" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 640 170.0 L 670 170.0 L 670 296 L 636 296" stroke="#34d399" stroke-width="1.5" fill="none" marker-end="url(#arr-token)" stroke-dasharray="5,3"/>
+  <rect x="684.0" y="202.0" width="72" height="18" rx="4" fill="#0f172a" stroke="#334155" stroke-width="0.8"/>
+  <text x="720" y="215.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#94a3b8">residual</text>
+  <path d="M 640 334.0 L 670 334.0 L 670 460 L 636 460" stroke="#34d399" stroke-width="1.5" fill="none" marker-end="url(#arr-token)" stroke-dasharray="5,3"/>
+  <rect x="684.0" y="366.0" width="72" height="18" rx="4" fill="#0f172a" stroke="#334155" stroke-width="0.8"/>
+  <text x="720" y="379.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#94a3b8">residual</text>
+  <rect x="920" y="200" width="160" height="56" rx="10" fill="#0f172a"/>
+  <rect x="920" y="200" width="160" height="56" rx="10" fill="rgba(251,191,36,0.15)" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="1000.0" y="224.0" text-anchor="middle" font-size="14" font-weight="700" fill="#fde68a">LM Head (linear)</text>
+  <text x="1000.0" y="240.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#fbbf24">hidden → vocab</text>
+  <rect x="920" y="290" width="160" height="56" rx="10" fill="#0f172a"/>
+  <rect x="920" y="290" width="160" height="56" rx="10" fill="rgba(52,211,153,0.2)" stroke="#34d399" stroke-width="1.5"/>
+  <text x="1000.0" y="314.0" text-anchor="middle" font-size="14" font-weight="700" fill="#a7f3d0">Softmax</text>
+  <text x="1000.0" y="330.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#34d399">다음 토큰 확률 분포</text>
+  <rect x="920" y="380" width="160" height="56" rx="10" fill="#0f172a"/>
+  <rect x="920" y="380" width="160" height="56" rx="10" fill="rgba(52,211,153,0.2)" stroke="#34d399" stroke-width="1.5"/>
+  <text x="1000.0" y="404.0" text-anchor="middle" font-size="14" font-weight="700" fill="#a7f3d0">Sample / argmax</text>
+  <text x="1000.0" y="420.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#34d399">다음 토큰 결정</text>
+  <path d="M 1000.0,258 L 1000.0,288" stroke="#64748b" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 1000.0,348 L 1000.0,378" stroke="#64748b" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 222,318.0 L 324,280.0" stroke="#64748b" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <rect x="244.0" y="272.0" width="58" height="18" rx="4" fill="#0f172a" stroke="#334155" stroke-width="0.8"/>
+  <text x="273.0" y="285.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#94a3b8">hidden</text>
+  <path d="M 862,280.0 L 918,228.0" stroke="#64748b" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <rect x="861.0" y="227.0" width="58" height="18" rx="4" fill="#0f172a" stroke="#334155" stroke-width="0.8"/>
+  <text x="890.0" y="240.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#94a3b8">hidden</text>
+  <rect x="40" y="540" width="1100" height="44" rx="6" fill="#0f172a" stroke="#334155" stroke-width="0.8"/>
+  <text x="590.0" y="562" text-anchor="middle" font-size="12" fill="#cbd5e1">d_model · n_heads · n_layers · vocab_size 가 모델 크기를 결정. Llama-3-8B ≈ d=4096 · h=32 · L=32 · V=128k.</text>
+  <text x="590.0" y="580" text-anchor="middle" font-size="11" fill="#cbd5e1">MoE 는 FFN 자리에 여러 expert 중 일부만 활성. attention 은 그대로.</text>
+</svg>

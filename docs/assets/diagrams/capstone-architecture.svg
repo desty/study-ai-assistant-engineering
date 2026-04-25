@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 600" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#f1f5f9" stroke-width="0.5"/>
+    </pattern>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#6b7280"/></marker>
+    <marker id="arr-input" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#2563eb"/></marker>
+    <marker id="arr-llm" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ea580c"/></marker>
+    <marker id="arr-model" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#7c3aed"/></marker>
+    <marker id="arr-token" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-output" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-gate" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ca8a04"/></marker>
+    <marker id="arr-tool" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#0891b2"/></marker>
+    <marker id="arr-memory" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#db2777"/></marker>
+    <marker id="arr-error" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#dc2626"/></marker>
+  </defs>
+  <rect width="1240" height="600" fill="#ffffff"/>
+  <rect width="1240" height="600" fill="url(#grid)"/>
+  <text x="620" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">캡스톤 통합 아키텍처 — Part 1~7 한 장</text>
+  <text x="620" y="58" text-anchor="middle" font-size="12" fill="#64748b">본 챕터들의 모든 조각이 하나의 시스템에 들어간다. 각 모듈이 어느 챕터에서 왔는지 추적 가능.</text>
+  <rect x="60" y="90" width="1120" height="110" rx="12" fill="rgba(37,99,235,0.04)" stroke="#2563eb" stroke-width="1" stroke-dasharray="8,4"/>
+  <text x="72" y="108" font-size="10" font-weight="700" fill="#2563eb" font-family="JetBrains Mono, monospace">SERVING</text>
+  <rect x="90" y="116" width="240" height="70" rx="8" fill="#e3f2fd" stroke="#2563eb" stroke-width="1.3"/>
+  <text x="104" y="138" font-size="13" font-weight="700" fill="#0d47a1">API Gateway</text>
+  <text x="104" y="156" font-size="11" font-family="JetBrains Mono, monospace" fill="#1e40af">FastAPI · async</text>
+  <text x="316" y="176" text-anchor="end" font-size="10" font-family="JetBrains Mono, monospace" fill="#334155">Ch 26</text>
+  <rect x="363" y="116" width="240" height="70" rx="8" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.3"/>
+  <text x="377" y="138" font-size="13" font-weight="700" fill="#713f12">Guardrails 7</text>
+  <text x="377" y="156" font-size="11" font-family="JetBrains Mono, monospace" fill="#a16207">in/tool/out</text>
+  <text x="589" y="176" text-anchor="end" font-size="10" font-family="JetBrains Mono, monospace" fill="#334155">Ch 28</text>
+  <rect x="636" y="116" width="240" height="70" rx="8" fill="#fce7f3" stroke="#db2777" stroke-width="1.3"/>
+  <text x="650" y="138" font-size="13" font-weight="700" fill="#500724">Session Store</text>
+  <text x="650" y="156" font-size="11" font-family="JetBrains Mono, monospace" fill="#be185d">Redis · TTL</text>
+  <text x="862" y="176" text-anchor="end" font-size="10" font-family="JetBrains Mono, monospace" fill="#334155">Ch 26</text>
+  <rect x="909" y="116" width="240" height="70" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="1.3"/>
+  <text x="923" y="138" font-size="13" font-weight="700" fill="#7f1d1d">Approval Queue</text>
+  <text x="923" y="156" font-size="11" font-family="JetBrains Mono, monospace" fill="#b91c1c">high-risk</text>
+  <text x="1135" y="176" text-anchor="end" font-size="10" font-family="JetBrains Mono, monospace" fill="#334155">Ch 29</text>
+  <rect x="60" y="216" width="1120" height="110" rx="12" fill="rgba(234,88,12,0.04)" stroke="#ea580c" stroke-width="1" stroke-dasharray="8,4"/>
+  <text x="72" y="234" font-size="10" font-weight="700" fill="#ea580c" font-family="JetBrains Mono, monospace">AGENT</text>
+  <rect x="90" y="242" width="240" height="70" rx="8" fill="#fef3e0" stroke="#ea580c" stroke-width="1.3"/>
+  <text x="104" y="264" font-size="13" font-weight="700" fill="#9a3412">LangGraph</text>
+  <text x="104" y="282" font-size="11" font-family="JetBrains Mono, monospace" fill="#c2410c">state · interrupt</text>
+  <text x="316" y="302" text-anchor="end" font-size="10" font-family="JetBrains Mono, monospace" fill="#334155">Ch 23</text>
+  <rect x="363" y="242" width="240" height="70" rx="8" fill="#cffafe" stroke="#0891b2" stroke-width="1.3"/>
+  <text x="377" y="264" font-size="13" font-weight="700" fill="#083344">Tools (ACI)</text>
+  <text x="377" y="282" font-size="11" font-family="JetBrains Mono, monospace" fill="#0e7490">data/action/orch</text>
+  <text x="589" y="302" text-anchor="end" font-size="10" font-family="JetBrains Mono, monospace" fill="#334155">Ch 22</text>
+  <rect x="636" y="242" width="240" height="70" rx="8" fill="#fce7f3" stroke="#db2777" stroke-width="1.3"/>
+  <text x="650" y="264" font-size="13" font-weight="700" fill="#500724">Memory</text>
+  <text x="650" y="282" font-size="11" font-family="JetBrains Mono, monospace" fill="#be185d">thread + store</text>
+  <text x="862" y="302" text-anchor="end" font-size="10" font-family="JetBrains Mono, monospace" fill="#334155">Ch 24</text>
+  <rect x="909" y="242" width="240" height="70" rx="8" fill="#f3e8ff" stroke="#7c3aed" stroke-width="1.3"/>
+  <text x="923" y="264" font-size="13" font-weight="700" fill="#4c1d95">Model Router</text>
+  <text x="923" y="282" font-size="11" font-family="JetBrains Mono, monospace" fill="#6d28d9">Haiku/Sonnet/Opus</text>
+  <text x="1135" y="302" text-anchor="end" font-size="10" font-family="JetBrains Mono, monospace" fill="#334155">Ch 30</text>
+  <rect x="60" y="342" width="1120" height="110" rx="12" fill="rgba(8,145,178,0.04)" stroke="#0891b2" stroke-width="1" stroke-dasharray="8,4"/>
+  <text x="72" y="360" font-size="10" font-weight="700" fill="#0891b2" font-family="JetBrains Mono, monospace">KNOWLEDGE</text>
+  <rect x="90" y="368" width="240" height="70" rx="8" fill="#cffafe" stroke="#0891b2" stroke-width="1.3"/>
+  <text x="104" y="390" font-size="13" font-weight="700" fill="#083344">Hybrid Retrieval</text>
+  <text x="104" y="408" font-size="11" font-family="JetBrains Mono, monospace" fill="#0e7490">BM25 + dense</text>
+  <text x="316" y="428" text-anchor="end" font-size="10" font-family="JetBrains Mono, monospace" fill="#334155">Ch 12</text>
+  <rect x="363" y="368" width="240" height="70" rx="8" fill="#cffafe" stroke="#0891b2" stroke-width="1.3"/>
+  <text x="377" y="390" font-size="13" font-weight="700" fill="#083344">Reranker</text>
+  <text x="377" y="408" font-size="11" font-family="JetBrains Mono, monospace" fill="#0e7490">cross-encoder</text>
+  <text x="589" y="428" text-anchor="end" font-size="10" font-family="JetBrains Mono, monospace" fill="#334155">Ch 12</text>
+  <rect x="636" y="368" width="240" height="70" rx="8" fill="#fce7f3" stroke="#db2777" stroke-width="1.3"/>
+  <text x="650" y="390" font-size="13" font-weight="700" fill="#500724">Vector Store</text>
+  <text x="650" y="408" font-size="11" font-family="JetBrains Mono, monospace" fill="#be185d">Chroma · meta</text>
+  <text x="862" y="428" text-anchor="end" font-size="10" font-family="JetBrains Mono, monospace" fill="#334155">Ch 10·11</text>
+  <rect x="909" y="368" width="240" height="70" rx="8" fill="#dcfce7" stroke="#059669" stroke-width="1.3"/>
+  <text x="923" y="390" font-size="13" font-weight="700" fill="#064e3b">Citation</text>
+  <text x="923" y="408" font-size="11" font-family="JetBrains Mono, monospace" fill="#047857">XML 경계</text>
+  <text x="1135" y="428" text-anchor="end" font-size="10" font-family="JetBrains Mono, monospace" fill="#334155">Ch 11</text>
+  <rect x="60" y="468" width="1120" height="110" rx="12" fill="rgba(5,150,105,0.04)" stroke="#059669" stroke-width="1" stroke-dasharray="8,4"/>
+  <text x="72" y="486" font-size="10" font-weight="700" fill="#059669" font-family="JetBrains Mono, monospace">EVAL · LEARN</text>
+  <rect x="90" y="494" width="240" height="70" rx="8" fill="#dcfce7" stroke="#059669" stroke-width="1.3"/>
+  <text x="104" y="516" font-size="13" font-weight="700" fill="#064e3b">Trace + Logs</text>
+  <text x="104" y="534" font-size="11" font-family="JetBrains Mono, monospace" fill="#047857">trace_id · cost</text>
+  <text x="316" y="554" text-anchor="end" font-size="10" font-family="JetBrains Mono, monospace" fill="#334155">Ch 27</text>
+  <rect x="363" y="494" width="240" height="70" rx="8" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.3"/>
+  <text x="377" y="516" font-size="13" font-weight="700" fill="#713f12">Failure Classifier</text>
+  <text x="377" y="534" font-size="11" font-family="JetBrains Mono, monospace" fill="#a16207">5 layer · Judge</text>
+  <text x="589" y="554" text-anchor="end" font-size="10" font-family="JetBrains Mono, monospace" fill="#334155">Ch 17·19</text>
+  <rect x="636" y="494" width="240" height="70" rx="8" fill="#d1fae5" stroke="#059669" stroke-width="1.3"/>
+  <text x="650" y="516" font-size="13" font-weight="700" fill="#064e3b">Eval Set</text>
+  <text x="650" y="534" font-size="11" font-family="JetBrains Mono, monospace" fill="#047857">gold + regression</text>
+  <text x="862" y="554" text-anchor="end" font-size="10" font-family="JetBrains Mono, monospace" fill="#334155">Ch 16</text>
+  <rect x="909" y="494" width="240" height="70" rx="8" fill="#d1fae5" stroke="#059669" stroke-width="1.3"/>
+  <text x="923" y="516" font-size="13" font-weight="700" fill="#064e3b">LoRA / DPO</text>
+  <text x="923" y="534" font-size="11" font-family="JetBrains Mono, monospace" fill="#047857">adapter · 주간</text>
+  <text x="1135" y="554" text-anchor="end" font-size="10" font-family="JetBrains Mono, monospace" fill="#334155">Ch 33·34</text>
+  <path d="M 1180 523.0 L 1208 523.0 L 1208 145.0 L 1180 145.0" stroke="#059669" stroke-width="1.5" fill="none" marker-end="url(#arr-token)" stroke-dasharray="5,3"/>
+  <rect x="1218.0" y="325.0" width="156" height="18" rx="4" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.8"/>
+  <text x="1296" y="338.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#475569">주간 학습 → 새 adapter 배포</text>
+  <rect x="40" y="565" width="1160" height="22" rx="4" fill="#f8fafc" stroke="#e2e8f0" stroke-width="0.8"/>
+  <text x="620.0" y="581" text-anchor="middle" font-size="11" fill="#334155">한 모듈 = 한 챕터로 추적 가능. 전체 챕터를 다 쓰지 않아도 캡스톤은 가능 — 단 루프는 닫혀야 한다.</text>
+</svg>

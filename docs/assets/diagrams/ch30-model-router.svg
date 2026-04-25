@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 480" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#f1f5f9" stroke-width="0.5"/>
+    </pattern>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#6b7280"/></marker>
+    <marker id="arr-input" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#2563eb"/></marker>
+    <marker id="arr-llm" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ea580c"/></marker>
+    <marker id="arr-model" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#7c3aed"/></marker>
+    <marker id="arr-token" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-output" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-gate" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ca8a04"/></marker>
+    <marker id="arr-tool" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#0891b2"/></marker>
+    <marker id="arr-memory" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#db2777"/></marker>
+    <marker id="arr-error" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#dc2626"/></marker>
+  </defs>
+  <rect width="1180" height="480" fill="#ffffff"/>
+  <rect width="1180" height="480" fill="url(#grid)"/>
+  <text x="590" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">모델 라우터 — 한 모델로 다 풀지 말 것</text>
+  <text x="590" y="58" text-anchor="middle" font-size="12" fill="#64748b">쉬운 질의는 Haiku 로 · 어려운 것만 Opus. 분류기 비용을 합쳐도 baseline 대비 60% 절감.</text>
+  <rect x="60" y="200" width="130" height="70" rx="10" fill="#ffffff"/>
+  <rect x="60" y="200" width="130" height="70" rx="10" fill="#e3f2fd" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="125.0" y="231.0" text-anchor="middle" font-size="14" font-weight="700" fill="#0d47a1">Query</text>
+  <text x="125.0" y="247.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#1e40af">사용자 입력</text>
+  <rect x="260" y="200" width="170" height="100" rx="12" fill="#fef9c3" stroke="#ca8a04" stroke-width="2"/>
+  <text x="345.0" y="228" text-anchor="middle" font-size="14" font-weight="700" fill="#713f12">Classifier (Haiku)</text>
+  <text x="345.0" y="250" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#a16207">난이도 분류</text>
+  <text x="345.0" y="272" text-anchor="middle" font-size="10" font-family="JetBrains Mono, monospace" fill="#a16207">~$0.0005 · 200ms</text>
+  <rect x="500" y="80" width="220" height="90" rx="12" fill="#fef3e0" stroke="#ea580c" stroke-width="1.5"/>
+  <text x="516" y="106" font-size="14" font-weight="700" fill="#9a3412">Haiku</text>
+  <text x="704" y="106" text-anchor="end" font-size="14" font-weight="700" fill="#9a3412">60%</text>
+  <text x="516" y="128" font-size="11" fill="#c2410c">FAQ · 분류 · 요약</text>
+  <text x="516" y="152" font-size="11" font-family="JetBrains Mono, monospace" fill="#c2410c">$0.001 · 400ms</text>
+  <rect x="500" y="184" width="220" height="90" rx="12" fill="#fef3e0" stroke="#ea580c" stroke-width="1.5"/>
+  <text x="516" y="210" font-size="14" font-weight="700" fill="#9a3412">Sonnet</text>
+  <text x="704" y="210" text-anchor="end" font-size="14" font-weight="700" fill="#9a3412">30%</text>
+  <text x="516" y="232" font-size="11" fill="#c2410c">일반 답변</text>
+  <text x="516" y="256" font-size="11" font-family="JetBrains Mono, monospace" fill="#c2410c">$0.012 · 1200ms</text>
+  <rect x="500" y="288" width="220" height="90" rx="12" fill="#fef3e0" stroke="#ea580c" stroke-width="1.5"/>
+  <text x="516" y="314" font-size="14" font-weight="700" fill="#9a3412">Opus</text>
+  <text x="704" y="314" text-anchor="end" font-size="14" font-weight="700" fill="#9a3412">10%</text>
+  <text x="516" y="336" font-size="11" fill="#c2410c">복잡 추론·코드</text>
+  <text x="516" y="360" font-size="11" font-family="JetBrains Mono, monospace" fill="#c2410c">$0.030 · 2400ms</text>
+  <path d="M 192,235.0 L 258,250.0" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 432,250.0 L 498,125.0" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 432,250.0 L 498,229.0" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 432,250.0 L 498,333.0" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <rect x="860" y="200" width="130" height="70" rx="10" fill="#ffffff"/>
+  <rect x="860" y="200" width="130" height="70" rx="10" fill="#d1fae5" stroke="#059669" stroke-width="1.5"/>
+  <text x="925.0" y="231.0" text-anchor="middle" font-size="14" font-weight="700" fill="#064e3b">Response</text>
+  <path d="M 722,125.0 L 860,235.0" stroke="#059669" stroke-width="1.5" fill="none" marker-end="url(#arr-output)"/>
+  <path d="M 722,229.0 L 860,235.0" stroke="#059669" stroke-width="1.5" fill="none" marker-end="url(#arr-output)"/>
+  <path d="M 722,333.0 L 860,235.0" stroke="#059669" stroke-width="1.5" fill="none" marker-end="url(#arr-output)"/>
+  <rect x="980" y="80" width="180" height="250" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="996" y="104" font-size="13" font-weight="700" fill="#0f172a">실효 비용</text>
+  <text x="996" y="132" font-size="12" font-family="JetBrains Mono, monospace" fill="#334155">평균 = </text>
+  <text x="996" y="154" font-size="12" font-family="JetBrains Mono, monospace" fill="#334155">0.6×0.001</text>
+  <text x="996" y="176" font-size="12" font-family="JetBrains Mono, monospace" fill="#334155">+ 0.3×0.012</text>
+  <text x="996" y="198" font-size="12" font-family="JetBrains Mono, monospace" fill="#334155">+ 0.1×0.030</text>
+  <text x="996" y="220" font-size="12" font-family="JetBrains Mono, monospace" fill="#334155">+ classifier</text>
+  <text x="996" y="242" font-size="12" font-family="JetBrains Mono, monospace" fill="#334155">= ~$0.0073</text>
+  <text x="996" y="264" font-size="12" font-family="JetBrains Mono, monospace" fill="#334155"></text>
+  <text x="996" y="286" font-size="12" font-family="JetBrains Mono, monospace" fill="#334155">baseline Opus</text>
+  <text x="996" y="308" font-size="12" font-family="JetBrains Mono, monospace" fill="#334155">$0.030 의 24%</text>
+  <rect x="40" y="445" width="1100" height="22" rx="4" fill="#f8fafc" stroke="#e2e8f0" stroke-width="0.8"/>
+  <text x="590.0" y="461" text-anchor="middle" font-size="11" fill="#334155">분류기가 틀리면 품질 저하 — 평가셋에서 라우팅 정확도 별도 측정 (Ch 16/17).</text>
+</svg>

@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 540" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#f1f5f9" stroke-width="0.5"/>
+    </pattern>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#6b7280"/></marker>
+    <marker id="arr-input" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#2563eb"/></marker>
+    <marker id="arr-llm" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ea580c"/></marker>
+    <marker id="arr-model" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#7c3aed"/></marker>
+    <marker id="arr-token" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-output" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-gate" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ca8a04"/></marker>
+    <marker id="arr-tool" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#0891b2"/></marker>
+    <marker id="arr-memory" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#db2777"/></marker>
+    <marker id="arr-error" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#dc2626"/></marker>
+  </defs>
+  <rect width="1240" height="540" fill="#ffffff"/>
+  <rect width="1240" height="540" fill="url(#grid)"/>
+  <text x="620" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">4 접근법 비교 — 무엇이 부족할 때 어디로?</text>
+  <text x="620" y="58" text-anchor="middle" font-size="12" fill="#64748b">문제 유형별 첫 시도. 파인튜닝은 항상 마지막 카드.</text>
+  <rect x="33" y="100" width="280" height="360" rx="12" fill="#e3f2fd" stroke="#2563eb" stroke-width="1.8"/>
+  <text x="53" y="136" font-size="22" font-weight="700" fill="#0d47a1">①</text>
+  <text x="89" y="136" font-size="18" font-weight="700" fill="#0d47a1">Prompt</text>
+  <text x="53" y="156" font-size="11" font-family="JetBrains Mono, monospace" fill="#1e40af">0 데이터</text>
+  <text x="53" y="186" font-size="10" font-weight="700" font-family="JetBrains Mono, monospace" fill="#2563eb">GOOD</text>
+  <text x="53" y="204" font-size="11" fill="#0d47a1">형식 변경 · 스타일 · 단일 작업</text>
+  <text x="53" y="242" font-size="10" font-weight="700" font-family="JetBrains Mono, monospace" fill="#4b5563">WEAK</text>
+  <text x="53" y="260" font-size="11" fill="#0d47a1">도메인 사실 · 대규모 톤 변환</text>
+  <text x="53" y="298" font-size="10" font-weight="700" font-family="JetBrains Mono, monospace" fill="#1e40af">COST</text>
+  <text x="53" y="316" font-size="11" fill="#0d47a1">$ 적음</text>
+  <text x="53" y="354" font-size="10" font-weight="700" font-family="JetBrains Mono, monospace" fill="#1e40af">TIME</text>
+  <text x="53" y="372" font-size="11" fill="#0d47a1">시간: 분</text>
+  <text x="53" y="410" font-size="10" font-weight="700" font-family="JetBrains Mono, monospace" fill="#2563eb">WHEN</text>
+  <text x="53" y="428" font-size="11" fill="#0d47a1">항상 첫 시도</text>
+  <rect x="331" y="100" width="280" height="360" rx="12" fill="#cffafe" stroke="#0891b2" stroke-width="1.8"/>
+  <text x="351" y="136" font-size="22" font-weight="700" fill="#083344">②</text>
+  <text x="387" y="136" font-size="18" font-weight="700" fill="#083344">RAG</text>
+  <text x="351" y="156" font-size="11" font-family="JetBrains Mono, monospace" fill="#0e7490">문서 + 임베딩</text>
+  <text x="351" y="186" font-size="10" font-weight="700" font-family="JetBrains Mono, monospace" fill="#0891b2">GOOD</text>
+  <text x="351" y="204" font-size="11" fill="#083344">도메인 사실 · 최신 정보 · citation</text>
+  <text x="351" y="242" font-size="10" font-weight="700" font-family="JetBrains Mono, monospace" fill="#4b5563">WEAK</text>
+  <text x="351" y="260" font-size="11" fill="#083344">톤·말투 · 느린 추론 · 형식 강제</text>
+  <text x="351" y="298" font-size="10" font-weight="700" font-family="JetBrains Mono, monospace" fill="#0e7490">COST</text>
+  <text x="351" y="316" font-size="11" fill="#083344">$$ 인덱싱 + 검색</text>
+  <text x="351" y="354" font-size="10" font-weight="700" font-family="JetBrains Mono, monospace" fill="#0e7490">TIME</text>
+  <text x="351" y="372" font-size="11" fill="#083344">시간: 일</text>
+  <text x="351" y="410" font-size="10" font-weight="700" font-family="JetBrains Mono, monospace" fill="#0891b2">WHEN</text>
+  <text x="351" y="428" font-size="11" fill="#083344">지식 부족이면 먼저</text>
+  <rect x="629" y="100" width="280" height="360" rx="12" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.8"/>
+  <text x="649" y="136" font-size="22" font-weight="700" fill="#713f12">③</text>
+  <text x="685" y="136" font-size="18" font-weight="700" fill="#713f12">SFT (LoRA)</text>
+  <text x="649" y="156" font-size="11" font-family="JetBrains Mono, monospace" fill="#a16207">수K (q,a) 쌍</text>
+  <text x="649" y="186" font-size="10" font-weight="700" font-family="JetBrains Mono, monospace" fill="#ca8a04">GOOD</text>
+  <text x="649" y="204" font-size="11" fill="#713f12">도메인 톤·말투 · 출력 형식 안정 · 분류</text>
+  <text x="649" y="242" font-size="10" font-weight="700" font-family="JetBrains Mono, monospace" fill="#4b5563">WEAK</text>
+  <text x="649" y="260" font-size="11" fill="#713f12">새 사실 주입 (비효율)</text>
+  <text x="649" y="298" font-size="10" font-weight="700" font-family="JetBrains Mono, monospace" fill="#a16207">COST</text>
+  <text x="649" y="316" font-size="11" fill="#713f12">$$$ 라벨링 + GPU</text>
+  <text x="649" y="354" font-size="10" font-weight="700" font-family="JetBrains Mono, monospace" fill="#a16207">TIME</text>
+  <text x="649" y="372" font-size="11" fill="#713f12">시간: 주</text>
+  <text x="649" y="410" font-size="10" font-weight="700" font-family="JetBrains Mono, monospace" fill="#ca8a04">WHEN</text>
+  <text x="649" y="428" font-size="11" fill="#713f12">톤 / 형식 / 분류 안정 필요</text>
+  <rect x="927" y="100" width="280" height="360" rx="12" fill="#d1fae5" stroke="#059669" stroke-width="1.8"/>
+  <text x="947" y="136" font-size="22" font-weight="700" fill="#064e3b">④</text>
+  <text x="983" y="136" font-size="18" font-weight="700" fill="#064e3b">DPO / RLHF</text>
+  <text x="947" y="156" font-size="11" font-family="JetBrains Mono, monospace" fill="#047857">수K 선호 쌍</text>
+  <text x="947" y="186" font-size="10" font-weight="700" font-family="JetBrains Mono, monospace" fill="#059669">GOOD</text>
+  <text x="947" y="204" font-size="11" fill="#064e3b">안전 · 정중함 · 거절 정책</text>
+  <text x="947" y="242" font-size="10" font-weight="700" font-family="JetBrains Mono, monospace" fill="#4b5563">WEAK</text>
+  <text x="947" y="260" font-size="11" fill="#064e3b">데이터 수집 어려움 · 과적합</text>
+  <text x="947" y="298" font-size="10" font-weight="700" font-family="JetBrains Mono, monospace" fill="#047857">COST</text>
+  <text x="947" y="316" font-size="11" fill="#064e3b">$$$$ 선호 라벨링</text>
+  <text x="947" y="354" font-size="10" font-weight="700" font-family="JetBrains Mono, monospace" fill="#047857">TIME</text>
+  <text x="947" y="372" font-size="11" fill="#064e3b">시간: 월</text>
+  <text x="947" y="410" font-size="10" font-weight="700" font-family="JetBrains Mono, monospace" fill="#059669">WHEN</text>
+  <text x="947" y="428" font-size="11" fill="#064e3b">품질이 SFT 천장 · 정렬 필요</text>
+  <line x1="33" y1="490" x2="1207" y2="490" stroke="#4b5563" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="33" y="512" font-size="12" font-weight="700" fill="#0f172a">시도 순서 · 비용·시간 증가</text>
+  <text x="1207" y="512" text-anchor="end" font-size="12" font-weight="700" fill="#0f172a">정렬·정밀</text>
+</svg>

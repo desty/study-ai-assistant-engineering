@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 460" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/>
+    </pattern>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#64748b"/></marker>
+    <marker id="arr-input" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#60a5fa"/></marker>
+    <marker id="arr-llm" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#fb923c"/></marker>
+    <marker id="arr-model" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#a78bfa"/></marker>
+    <marker id="arr-token" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#34d399"/></marker>
+    <marker id="arr-output" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#34d399"/></marker>
+    <marker id="arr-gate" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#fbbf24"/></marker>
+    <marker id="arr-tool" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#22d3ee"/></marker>
+    <marker id="arr-memory" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#f472b6"/></marker>
+    <marker id="arr-error" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#f87171"/></marker>
+  </defs>
+  <rect width="1180" height="460" fill="#020617"/>
+  <rect width="1180" height="460" fill="url(#grid)"/>
+  <text x="590" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#f1f5f9">승인 큐 상태 머신 — Pending 에서 끝까지</text>
+  <text x="590" y="58" text-anchor="middle" font-size="12" fill="#94a3b8">대기 → 결정 → 재개 또는 거절. TTL 만료는 자동 reject 로 떨어뜨려 영구 펜딩을 막는다.</text>
+  <rect x="80" y="200" width="140" height="100" rx="10" fill="#0f172a"/>
+  <rect x="80" y="200" width="140" height="100" rx="10" fill="rgba(244,114,182,0.15)" stroke="#f472b6" stroke-width="1.5"/>
+  <text x="150.0" y="246.0" text-anchor="middle" font-size="14" font-weight="700" fill="#fbcfe8">① Pending</text>
+  <text x="150.0" y="262.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#f472b6">queue</text>
+  <text x="150.0" y="278.0" text-anchor="middle" font-size="10" fill="#f472b6">TTL 시작</text>
+  <rect x="380" y="100" width="140" height="70" rx="10" fill="#0f172a"/>
+  <rect x="380" y="100" width="140" height="70" rx="10" fill="rgba(52,211,153,0.2)" stroke="#34d399" stroke-width="1.5"/>
+  <text x="450.0" y="131.0" text-anchor="middle" font-size="14" font-weight="700" fill="#a7f3d0">② Approved</text>
+  <text x="450.0" y="147.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#34d399">reviewer</text>
+  <rect x="380" y="220" width="140" height="70" rx="10" fill="#0f172a"/>
+  <rect x="380" y="220" width="140" height="70" rx="10" fill="rgba(248,113,113,0.15)" stroke="#f87171" stroke-width="1.5"/>
+  <text x="450.0" y="251.0" text-anchor="middle" font-size="14" font-weight="700" fill="#fecaca">② Rejected</text>
+  <text x="450.0" y="267.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#f87171">reviewer</text>
+  <rect x="380" y="340" width="140" height="70" rx="10" fill="#0f172a"/>
+  <rect x="380" y="340" width="140" height="70" rx="10" fill="rgba(251,191,36,0.15)" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="450.0" y="371.0" text-anchor="middle" font-size="14" font-weight="700" fill="#fde68a">② Expired</text>
+  <text x="450.0" y="387.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#fbbf24">TTL > 24h</text>
+  <rect x="700" y="100" width="140" height="70" rx="10" fill="#0f172a"/>
+  <rect x="700" y="100" width="140" height="70" rx="10" fill="rgba(251,146,60,0.15)" stroke="#fb923c" stroke-width="1.5"/>
+  <text x="770.0" y="131.0" text-anchor="middle" font-size="14" font-weight="700" fill="#fed7aa">③ Resume</text>
+  <text x="770.0" y="147.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#fb923c">Agent 재개</text>
+  <rect x="700" y="220" width="140" height="70" rx="10" fill="#0f172a"/>
+  <rect x="700" y="220" width="140" height="70" rx="10" fill="rgba(52,211,153,0.15)" stroke="#34d399" stroke-width="1.5"/>
+  <text x="770.0" y="251.0" text-anchor="middle" font-size="14" font-weight="700" fill="#a7f3d0">③ Notify User</text>
+  <text x="770.0" y="267.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#34d399">reason 동반</text>
+  <rect x="700" y="340" width="140" height="70" rx="10" fill="#0f172a"/>
+  <rect x="700" y="340" width="140" height="70" rx="10" fill="rgba(248,113,113,0.15)" stroke="#f87171" stroke-width="1.5"/>
+  <text x="770.0" y="371.0" text-anchor="middle" font-size="14" font-weight="700" fill="#fecaca">③ Auto-reject</text>
+  <text x="770.0" y="387.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#f87171">+ on-call alert</text>
+  <rect x="1000" y="220" width="140" height="100" rx="10" fill="#0f172a"/>
+  <rect x="1000" y="220" width="140" height="100" rx="10" fill="rgba(52,211,153,0.15)" stroke="#34d399" stroke-width="1.5"/>
+  <text x="1070.0" y="266.0" text-anchor="middle" font-size="14" font-weight="700" fill="#a7f3d0">④ Audit</text>
+  <text x="1070.0" y="282.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#34d399">log + metrics</text>
+  <text x="1070.0" y="298.0" text-anchor="middle" font-size="10" fill="#34d399">who/when/why</text>
+  <path d="M 222,220.0 L 378,135.0" stroke="#34d399" stroke-width="1.5" fill="none" marker-end="url(#arr-output)"/>
+  <rect x="267.5" y="150.5" width="65" height="18" rx="4" fill="#0f172a" stroke="#334155" stroke-width="0.8"/>
+  <text x="300.0" y="163.5" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#94a3b8">approve</text>
+  <path d="M 222,250.0 L 378,255.0" stroke="#f87171" stroke-width="1.8" fill="none" marker-end="url(#arr-error)"/>
+  <rect x="271.0" y="225.5" width="58" height="18" rx="4" fill="#0f172a" stroke="#334155" stroke-width="0.8"/>
+  <text x="300.0" y="238.5" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#94a3b8">reject</text>
+  <path d="M 222,290.0 L 378,375.0" stroke="#fbbf24" stroke-width="1.5" fill="none" marker-end="url(#arr-gate)" stroke-dasharray="3,3"/>
+  <rect x="267.5" y="305.5" width="65" height="18" rx="4" fill="#0f172a" stroke="#334155" stroke-width="0.8"/>
+  <text x="300.0" y="318.5" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#94a3b8">timeout</text>
+  <path d="M 522,135.0 L 698,135.0" stroke="#64748b" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 522,255.0 L 698,255.0" stroke="#64748b" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 522,375.0 L 698,375.0" stroke="#64748b" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 842,135.0 L 998,240" stroke="#34d399" stroke-width="1.5" fill="none" marker-end="url(#arr-token)" stroke-dasharray="5,3"/>
+  <path d="M 842,255.0 L 998,270.0" stroke="#34d399" stroke-width="1.5" fill="none" marker-end="url(#arr-token)" stroke-dasharray="5,3"/>
+  <path d="M 842,375.0 L 998,300" stroke="#34d399" stroke-width="1.5" fill="none" marker-end="url(#arr-token)" stroke-dasharray="5,3"/>
+  <rect x="40" y="425" width="1100" height="22" rx="4" fill="#0f172a" stroke="#334155" stroke-width="0.8"/>
+  <text x="590.0" y="441" text-anchor="middle" font-size="11" fill="#cbd5e1">TTL 24h 이 기본값. 야간·휴일 정책에 맞춰 조정. 모든 종료 경로가 Audit 에 모인다.</text>
+</svg>

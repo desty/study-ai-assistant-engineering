@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 540" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/>
+    </pattern>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#64748b"/></marker>
+    <marker id="arr-input" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#60a5fa"/></marker>
+    <marker id="arr-llm" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#fb923c"/></marker>
+    <marker id="arr-model" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#a78bfa"/></marker>
+    <marker id="arr-token" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#34d399"/></marker>
+    <marker id="arr-output" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#34d399"/></marker>
+    <marker id="arr-gate" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#fbbf24"/></marker>
+    <marker id="arr-tool" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#22d3ee"/></marker>
+    <marker id="arr-memory" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#f472b6"/></marker>
+    <marker id="arr-error" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#f87171"/></marker>
+  </defs>
+  <rect width="1240" height="540" fill="#020617"/>
+  <rect width="1240" height="540" fill="url(#grid)"/>
+  <text x="620" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#f1f5f9">비용·지연 4 레버 — Baseline 대비 효과</text>
+  <text x="620" y="58" text-anchor="middle" font-size="12" fill="#94a3b8">캐싱 · 라우팅 · 배치 · 컨텍스트 압축. 레버는 누적 가능하지만 첫 한 개로 보통 절반이 빠진다.</text>
+  <text x="306" y="140" text-anchor="end" font-size="13" font-weight="700" fill="#f1f5f9">Baseline</text>
+  <rect x="320" y="110" width="700.0" height="50" rx="6" fill="rgba(248,113,113,0.15)" stroke="#f87171" stroke-width="1.5"/>
+  <text x="334" y="140" font-size="14" font-weight="700" fill="#fecaca">100%</text>
+  <text x="1040" y="128" font-size="12" font-family="JetBrains Mono, monospace" fill="#cbd5e1">$0.025 · 2400ms</text>
+  <text x="1040" y="146" font-size="11" fill="#f87171">단일 Opus, 캐시·라우팅 없음</text>
+  <text x="306" y="208" text-anchor="end" font-size="13" font-weight="700" fill="#f1f5f9">+ Prompt cache</text>
+  <rect x="320" y="178" width="420.0" height="50" rx="6" fill="rgba(244,114,182,0.15)" stroke="#f472b6" stroke-width="1.5"/>
+  <text x="334" y="208" font-size="14" font-weight="700" fill="#fbcfe8">60%</text>
+  <text x="1040" y="196" font-size="12" font-family="JetBrains Mono, monospace" fill="#cbd5e1">$0.015 · 1900ms</text>
+  <text x="1040" y="214" font-size="11" fill="#f472b6">시스템 + 도구 정의 캐싱 90% off</text>
+  <text x="306" y="276" text-anchor="end" font-size="13" font-weight="700" fill="#f1f5f9">+ Model routing</text>
+  <rect x="320" y="246" width="224.0" height="50" rx="6" fill="rgba(251,191,36,0.15)" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="334" y="276" font-size="14" font-weight="700" fill="#fde68a">32%</text>
+  <text x="1040" y="264" font-size="12" font-family="JetBrains Mono, monospace" fill="#cbd5e1">$0.008 · 1200ms</text>
+  <text x="1040" y="282" font-size="11" fill="#fbbf24">쉬운 60% 는 Haiku 로</text>
+  <text x="306" y="344" text-anchor="end" font-size="13" font-weight="700" fill="#f1f5f9">+ Batch API</text>
+  <rect x="320" y="314" width="140.0" height="50" rx="6" fill="rgba(34,211,238,0.15)" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="334" y="344" font-size="14" font-weight="700" fill="#a5f3fc">20%</text>
+  <text x="1040" y="332" font-size="12" font-family="JetBrains Mono, monospace" fill="#cbd5e1">$0.005 · async</text>
+  <text x="1040" y="350" font-size="11" fill="#22d3ee">비실시간만 50% off</text>
+  <text x="306" y="412" text-anchor="end" font-size="13" font-weight="700" fill="#f1f5f9">+ Context 압축</text>
+  <rect x="320" y="382" width="98.0" height="50" rx="6" fill="rgba(52,211,153,0.15)" stroke="#34d399" stroke-width="1.5"/>
+  <text x="334" y="412" font-size="14" font-weight="700" fill="#a7f3d0">14%</text>
+  <text x="1040" y="400" font-size="12" font-family="JetBrains Mono, monospace" fill="#cbd5e1">$0.0035 · 900ms</text>
+  <text x="1040" y="418" font-size="11" fill="#34d399">이력 요약 · max_tokens 축소</text>
+  <line x1="1020" y1="104" x2="1020" y2="450" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="1020" y="98" text-anchor="middle" font-size="10" font-family="JetBrains Mono, monospace" fill="#cbd5e1">baseline 100%</text>
+  <rect x="40" y="505" width="1160" height="22" rx="4" fill="#0f172a" stroke="#334155" stroke-width="0.8"/>
+  <text x="620.0" y="521" text-anchor="middle" font-size="11" fill="#cbd5e1">수치는 예시. 도메인·트래픽에 따라 효과 달라짐 — 실측 후 적용 순서 결정.</text>
+</svg>

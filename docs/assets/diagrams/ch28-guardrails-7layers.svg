@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 620" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#f1f5f9" stroke-width="0.5"/>
+    </pattern>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#6b7280"/></marker>
+    <marker id="arr-input" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#2563eb"/></marker>
+    <marker id="arr-llm" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ea580c"/></marker>
+    <marker id="arr-model" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#7c3aed"/></marker>
+    <marker id="arr-token" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-output" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-gate" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ca8a04"/></marker>
+    <marker id="arr-tool" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#0891b2"/></marker>
+    <marker id="arr-memory" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#db2777"/></marker>
+    <marker id="arr-error" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#dc2626"/></marker>
+  </defs>
+  <rect width="1240" height="620" fill="#ffffff"/>
+  <rect width="1240" height="620" fill="url(#grid)"/>
+  <text x="620" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">가드레일 7종 — 입력 4 + 출력 3 의 계층 방어</text>
+  <text x="620" y="58" text-anchor="middle" font-size="12" fill="#64748b">하나로는 부족하다. 입력·툴 호출·출력 세 위치에 특화된 필터를 배치해 한 곳이 뚫려도 다음이 잡는다.</text>
+  <rect x="220" y="100" width="200" height="56" rx="8" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+  <text x="234" y="124" font-size="13" font-weight="700" fill="#713f12">① Relevance</text>
+  <text x="234" y="144" font-size="11" font-family="JetBrains Mono, monospace" fill="#a16207">topic classifier</text>
+  <rect x="220" y="170" width="200" height="56" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="234" y="194" font-size="13" font-weight="700" fill="#7f1d1d">② Safety</text>
+  <text x="234" y="214" font-size="11" font-family="JetBrains Mono, monospace" fill="#b91c1c">jailbreak · injection</text>
+  <rect x="220" y="240" width="200" height="56" rx="8" fill="#fce7f3" stroke="#db2777" stroke-width="1.5"/>
+  <text x="234" y="264" font-size="13" font-weight="700" fill="#500724">③ Moderation</text>
+  <text x="234" y="284" font-size="11" font-family="JetBrains Mono, monospace" fill="#be185d">hate · violence</text>
+  <rect x="220" y="310" width="200" height="56" rx="8" fill="#dcfce7" stroke="#059669" stroke-width="1.5"/>
+  <text x="234" y="334" font-size="13" font-weight="700" fill="#064e3b">④ Rules</text>
+  <text x="234" y="354" font-size="11" font-family="JetBrains Mono, monospace" fill="#047857">regex · blocklist</text>
+  <rect x="60" y="280" width="130" height="60" rx="10" fill="#ffffff"/>
+  <rect x="60" y="280" width="130" height="60" rx="10" fill="#e3f2fd" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="125.0" y="306.0" text-anchor="middle" font-size="14" font-weight="700" fill="#0d47a1">User</text>
+  <text x="125.0" y="322.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#1e40af">input</text>
+  <rect x="540" y="260" width="160" height="100" rx="14" fill="#fef3e0" stroke="#ea580c" stroke-width="2"/>
+  <text x="620.0" y="292" text-anchor="middle" font-size="16" font-weight="700" fill="#9a3412">Agent</text>
+  <text x="620.0" y="316" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#c2410c">LLM + Tools</text>
+  <text x="620.0" y="338" text-anchor="middle" font-size="10" fill="#c2410c">루프 · 툴 선택</text>
+  <rect x="545" y="180" width="150" height="60" rx="8" fill="#cffafe" stroke="#0891b2" stroke-width="1.5"/>
+  <text x="620.0" y="204" text-anchor="middle" font-size="13" font-weight="700" fill="#083344">⑤ Tool Safeguard</text>
+  <text x="620.0" y="224" text-anchor="middle" font-size="10" font-family="JetBrains Mono, monospace" fill="#0e7490">low/med/high · 승인</text>
+  <path d="M 620.0,242 L 620.0,258" stroke="#ca8a04" stroke-width="1.5" fill="none" marker-end="url(#arr-gate)" stroke-dasharray="3,3"/>
+  <rect x="598.0" y="223.0" width="44" height="18" rx="4" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.8"/>
+  <text x="620.0" y="236.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#475569">gate</text>
+  <rect x="730" y="150" width="200" height="56" rx="8" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+  <text x="744" y="174" font-size="13" font-weight="700" fill="#713f12">⑥ PII Filter</text>
+  <text x="744" y="194" font-size="11" font-family="JetBrains Mono, monospace" fill="#a16207">mask · redact</text>
+  <rect x="730" y="220" width="200" height="56" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="744" y="244" font-size="13" font-weight="700" fill="#7f1d1d">⑦ Output Validate</text>
+  <text x="744" y="264" font-size="11" font-family="JetBrains Mono, monospace" fill="#b91c1c">브랜드 · 정책</text>
+  <rect x="730" y="290" width="200" height="56" rx="8" fill="#d1fae5" stroke="#059669" stroke-width="1.5"/>
+  <text x="744" y="314" font-size="13" font-weight="700" fill="#064e3b">✓ Final Response</text>
+  <text x="744" y="334" font-size="11" font-family="JetBrains Mono, monospace" fill="#047857">user-safe</text>
+  <rect x="1050" y="280" width="130" height="60" rx="10" fill="#ffffff"/>
+  <rect x="1050" y="280" width="130" height="60" rx="10" fill="#d1fae5" stroke="#059669" stroke-width="1.5"/>
+  <text x="1115.0" y="306.0" text-anchor="middle" font-size="14" font-weight="700" fill="#064e3b">Response</text>
+  <text x="1115.0" y="322.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#047857">to user</text>
+  <path d="M 192,310.0 L 218,310.0" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 422,310.0 L 538,310.0" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <rect x="451.0" y="283.0" width="58" height="18" rx="4" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.8"/>
+  <text x="480.0" y="296.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#475569">passed</text>
+  <path d="M 702,310.0 L 728,310.0" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 932,310.0 L 1048,310.0" stroke="#059669" stroke-width="1.5" fill="none" marker-end="url(#arr-output)"/>
+  <text x="320.0" y="86" text-anchor="middle" font-size="11" font-weight="700" fill="#334155" font-family="JetBrains Mono, monospace">INPUT GUARDRAILS</text>
+  <text x="830.0" y="136" text-anchor="middle" font-size="11" font-weight="700" fill="#334155" font-family="JetBrains Mono, monospace">OUTPUT GUARDRAILS</text>
+  <rect x="40" y="585" width="1160" height="22" rx="4" fill="#f8fafc" stroke="#e2e8f0" stroke-width="0.8"/>
+  <text x="620.0" y="601" text-anchor="middle" font-size="11" fill="#334155">위반 시 즉시 차단(reject) · 마스킹(transform) · 사람 승인(escalate) 셋 중 하나로 응답한다.</text>
+</svg>

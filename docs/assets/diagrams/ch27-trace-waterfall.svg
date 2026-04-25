@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 520" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#f1f5f9" stroke-width="0.5"/>
+    </pattern>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#6b7280"/></marker>
+    <marker id="arr-input" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#2563eb"/></marker>
+    <marker id="arr-llm" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ea580c"/></marker>
+    <marker id="arr-model" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#7c3aed"/></marker>
+    <marker id="arr-token" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-output" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-gate" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ca8a04"/></marker>
+    <marker id="arr-tool" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#0891b2"/></marker>
+    <marker id="arr-memory" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#db2777"/></marker>
+    <marker id="arr-error" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#dc2626"/></marker>
+  </defs>
+  <rect width="1240" height="520" fill="#ffffff"/>
+  <rect width="1240" height="520" fill="url(#grid)"/>
+  <text x="620" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">한 요청의 Trace — span 으로 분해</text>
+  <text x="620" y="58" text-anchor="middle" font-size="12" fill="#64748b">같은 요청을 span 7개로 펼친다. 무엇이 비싸고 무엇이 느린지 즉시 보인다.</text>
+  <line x1="280" y1="110" x2="1040" y2="110" stroke="#4b5563" stroke-width="1.5"/>
+  <line x1="280.0" y1="106" x2="280.0" y2="114" stroke="#4b5563" stroke-width="1"/>
+  <text x="280.0" y="100" text-anchor="middle" font-size="10" font-family="JetBrains Mono, monospace" fill="#334155">0ms</text>
+  <line x1="426.1538461538462" y1="106" x2="426.1538461538462" y2="114" stroke="#4b5563" stroke-width="1"/>
+  <text x="426.1538461538462" y="100" text-anchor="middle" font-size="10" font-family="JetBrains Mono, monospace" fill="#334155">500ms</text>
+  <line x1="572.3076923076924" y1="106" x2="572.3076923076924" y2="114" stroke="#4b5563" stroke-width="1"/>
+  <text x="572.3076923076924" y="100" text-anchor="middle" font-size="10" font-family="JetBrains Mono, monospace" fill="#334155">1000ms</text>
+  <line x1="718.4615384615383" y1="106" x2="718.4615384615383" y2="114" stroke="#4b5563" stroke-width="1"/>
+  <text x="718.4615384615383" y="100" text-anchor="middle" font-size="10" font-family="JetBrains Mono, monospace" fill="#334155">1500ms</text>
+  <line x1="864.6153846153846" y1="106" x2="864.6153846153846" y2="114" stroke="#4b5563" stroke-width="1"/>
+  <text x="864.6153846153846" y="100" text-anchor="middle" font-size="10" font-family="JetBrains Mono, monospace" fill="#334155">2000ms</text>
+  <line x1="1010.7692307692308" y1="106" x2="1010.7692307692308" y2="114" stroke="#4b5563" stroke-width="1"/>
+  <text x="1010.7692307692308" y="100" text-anchor="middle" font-size="10" font-family="JetBrains Mono, monospace" fill="#334155">2500ms</text>
+  <text x="72" y="158" font-size="12" fill="#0d47a1">HTTP request</text>
+  <rect x="280.0" y="140" width="754.1538461538462" height="28" rx="4" fill="#e3f2fd" stroke="#2563eb" stroke-width="1.2"/>
+  <text x="657.0769230769231" y="158" text-anchor="middle" font-size="10" font-family="JetBrains Mono, monospace" fill="#1e40af">2580ms</text>
+  <text x="1054" y="158" font-size="11" font-family="JetBrains Mono, monospace" fill="#334155">—</text>
+  <text x="86" y="192" font-size="12" fill="#713f12">Auth · rate limit</text>
+  <rect x="282.9230769230769" y="174" width="8.769230769230774" height="28" rx="4" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.2"/>
+  <text x="297.6923076923077" y="192" font-size="10" font-family="JetBrains Mono, monospace" fill="#a16207">30ms</text>
+  <text x="1054" y="192" font-size="11" font-family="JetBrains Mono, monospace" fill="#334155">—</text>
+  <text x="86" y="226" font-size="12" fill="#713f12">Input guardrails</text>
+  <rect x="293.15384615384613" y="208" width="58.46153846153851" height="28" rx="4" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.2"/>
+  <text x="357.61538461538464" y="226" font-size="10" font-family="JetBrains Mono, monospace" fill="#a16207">200ms</text>
+  <text x="1054" y="226" font-size="11" font-family="JetBrains Mono, monospace" fill="#334155">$0.0001</text>
+  <text x="86" y="260" font-size="12" fill="#083344">Retrieval</text>
+  <rect x="353.0769230769231" y="242" width="64.30769230769226" height="28" rx="4" fill="#cffafe" stroke="#0891b2" stroke-width="1.2"/>
+  <text x="385.2307692307692" y="260" text-anchor="middle" font-size="10" font-family="JetBrains Mono, monospace" fill="#0e7490">220ms</text>
+  <text x="1054" y="260" font-size="11" font-family="JetBrains Mono, monospace" fill="#334155">$0.0002</text>
+  <text x="100" y="294" font-size="12" fill="#064e3b">  embed (query)</text>
+  <rect x="354.53846153846155" y="276" width="17.538461538461547" height="28" rx="4" fill="#dcfce7" stroke="#059669" stroke-width="1.2"/>
+  <text x="378.0769230769231" y="294" font-size="10" font-family="JetBrains Mono, monospace" fill="#047857">60ms</text>
+  <text x="1054" y="294" font-size="11" font-family="JetBrains Mono, monospace" fill="#334155">$0.00005</text>
+  <text x="100" y="328" font-size="12" fill="#083344">  vector search</text>
+  <rect x="373.53846153846155" y="310" width="26.307692307692264" height="28" rx="4" fill="#cffafe" stroke="#0891b2" stroke-width="1.2"/>
+  <text x="405.8461538461538" y="328" font-size="10" font-family="JetBrains Mono, monospace" fill="#0e7490">90ms</text>
+  <text x="1054" y="328" font-size="11" font-family="JetBrains Mono, monospace" fill="#334155">—</text>
+  <text x="100" y="362" font-size="12" fill="#083344">  rerank</text>
+  <rect x="401.30769230769226" y="344" width="14.615384615384642" height="28" rx="4" fill="#cffafe" stroke="#0891b2" stroke-width="1.2"/>
+  <text x="421.9230769230769" y="362" font-size="10" font-family="JetBrains Mono, monospace" fill="#0e7490">50ms</text>
+  <text x="1054" y="362" font-size="11" font-family="JetBrains Mono, monospace" fill="#334155">$0.00015</text>
+  <text x="86" y="396" font-size="12" fill="#9a3412">LLM call (Opus)</text>
+  <rect x="420.3076923076923" y="378" width="584.6153846153848" height="28" rx="4" fill="#fef3e0" stroke="#ea580c" stroke-width="1.2"/>
+  <text x="712.6153846153848" y="396" text-anchor="middle" font-size="10" font-family="JetBrains Mono, monospace" fill="#c2410c">2000ms</text>
+  <text x="1054" y="396" font-size="11" font-family="JetBrains Mono, monospace" fill="#334155">$0.025</text>
+  <text x="86" y="430" font-size="12" fill="#7f1d1d">Output guardrails</text>
+  <rect x="1006.3846153846155" y="412" width="20.46153846153834" height="28" rx="4" fill="#fee2e2" stroke="#dc2626" stroke-width="1.2"/>
+  <text x="1032.8461538461538" y="430" font-size="10" font-family="JetBrains Mono, monospace" fill="#b91c1c">70ms</text>
+  <text x="1054" y="430" font-size="11" font-family="JetBrains Mono, monospace" fill="#334155">$0.00005</text>
+  <text x="1054" y="128" font-size="11" font-weight="700" fill="#334155" font-family="JetBrains Mono, monospace">cost</text>
+  <text x="72" y="128" font-size="11" font-weight="700" fill="#334155" font-family="JetBrains Mono, monospace">span</text>
+  <rect x="40" y="485" width="1160" height="22" rx="4" fill="#f8fafc" stroke="#e2e8f0" stroke-width="0.8"/>
+  <text x="620.0" y="501" text-anchor="middle" font-size="11" fill="#334155">LLM call 이 전체의 78% · 비용의 99%. 최적화는 가장 굵은 막대부터 (Ch 30).</text>
+</svg>

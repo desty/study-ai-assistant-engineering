@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 540" font-family="Pretendard, -apple-system, BlinkMacSystemFont, sans-serif">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#f1f5f9" stroke-width="0.5"/>
+    </pattern>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#6b7280"/></marker>
+    <marker id="arr-input" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#2563eb"/></marker>
+    <marker id="arr-llm" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ea580c"/></marker>
+    <marker id="arr-model" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#7c3aed"/></marker>
+    <marker id="arr-token" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-output" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#059669"/></marker>
+    <marker id="arr-gate" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ca8a04"/></marker>
+    <marker id="arr-tool" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#0891b2"/></marker>
+    <marker id="arr-memory" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#db2777"/></marker>
+    <marker id="arr-error" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#dc2626"/></marker>
+  </defs>
+  <rect width="1240" height="540" fill="#ffffff"/>
+  <rect width="1240" height="540" fill="url(#grid)"/>
+  <text x="620" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">정렬 3 방식 — SFT · DPO · RLHF</text>
+  <text x="620" y="58" text-anchor="middle" font-size="12" fill="#64748b">같은 Base 에서 출발해 사람 선호로 다듬는 세 길. DPO 가 RLHF 의 단순화 버전이라 우선순위.</text>
+  <text x="60" y="160.0" font-size="15" font-weight="700" fill="#713f12">SFT</text>
+  <text x="60" y="179.0" font-size="11" font-family="JetBrains Mono, monospace" fill="#a16207">데이터: (q, a)</text>
+  <rect x="200" y="135.0" width="130" height="60" rx="10" fill="#ffffff"/>
+  <rect x="200" y="135.0" width="130" height="60" rx="10" fill="#e3f2fd" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="265.0" y="161.0" text-anchor="middle" font-size="14" font-weight="700" fill="#0d47a1">Base</text>
+  <text x="265.0" y="177.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#1e40af">pretrained</text>
+  <rect x="380" y="135.0" width="130" height="60" rx="10" fill="#ffffff"/>
+  <rect x="380" y="135.0" width="130" height="60" rx="10" fill="#dcfce7" stroke="#059669" stroke-width="1.5"/>
+  <text x="445.0" y="161.0" text-anchor="middle" font-size="14" font-weight="700" fill="#064e3b">(q, a) 쌍</text>
+  <text x="445.0" y="177.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#047857">수K~수십K</text>
+  <rect x="580" y="135.0" width="130" height="60" rx="10" fill="#ffffff"/>
+  <rect x="580" y="135.0" width="130" height="60" rx="10" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+  <text x="645.0" y="161.0" text-anchor="middle" font-size="14" font-weight="700" fill="#713f12">SFT</text>
+  <text x="645.0" y="177.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#a16207">next-token loss</text>
+  <rect x="780" y="135.0" width="130" height="60" rx="10" fill="#ffffff"/>
+  <rect x="780" y="135.0" width="130" height="60" rx="10" fill="#d1fae5" stroke="#059669" stroke-width="1.5"/>
+  <text x="845.0" y="161.0" text-anchor="middle" font-size="14" font-weight="700" fill="#064e3b">Instruct</text>
+  <text x="845.0" y="177.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#047857">chat 가능</text>
+  <path d="M 332,165.0 L 378,165.0" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 512,165.0 L 578,165.0" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 712,165.0 L 778,165.0" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <text x="60" y="310.0" font-size="15" font-weight="700" fill="#064e3b">DPO</text>
+  <text x="60" y="329.0" font-size="11" font-family="JetBrains Mono, monospace" fill="#047857">데이터: (q, ✓, ✗)</text>
+  <rect x="200" y="285.0" width="130" height="60" rx="10" fill="#ffffff"/>
+  <rect x="200" y="285.0" width="130" height="60" rx="10" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+  <text x="265.0" y="311.0" text-anchor="middle" font-size="14" font-weight="700" fill="#713f12">Instruct</text>
+  <text x="265.0" y="327.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#a16207">SFT 후</text>
+  <rect x="380" y="285.0" width="130" height="60" rx="10" fill="#ffffff"/>
+  <rect x="380" y="285.0" width="130" height="60" rx="10" fill="#fce7f3" stroke="#db2777" stroke-width="1.5"/>
+  <text x="445.0" y="311.0" text-anchor="middle" font-size="14" font-weight="700" fill="#500724">선호 쌍</text>
+  <text x="445.0" y="327.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#be185d">chosen/rejected</text>
+  <rect x="580" y="285.0" width="130" height="60" rx="10" fill="#ffffff"/>
+  <rect x="580" y="285.0" width="130" height="60" rx="10" fill="#d1fae5" stroke="#059669" stroke-width="1.5"/>
+  <text x="645.0" y="311.0" text-anchor="middle" font-size="14" font-weight="700" fill="#064e3b">DPO loss</text>
+  <text x="645.0" y="327.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#047857">reward 식 X</text>
+  <rect x="780" y="285.0" width="130" height="60" rx="10" fill="#ffffff"/>
+  <rect x="780" y="285.0" width="130" height="60" rx="10" fill="#d1fae5" stroke="#059669" stroke-width="1.5"/>
+  <text x="845.0" y="311.0" text-anchor="middle" font-size="14" font-weight="700" fill="#064e3b">Aligned</text>
+  <text x="845.0" y="327.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#047857">톤·정중함</text>
+  <path d="M 332,315.0 L 378,315.0" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 512,315.0 L 578,315.0" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 712,315.0 L 778,315.0" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <text x="60" y="460.0" font-size="15" font-weight="700" fill="#7f1d1d">RLHF</text>
+  <text x="60" y="479.0" font-size="11" font-family="JetBrains Mono, monospace" fill="#b91c1c">데이터: (q, ✓, ✗)</text>
+  <rect x="200" y="435.0" width="130" height="60" rx="10" fill="#ffffff"/>
+  <rect x="200" y="435.0" width="130" height="60" rx="10" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+  <text x="265.0" y="461.0" text-anchor="middle" font-size="14" font-weight="700" fill="#713f12">Instruct</text>
+  <text x="265.0" y="477.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#a16207">SFT 후</text>
+  <rect x="380" y="435.0" width="130" height="60" rx="10" fill="#ffffff"/>
+  <rect x="380" y="435.0" width="130" height="60" rx="10" fill="#fce7f3" stroke="#db2777" stroke-width="1.5"/>
+  <text x="445.0" y="461.0" text-anchor="middle" font-size="14" font-weight="700" fill="#500724">Reward Model</text>
+  <text x="445.0" y="477.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#be185d">선호로 학습</text>
+  <rect x="580" y="435.0" width="130" height="60" rx="10" fill="#ffffff"/>
+  <rect x="580" y="435.0" width="130" height="60" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="645.0" y="461.0" text-anchor="middle" font-size="14" font-weight="700" fill="#7f1d1d">PPO</text>
+  <text x="645.0" y="477.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#b91c1c">RL 루프</text>
+  <rect x="780" y="435.0" width="130" height="60" rx="10" fill="#ffffff"/>
+  <rect x="780" y="435.0" width="130" height="60" rx="10" fill="#d1fae5" stroke="#059669" stroke-width="1.5"/>
+  <text x="845.0" y="461.0" text-anchor="middle" font-size="14" font-weight="700" fill="#064e3b">Aligned</text>
+  <text x="845.0" y="477.0" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#047857">복잡·불안정</text>
+  <path d="M 332,465.0 L 378,465.0" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 512,465.0 L 578,465.0" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M 712,465.0 L 778,465.0" stroke="#6b7280" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <rect x="950" y="100" width="250" height="430" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="966" y="124" font-size="13" font-weight="700" fill="#0f172a">비교 요약</text>
+  <text x="966" y="152" font-size="12" font-weight="700" fill="#0f172a">SFT</text>
+  <text x="974" y="170" font-size="11" fill="#334155">· 가장 단순</text>
+  <text x="974" y="186" font-size="11" fill="#334155">· 새 행동 학습</text>
+  <text x="974" y="202" font-size="11" fill="#334155">· 거절·정렬 약함</text>
+  <text x="966" y="224" font-size="12" font-weight="700" fill="#0f172a">DPO</text>
+  <text x="974" y="242" font-size="11" fill="#334155">· reward 모델 X</text>
+  <text x="974" y="258" font-size="11" fill="#334155">· 안정 · 빠름</text>
+  <text x="974" y="274" font-size="11" fill="#334155">· 5K 쌍이면 OK</text>
+  <text x="974" y="290" font-size="11" fill="#334155">· 2026 표준</text>
+  <text x="966" y="312" font-size="12" font-weight="700" fill="#0f172a">RLHF</text>
+  <text x="974" y="330" font-size="11" fill="#334155">· reward + PPO</text>
+  <text x="974" y="346" font-size="11" fill="#334155">· 데이터 효율 ↑</text>
+  <text x="974" y="362" font-size="11" fill="#334155">· 불안정 · 비쌈</text>
+  <text x="974" y="378" font-size="11" fill="#334155">· 대형사만</text>
+  <rect x="40" y="505" width="1160" height="22" rx="4" fill="#f8fafc" stroke="#e2e8f0" stroke-width="0.8"/>
+  <text x="620.0" y="521" text-anchor="middle" font-size="11" fill="#334155">우리 첫 시도는 SFT. 거절 톤·정렬이 SFT 천장에 부딪히면 DPO. RLHF 는 안 가도 됨.</text>
+</svg>
