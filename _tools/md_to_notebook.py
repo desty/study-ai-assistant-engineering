@@ -103,12 +103,15 @@ def build_cells(md_path: Path, web_path: str) -> list[dict]:
     md = md_path.read_text(encoding="utf-8")
     title, abstract_md, body_lines = parse_md(md)
 
+    is_en = web_path.startswith("en/")
+    web_label = "Read on the web" if is_en else "원본 웹페이지"
+
     cells: list[dict] = []
 
     # Header cell
     header = (
         f"# {title}\n\n"
-        f"**[원본 웹페이지]({WEB_BASE}/{web_path}/)**"
+        f"**[{web_label}]({WEB_BASE}/{web_path}/)**"
     )
     if abstract_md:
         header += f"\n\n## Abstract\n\n{abstract_md}"

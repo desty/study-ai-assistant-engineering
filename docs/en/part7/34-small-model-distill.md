@@ -1,6 +1,6 @@
 # Ch 34. Small Models, Distillation, and DPO
 
-<a class="colab-badge" href="https://colab.research.google.com/github/desty/study-ai-assistant-engineering/blob/main/notebooks/part7/ch34_small_model_distill.ipynb" target="_blank">
+<a class="colab-badge" href="https://colab.research.google.com/github/desty/study-ai-assistant-engineering/blob/main/notebooks/en/part7/ch34_small_model_distill.ipynb" target="_blank">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab">
 </a>
 
