@@ -195,29 +195,16 @@ print(result['response'])
 
 ### 5-2. 실제 운영 패턴
 
-```
-┌─ 사용자 요청
-│
-▼
-graph.invoke(...)  # 첫 호출
-│
-├─ classify 실행
-│
-├─ interrupt_before='refund_check'  → pause, state 저장
-│
-└─ return (운영자에게 알림 · Slack / 대시보드)
-
-[~10분 후]
-
-운영자 승인 → webhook 호출
-│
-▼
-graph.invoke(None, {'thread_id': ...})  # 재개
-│
-├─ refund_check 실행
-├─ respond 실행
-└─ END, 사용자에게 응답 전송
-```
+| # | 시점 | 동작 | 상태 |
+|---|---|---|---|
+| 1 | 사용자 요청 | `graph.invoke(...)` 첫 호출 | — |
+| 2 | classify 실행 | 라우팅 결정 | — |
+| 3 | `interrupt_before='refund_check'` | pause + state 저장 | DB 에 thread 저장 |
+| 4 | return | 운영자 알림 (Slack/대시보드) | — |
+| 5 | ~10분 후 운영자 승인 | webhook 호출 | — |
+| 6 | `graph.invoke(None, {'thread_id': ...})` | 재개 | DB 에서 state 복원 |
+| 7 | refund_check 실행 | tool 호출 | — |
+| 8 | respond 실행 → END | 사용자에게 응답 전송 | — |
 
 **핵심**: thread_id 만 있으면 되고, 중간 상태가 DB 에 있어서 **재시작·복구** 가 자유롭다.
 
