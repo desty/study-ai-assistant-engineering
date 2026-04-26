@@ -1,5 +1,9 @@
 # Ch 28. 가드레일 7종
 
+<a class="colab-badge" href="https://colab.research.google.com/github/desty/study-ai-assistant-engineering/blob/main/notebooks/part6/ch28_guardrails.ipynb" target="_blank">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab">
+</a>
+
 !!! abstract "이 챕터에서 배우는 것"
     - **계층형 방어** — 한 종류 가드레일로는 부족한 이유
     - **7종 가드레일 표** — Relevance · Safety · Moderation · Rules · Tool Safeguard · PII · Output Validation

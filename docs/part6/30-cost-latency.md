@@ -1,5 +1,9 @@
 # Ch 30. 비용·지연 최적화
 
+<a class="colab-badge" href="https://colab.research.google.com/github/desty/study-ai-assistant-engineering/blob/main/notebooks/part6/ch30_cost_latency.ipynb" target="_blank">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab">
+</a>
+
 !!! abstract "이 챕터에서 배우는 것"
     - **4 레버** — Prompt cache · Model routing · Batch API · Context 압축
     - 각 레버의 **실효 절감** 추정 (도메인별 차이 인지)

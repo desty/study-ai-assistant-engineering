@@ -1,5 +1,9 @@
 # Ch 26. Production 아키텍처
 
+<a class="colab-badge" href="https://colab.research.google.com/github/desty/study-ai-assistant-engineering/blob/main/notebooks/part6/ch26_prod_arch.ipynb" target="_blank">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab">
+</a>
+
 !!! abstract "이 챕터에서 배우는 것"
     - **PoC 와 Production 의 차이** — 무엇이 추가로 필요한가
     - **5개 레이어**로 분리: API · LLM · Retrieval · Session · Observability

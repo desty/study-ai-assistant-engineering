@@ -1,5 +1,9 @@
 # 캡스톤 — Self-Improving Assistant
 
+<a class="colab-badge" href="https://colab.research.google.com/github/desty/study-ai-assistant-engineering/blob/main/notebooks/capstone/self_improving.ipynb" target="_blank">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab">
+</a>
+
 !!! abstract "이 캡스톤에서 만드는 것"
     - **Part 1~7 의 모든 조각** 을 한 시스템에 통합
     - 사용자 피드백이 **자동으로 평가셋 + 학습 데이터** 가 되는 폐쇄 루프

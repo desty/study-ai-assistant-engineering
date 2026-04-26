@@ -1,5 +1,9 @@
 # Ch 32. 파인튜닝이 필요한 경우와 아닌 경우
 
+<a class="colab-badge" href="https://colab.research.google.com/github/desty/study-ai-assistant-engineering/blob/main/notebooks/part7/ch32_when_to_finetune.ipynb" target="_blank">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab">
+</a>
+
 !!! abstract "이 챕터에서 배우는 것"
     - **"AI 프로젝트 = 파인튜닝" 가정이 왜 틀린가**
     - 4 게이트 **결정 트리** — 게이트 하나만 막혀도 보류

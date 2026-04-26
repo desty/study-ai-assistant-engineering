@@ -1,5 +1,9 @@
 # Ch 33. LoRA / QLoRA 실전 (Colab)
 
+<a class="colab-badge" href="https://colab.research.google.com/github/desty/study-ai-assistant-engineering/blob/main/notebooks/part7/ch33_lora_qlora.ipynb" target="_blank">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab">
+</a>
+
 !!! abstract "이 챕터에서 배우는 것"
     - **Full FT vs LoRA** — 무엇이 학습되나
     - **QLoRA** — 4-bit 양자화로 Colab T4 한 장에 8B 모델 학습

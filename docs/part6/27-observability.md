@@ -1,5 +1,9 @@
 # Ch 27. 관측성과 운영
 
+<a class="colab-badge" href="https://colab.research.google.com/github/desty/study-ai-assistant-engineering/blob/main/notebooks/part6/ch27_observability.ipynb" target="_blank">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab">
+</a>
+
 !!! abstract "이 챕터에서 배우는 것"
     - 로그·지표·트레이스의 **3 신호** — 왜 셋이 다 필요한가
     - **Trace span** 으로 한 요청을 분해 — LLM 콜이 차지하는 비중을 본다

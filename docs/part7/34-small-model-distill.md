@@ -1,5 +1,9 @@
 # Ch 34. 소형모델 · 증류 · DPO
 
+<a class="colab-badge" href="https://colab.research.google.com/github/desty/study-ai-assistant-engineering/blob/main/notebooks/part7/ch34_small_model_distill.ipynb" target="_blank">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab">
+</a>
+
 !!! abstract "이 챕터에서 배우는 것"
     - **소형 모델** 의 자리 — 언제 큰 모델 대신 작은 모델
     - **Distillation** (증류) — Teacher 가 Student 를 가르치는 패턴

@@ -1,5 +1,9 @@
 # Ch 29. 휴먼 개입 설계
 
+<a class="colab-badge" href="https://colab.research.google.com/github/desty/study-ai-assistant-engineering/blob/main/notebooks/part6/ch29_human_in_loop.ipynb" target="_blank">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab">
+</a>
+
 !!! abstract "이 챕터에서 배우는 것"
     - 사람을 부르는 **두 가지 트리거** — 실패 임계 / 고위험 액션
     - **승인 큐** 상태 머신 — pending · approved · rejected · expired
