@@ -180,14 +180,14 @@ def rule_vs_model(theme):
     # 첫 번째 화살표 중앙 x 위치
     mx = xs[0] + NW + GAP // 2
 
-    for lbl, cy, role in [('Rule', cy1, 'gate'), ('Model', cy2, 'llm')]:
-        lw = len(lbl) * 7 + 20
+    for lbl, cy in [('Rule', cy1), ('Model', cy2)]:
+        lw = len(lbl) * 7 + 16
         lx = mx - lw / 2
-        lines.append(f'  <rect x="{lx:.1f}" y="{cy - 12}" width="{lw}" height="24" rx="6" '
-                     f'fill="{pal[role]["fill"]}" stroke="{pal[role]["stroke"]}" stroke-width="1.5"/>')
-        lines.append(f'  <text x="{mx}" y="{cy + 5}" text-anchor="middle" font-size="12" '
-                     f'font-weight="700" font-family="JetBrains Mono, monospace" '
-                     f'fill="{pal[role]["text"]}">{lbl}</text>')
+        lines.append(f'  <rect x="{lx:.1f}" y="{cy - 9}" width="{lw}" height="18" rx="4" '
+                     f'fill="{t_data["label_bg"]}" stroke="{t_data["label_border"]}" stroke-width="0.8"/>')
+        lines.append(f'  <text x="{mx}" y="{cy + 4}" text-anchor="middle" font-size="11" '
+                     f'font-family="JetBrains Mono, monospace" '
+                     f'fill="{t_data["label_text"]}">{lbl}</text>')
 
     lines.extend(svg_footer())
     return '\n'.join(lines)
