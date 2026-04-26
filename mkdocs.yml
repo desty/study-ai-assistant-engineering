@@ -50,6 +50,76 @@ extra:
   analytics:
     provider: google
     property: G-4L031NBC3Z
+  alternate:
+    - name: 한국어
+      link: /study-ai-assistant-engineering/
+      lang: ko
+    - name: English
+      link: /study-ai-assistant-engineering/en/
+      lang: en
+
+plugins:
+  - search
+  - i18n:
+      docs_structure: folder
+      fallback_to_default: true
+      languages:
+        - locale: ko
+          default: true
+          name: 한국어
+          build: true
+        - locale: en
+          name: English
+          build: true
+          site_name: AI Assistant Engineering
+          nav_translations:
+            홈: Home
+            소개: About
+            학습 시스템: Learning System
+            학습 내용: Curriculum
+            "Part 1. 입문": "Part 1. Foundations"
+            왜 모델이 필요한가: Why Models
+            LLM이란 무엇인가: What is an LLM
+            AI Assistant 시스템 개요: Assistant System Overview
+            "Part 2. Python & API": "Part 2. Python & API"
+            API 시작: Getting Started with the API
+            프롬프트 + CoT: Prompts + CoT
+            구조화 출력: Structured Output
+            스트리밍과 UX: Streaming & UX
+            Tool Calling: Tool Calling
+            "Part 3. RAG": "Part 3. RAG"
+            왜 RAG인가: Why RAG
+            임베딩·벡터검색: Embeddings & Vector Search
+            RAG 파이프라인: RAG Pipeline
+            검색 품질 개선: Retrieval Quality
+            Advanced RAG: Advanced RAG
+            LangChain + 멀티모달: LangChain & Multimodal
+            "Part 4. 평가·추론": "Part 4. Evaluation & Reasoning"
+            무엇을 평가하나: What to Evaluate
+            평가셋 만들기: Building an Eval Set
+            LLM-as-a-Judge: LLM-as-a-Judge
+            추론 품질: Reasoning Quality
+            실패 분석: Failure Analysis
+            "Part 5. Agent & LangGraph": "Part 5. Agents & LangGraph"
+            "Agent란": What is an Agent
+            "Agent 패턴": Agent Patterns
+            Tool Use 실전: Tool Use in Practice
+            LangGraph: LangGraph
+            "Agent 메모리": Agent Memory
+            "멀티 에이전트": Multi-Agent
+            "Part 6. 운영": "Part 6. Production"
+            Production 아키텍처: Production Architecture
+            관측성: Observability
+            가드레일 7종: Seven Guardrails
+            휴먼 개입: Human in the Loop
+            비용·지연 최적화: Cost & Latency
+            "Part 7. 모델·파인튜닝": "Part 7. Models & Fine-tuning"
+            모델 아키텍처: Model Architecture
+            언제 파인튜닝: When to Fine-tune
+            LoRA/QLoRA: LoRA / QLoRA
+            소형모델·증류: Small Models & Distillation
+            캡스톤: Capstone
+            Self-Improving Assistant: Self-Improving Assistant
 
 markdown_extensions:
   - admonition

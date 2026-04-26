@@ -253,3 +253,53 @@ docs/assets/diagrams/*.png  (verification only · git 제외)
 2. `_research/README.md`로 현재 아카이브 상태 파악.
 3. "§5 남은 설계 결정"에서 뭘 건드릴지 사용자와 합의.
 4. 새 웹 자료를 받을 땐 **research-capture 스킬**을 호출해 규칙대로 저장.
+
+## 10. 영문판 (English Edition)
+
+본 책은 **이중 언어**로 운영. 한국어가 1차 · 영문은 영문권 개발자용 후속 번역.
+
+### 인프라
+
+- **플러그인**: `mkdocs-static-i18n` 1.3+ (`docs_structure: folder`, `fallback_to_default: true`)
+- **빌드 결과**: `/` (한국어 기본) · `/en/` (영문)
+- **fallback**: 영문 페이지가 없으면 한국어 페이지가 그 자리에 노출됨 — 점진적 번역 가능
+- **Material 의 `extra.alternate`** 로 우상단 언어 스위처 자동 노출
+
+### 디렉토리 매핑
+
+```
+docs/<part>/<file>.md          ← 한국어 (1차 소스)
+docs/en/<part>/<file>.md       ← 영문 (점진 번역)
+```
+
+`docs/en/` 트리는 한국어와 동일한 슬러그·파일명. 다이어그램은 `docs/assets/diagrams/` 공용 사용 (라벨이 한국어인 SVG 그대로 embed — 영문 라벨이 필요해질 때 `*-en.svg` 분기 검토).
+
+### 번역 규칙
+
+- **스타일 가이드**: [`_plans/en-style-guide.md`](_plans/en-style-guide.md). 핵심: 직설·짧은 문장·기계번역 금지·한국어 문장을 통째 번역하지 말고 영문 독자에게 자연스러운 표현으로 재작성.
+- **톤**: 영문권 시니어 개발자 (Stripe·Cloudflare·Anthropic 엔지니어링 블로그) 기준.
+- **코드는 그대로**. 단 system 프롬프트 문자열·예제 데이터는 영문으로.
+- **8단계 템플릿** 동일. 헤딩만 영문화: Concept · Why it matters · Where it's used · Minimal example · Hands-on · Common pitfalls · Production checklist · Exercises.
+- **부제·섹션 약어**: `!!! abstract "What you'll learn"` · `!!! quote "Prerequisites"` 등.
+
+### 번역 진행 우선순위
+
+1. `docs/en/index.md` · `about/system.md` · `about/curriculum.md` ✅
+2. Part 1 (Ch 1~3) — 톤 시드 ✅
+3. Part 2 (5 챕터) — 입문 후 가장 많이 읽힘
+4. Part 3 (RAG) — 영문 검색 수요 큼
+5. Parts 4~7 + 캡스톤
+
+### 새 영문 챕터 추가 시 체크리스트
+
+- [ ] `docs/en/partN/NN-slug.md` 생성 (한국어와 동일 슬러그)
+- [ ] H1 영문화 + 동일 위치에 Colab badge (notebooks 경로는 한국어와 공용)
+- [ ] `!!! abstract` → 영문화
+- [ ] 8 섹션 헤딩 영문화 (단, 번호는 유지)
+- [ ] 마지막 줄 `**Next** → [Title](next.md)` 패턴
+- [ ] `mkdocs build --strict` clean 확인 (i18n 플러그인이 nav 자동 매핑)
+
+### 빌드·배포
+
+- 동일 `mkdocs build --strict` 명령으로 두 locale 한 번에 빌드
+- nav 라벨은 `mkdocs.yml` 의 `plugins.i18n.languages[en].nav_translations` 에서 한 번 매핑됨 — 신규 nav 추가 시 같이 갱신
