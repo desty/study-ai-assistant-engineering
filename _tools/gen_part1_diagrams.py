@@ -12,6 +12,7 @@ from svg_prim import (
     svg_header, svg_footer, text_title, text_subtitle,
     node, group_around_nodes, arrow_line, arrow_path,
     arrow_legend, role_legend,
+    PALETTE_LIGHT, PALETTE_DARK, THEME,
 )
 
 BASE = str(HERE.parent / 'docs' / 'assets' / 'diagrams')
@@ -132,34 +133,61 @@ def roadmap(theme):
 # =====================================================================
 
 def rule_vs_model(theme):
-    CW, CH = 880, 340
+    CW, CH = 960, 390
+    NW, NH = 155, 85
+    GAP = 72  # 노드 간 간격 — 라벨(최대 51px)이 여유 있게 들어감
+
+    pal = PALETTE_LIGHT if theme == 'light' else PALETTE_DARK
+    t_data = THEME[theme]
+
     lines = svg_header(CW, CH, theme)
     lines.extend(text_title(CW // 2, 36, '두 가지 접근', theme, size=18))
     lines.extend(text_subtitle(CW // 2, 58, '같은 입력, 다른 처리 방식', theme))
 
-    # Row 1: Rule path
+    total = 3 * NW + 2 * GAP
+    LEFT = (CW - total) // 2
+    xs = [LEFT + i * (NW + GAP) for i in range(3)]
+
+    Y1, Y2 = 110, 260
+    cy1 = Y1 + NH // 2
+    cy2 = Y2 + NH // 2
+
     row1 = [
         ('input',  '사용자 메시지', 'input'),
         ('gate',   'if-else 체인', 'deterministic'),
         ('output', '결과 A',       '고정'),
     ]
-    # Row 2: Model path
     row2 = [
         ('input',  '사용자 메시지', 'input'),
         ('llm',    'LLM',         'probabilistic'),
         ('output', '결과 B',       '가변'),
     ]
 
-    Y1, Y2 = 100, 230
-    xs = layout_centered_row(3, CW, NODE_W, NODE_GAP)
+    # === 1. 화살표 선만 먼저 (라벨 없이) — 노드 뒤에 깔림 ===
+    for i in range(2):
+        x1 = xs[i] + NW + 2
+        x2 = xs[i + 1] - 2
+        lines.extend(arrow_line(x1, cy1, x2, cy1, theme, kind='primary'))
+        lines.extend(arrow_line(x1, cy2, x2, cy2, theme, kind='primary'))
 
-    lines.extend(connect_row(xs, Y1, theme, kind='primary', label_per_arrow=['Rule', None]))
-    lines.extend(connect_row(xs, Y2, theme, kind='primary', label_per_arrow=['Model', None]))
+    # === 2. 노드 ===
+    for x, (role, title_t, s) in zip(xs, row1):
+        lines.extend(node(x, Y1, NW, NH, role, theme, title=title_t, sub=s))
+    for x, (role, title_t, s) in zip(xs, row2):
+        lines.extend(node(x, Y2, NW, NH, role, theme, title=title_t, sub=s))
 
-    for x, (role, t, s) in zip(xs, row1):
-        lines.extend(node(x, Y1, NODE_W, NODE_H, role, theme, title=t, sub=s))
-    for x, (role, t, s) in zip(xs, row2):
-        lines.extend(node(x, Y2, NODE_W, NODE_H, role, theme, title=t, sub=s))
+    # === 3. 라벨 배지 — 노드 이후에 그려서 Z-order 확보 ===
+    # 첫 번째 화살표 중앙 x 위치
+    mx = xs[0] + NW + GAP // 2
+
+    for lbl, cy, role in [('Rule', cy1, 'gate'), ('Model', cy2, 'llm')]:
+        lw = len(lbl) * 7 + 20
+        lx = mx - lw / 2
+        lines.append(f'  <rect x="{lx:.1f}" y="{cy - 12}" width="{lw}" height="24" rx="6" '
+                     f'fill="{pal[role]["fill"]}" stroke="{pal[role]["stroke"]}" stroke-width="1.5"/>')
+        lines.append(f'  <text x="{mx}" y="{cy + 5}" text-anchor="middle" font-size="12" '
+                     f'font-weight="700" font-family="JetBrains Mono, monospace" '
+                     f'fill="{pal[role]["text"]}">{lbl}</text>')
 
     lines.extend(svg_footer())
     return '\n'.join(lines)
