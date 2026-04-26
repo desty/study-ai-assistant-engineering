@@ -77,6 +77,19 @@ _study/
 - 설명은 `# (1)!` 주석 앵커 + 코드 아래 번호 리스트로 툴팁
 - 한 블록 40줄 상한
 
+### 커스텀 callout (admonition)
+
+Material 기본 admonition 외에 **2종 커스텀**을 `docs/stylesheets/extra.css` 에 정의해두었다.
+
+- `!!! definition "용어"` — 본문에서 처음 정의되는 용어. 박스로 강조하고 같은 항목을 `NN-slug.glossary.json` 에도 등록 (스펙: `_plans/chapter-metadata-spec.md`).
+- `!!! takeaways "핵심"` — 챕터 끝(§8 직전)에 배치하는 3~5줄 핵심 정리. bullet list 형태. 길이 30분+ 챕터에 권장.
+
+기본 admonition 사용 컨벤션:
+- `!!! abstract "이 장에서 배우는 것"` — 챕터 도입부 학습 목표 (§0 위치)
+- `!!! quote "선수 지식"` — 도입부 prerequisites
+- `!!! warning "자주 깨지는 포인트"` — §6 본문에서 강조용
+- `!!! tip "운영 팁"` — §7 본문에서 강조용
+
 ### 시각화 — 단일 체계 (SVG)
 
 이 책은 **Mermaid도 `.diagram` HTML도 쓰지 않는다**. 모든 흐름 다이어그램은 **SVG 페어** (light + dark) 로.

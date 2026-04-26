@@ -31,3 +31,40 @@
   font-size: 0.85rem;
   color: var(--md-default-fg-color--light);
 }
+
+/* ── Custom admonitions ────────────────────────────────────────────────── */
+/* `!!! definition "Term"` — 용어 정의용. 본문 첫 등장 시 박스로 강조. */
+:root {
+  --md-admonition-icon--definition: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2 4 5v6.09c0 5.05 3.41 9.76 8 10.91 4.59-1.15 8-5.86 8-10.91V5l-8-3zm-1 6h2v2h-2V8zm0 4h2v6h-2v-6z"/></svg>');
+  --md-admonition-icon--takeaways: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>');
+}
+
+.md-typeset .admonition.definition,
+.md-typeset details.definition {
+  border-color: #7c3aed; /* purple — 'model/concept' 톤과 통일 */
+}
+.md-typeset .definition > .admonition-title,
+.md-typeset .definition > summary {
+  background-color: rgba(124, 58, 237, 0.08);
+}
+.md-typeset .definition > .admonition-title::before,
+.md-typeset .definition > summary::before {
+  background-color: #7c3aed;
+  -webkit-mask-image: var(--md-admonition-icon--definition);
+          mask-image: var(--md-admonition-icon--definition);
+}
+
+.md-typeset .admonition.takeaways,
+.md-typeset details.takeaways {
+  border-color: #059669; /* green — 'output/완료' 톤 */
+}
+.md-typeset .takeaways > .admonition-title,
+.md-typeset .takeaways > summary {
+  background-color: rgba(5, 150, 105, 0.08);
+}
+.md-typeset .takeaways > .admonition-title::before,
+.md-typeset .takeaways > summary::before {
+  background-color: #059669;
+  -webkit-mask-image: var(--md-admonition-icon--takeaways);
+          mask-image: var(--md-admonition-icon--takeaways);
+}

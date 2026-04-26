@@ -1,0 +1,21 @@
+name: Codespell
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  codespell:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: codespell-project/actions-codespell@v2
+        with:
+          # docs/ + _plans/ + README. notebooks·assets·_research 제외.
+          path: docs README.md _plans
+          ignore_words_file: .codespell-ignore-words.txt
+          # 한국어 텍스트는 codespell이 건드리지 않지만, 흔한 false-positive를 미리 제외.
+          skip: "*.svg,*.ipynb,*.json,*.png,*.jpg"
