@@ -9,6 +9,7 @@
     - **Self-RAG** — LLM이 **검색 필요성·결과 품질** 을 스스로 판단
     - **GraphRAG** — 엔티티 그래프 기반 추론 (개념 소개)
     - **Agentic RAG** — Part 5 에이전트 루프 안에 검색 도구
+    - **Sufficient Context** (2026 추가) — '관련성' 이 아니라 '충분성' 으로 멈춤·기권 판단
     - Query Rewriting · Multi-query · Recursive retrieval
     - "Advanced 라고 다 좋은 건 아니다" — 비용·지연·복잡도 트레이드오프
 
@@ -207,6 +208,29 @@ Agent 루프:
 
 Part 2 Ch 8 Tool Calling + Part 5 Agent 패턴의 조합. **복합 질문** · **다중 도메인** 에 강함.
 
+### 5.6 Sufficient Context — '충분한가' 를 멈춤 신호로
+
+§5.2 Self-RAG 는 "검색 결과로 답할 수 있나?" 를 LLM 에게 즉석에서 물었습니다. 구글 연구([Sufficient Context, ICLR 2025](https://arxiv.org/abs/2411.06037){target=_blank})는 이 직관을 **별도의 신호** 로 떼어내 형식화합니다.
+
+핵심은 **relevant ≠ sufficient** 의 구분입니다.
+
+- **관련 있음(relevant)** — 검색된 문서가 주제와 관련됨
+- **충분함(sufficient)** — 그 문서만으로 **확정적 답이 가능함**
+
+관련 문서를 찾아도 핵심 사실이 빠져 있으면 그건 충분하지 않습니다. (HTTP 404 일반 설명은 "Room 404 가 어느 연구소에 있었나" 에 관련은 있지만 불충분.)
+
+!!! danger "RAG 의 역설 — 컨텍스트가 기권을 망친다"
+    컨텍스트를 붙이면 모델이 **과신** 해서, 모를 때 기권(abstain) 하는 대신 자신있게 환각합니다. 한 실험에서 **Claude 3.5 Sonnet 의 기권율이 RAG 적용 시 84% → 52% 로 떨어졌습니다.** 검색을 더 줬더니 "모른다" 고 말할 능력이 오히려 약해진 것 — 위 실수 3 의 Self-RAG 오판과 같은 뿌리입니다.
+
+이를 보정하는 게 **selective generation** 입니다. 두 신호를 묶어 답할지·기권할지 결정합니다.
+
+1. **자기평가 confidence** — 답을 여러 번 샘플링한 뒤 모델이 정오를 스스로 평가(`P(True)`)
+2. **sufficient context 라벨** — 충분성 판정기(autorater)의 이진 신호. 구글은 Gemini 1.5 Pro 프롬프팅만으로 **~93% 정확도** 를 얻었습니다(파인튜닝 불필요).
+
+두 신호를 로지스틱 회귀로 결합해 "환각 확률" 을 예측하고, 임계값을 넘으면 기권합니다. **정답 라벨 없이** 학습되고, 답한 문항의 정답 비율을 2~10% 끌어올립니다.
+
+**제품화 (2026)**: 구글은 이 판정기를 [Gemini Enterprise 의 Agentic RAG 루프 정지조건](https://research.google/blog/unlocking-dependable-responses-with-gemini-enterprise-agent-platforms-agentic-rag/){target=_blank}(Sufficient Context Agent)으로 넣었습니다. §5.5 의 "충분하면 답변 / 부족하면 재검색" 판단을, 즉석 YES/NO 대신 **학습된 신호** 로 바꾼 셈입니다.
+
 ---
 
 ## 6. 자주 깨지는 포인트
@@ -261,6 +285,7 @@ Part 2 Ch 8 Tool Calling + Part 5 Agent 패턴의 조합. **복합 질문** · *
 - **Self-RAG**: Asai et al. (2023), *"Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection"*
 - **GraphRAG**: Edge et al. Microsoft (2024), *"From Local to Global: A Graph RAG Approach to Query-Focused Summarization"* · [github.com/microsoft/graphrag](https://github.com/microsoft/graphrag){target=_blank}
 - **Agentic RAG**: LangChain · LlamaIndex 튜토리얼 다수
+- **Sufficient Context**: Joren et al. (2024), *"Sufficient Context: A New Lens on Retrieval Augmented Generation Systems"* (ICLR 2025) · [arXiv 2411.06037](https://arxiv.org/abs/2411.06037){target=_blank} · 제품화: [Google Research (2026)](https://research.google/blog/unlocking-dependable-responses-with-gemini-enterprise-agent-platforms-agentic-rag/){target=_blank}
 - **Stanford CME 295 Lec 7** — 프로젝트 `_research/stanford-cme295.md`
 
 ---

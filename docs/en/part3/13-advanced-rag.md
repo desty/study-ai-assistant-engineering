@@ -9,6 +9,7 @@
     - **Self-RAG** — let the LLM **judge whether retrieval is needed, and whether results are good**
     - **GraphRAG** — entity-graph-based reasoning (concept intro)
     - **Agentic RAG** — search as a tool inside the Part 5 agent loop
+    - **Sufficient Context** (added 2026) — decide when to stop or abstain by "sufficiency," not "relevance"
     - Query rewriting, multi-query, recursive retrieval
     - "Advanced doesn't always mean better" — cost, latency, and complexity trade-offs
 
@@ -208,6 +209,29 @@ Agent loop:
 
 Combines Part 2 Ch 8 (Tool Calling) + Part 5 (Agent patterns). Strong for **complex questions** and **multi-domain scenarios**.
 
+### 5.6 Sufficient Context — using "is it enough?" as a stop signal
+
+§5.2 Self-RAG asks the LLM, on the spot, "can you answer with these results?" Google's research ([Sufficient Context, ICLR 2025](https://arxiv.org/abs/2411.06037){target=_blank}) formalizes that intuition into a **separate signal**.
+
+The key distinction is **relevant ≠ sufficient**:
+
+- **Relevant** — the retrieved document is on-topic
+- **Sufficient** — that document alone makes a **definitive answer possible**
+
+You can retrieve relevant documents and still be missing the key fact — that's insufficient. (A generic explanation of the HTTP 404 error is relevant to "which lab housed Room 404," but not sufficient.)
+
+!!! danger "The RAG paradox — context erodes abstention"
+    Adding context makes the model overconfident, so instead of abstaining when it doesn't know, it confidently hallucinates. In one study, **Claude 3.5 Sonnet's abstention rate dropped from 84% to 52% with RAG.** Giving it more to read actually weakened its ability to say "I don't know" — the same root cause as the Self-RAG misjudgment in Pitfall 3.
+
+The fix is **selective generation**, which combines two signals to decide whether to answer or abstain:
+
+1. **Self-rated confidence** — sample multiple answers and let the model self-assess correctness (`P(True)`)
+2. **Sufficient-context label** — a binary signal from a sufficiency autorater. Google reached **~93% accuracy** with prompted Gemini 1.5 Pro alone (no fine-tuning).
+
+A logistic regression combines both signals to predict "hallucination probability," and abstains past a threshold. It trains **without ground-truth labels** and lifts the fraction of correct answers among answered questions by 2–10%.
+
+**Productized (2026)**: Google wired this rater into Gemini Enterprise as the [stopping condition of the Agentic RAG loop](https://research.google/blog/unlocking-dependable-responses-with-gemini-enterprise-agent-platforms-agentic-rag/){target=_blank} (the Sufficient Context Agent). It replaces §5.5's on-the-spot "enough → answer / not enough → search again" YES/NO with a **learned signal**.
+
 ---
 
 ## 6. Pitfalls — where these break
@@ -262,6 +286,7 @@ Combines Part 2 Ch 8 (Tool Calling) + Part 5 (Agent patterns). Strong for **comp
 - **Self-RAG**: Asai et al. (2023), *"Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection"*
 - **GraphRAG**: Edge et al., Microsoft (2024), *"From Local to Global: A Graph RAG Approach to Query-Focused Summarization"* · [github.com/microsoft/graphrag](https://github.com/microsoft/graphrag){target=_blank}
 - **Agentic RAG**: LangChain, LlamaIndex tutorials
+- **Sufficient Context**: Joren et al. (2024), *"Sufficient Context: A New Lens on Retrieval Augmented Generation Systems"* (ICLR 2025) · [arXiv 2411.06037](https://arxiv.org/abs/2411.06037){target=_blank} · productized: [Google Research (2026)](https://research.google/blog/unlocking-dependable-responses-with-gemini-enterprise-agent-platforms-agentic-rag/){target=_blank}
 - **Stanford CME 295 Lec 7** — in project `_research/stanford-cme295.md`
 
 ---
