@@ -8,6 +8,7 @@
     - **Four ways to improve reasoning quality** by changing your strategy — same model, different approach
     - **CoT variants · Self-Consistency · Best-of-N · Verifiers** — each fits a different problem
     - **Test-time compute** — trade money for quality at inference time
+    - **Native extended thinking** — built-in reasoning to try before you build any external scaffold
     - Building Self-Consistency on math problems and Best-of-N + pytest on code
     - The three bottlenecks that hit as you grow N: cost, latency, and verifier quality
 
@@ -33,6 +34,9 @@ Four strategies at a glance:
 | ④ **Best-of-N + Verifier** | N candidates → verifier picks the best | Unbeatable on code and checkable tasks |
 
 All four rest on the same principle: **test-time compute** — freeze the model weights and spend more **inference time** to buy quality.
+
+!!! tip "The zeroth option — native thinking"
+    Techniques ①–④ are strategies you build **outside** the model. Today's models often do the same thing **inside** (extended thinking). Before building a scaffold, try turning thinking on first — see §3-5 below.
 
 ---
 
@@ -74,6 +78,23 @@ All four rest on the same principle: **test-time compute** — freeze the model 
 ### 3-4. Tree of Thoughts (concept only)
 
 Branch search as a tree. More complex to build, higher cost. This book mentions it for context; see Yao et al. 2023 if you're curious.
+
+### 3-5. Native extended thinking — did you try this first?
+
+Techniques ①–④ above are test-time-compute scaffolds **we build outside** the model. But since 2025, frontier models do the same thing **inside**: Claude's extended thinking, OpenAI's o-series, DeepSeek R1, Gemini's thinking mode — the model runs a long internal reasoning pass before answering, and we control that **thinking budget** in tokens. Roughly, it's CoT plus self-verification, optimized and baked in during training.
+
+So lifting reasoning quality gains one extra step at the front:
+
+1. **First**, turn on native thinking, or move up to a model that has a thinking mode — it's one parameter, with no scaffold to maintain.
+2. **If that's still not enough**, layer on the external strategies (③④).
+
+When you still need an external scaffold:
+
+- **A deterministic verifier is the point** — loops that "check the answer by machine" (running code, validating against a DB) can't be replaced by internal thinking (keep ③ Best-of-N + verifier).
+- **Majority vote over discrete answers** — self-consistency on multiple choice / numeric QA (②).
+- **You must use a model without a thinking mode** (small open models, etc.).
+
+Gotcha: native thinking **isn't free** either. Thinking tokens are billed as output tokens and add latency. "Always-on max thinking" can cost as much as running ④ at N=10, so tune the budget alongside the cost lens in [Ch 30](../part6/30-cost-latency.md).
 
 ---
 

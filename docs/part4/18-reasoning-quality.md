@@ -8,6 +8,7 @@
     - **같은 모델**에서 추론 **전략**을 바꿔 품질을 올리는 4가지 방법
     - **CoT** 심화 · **Self-Consistency** · **Best-of-N** · **Verifier**
     - **Test-time compute** — 비용을 더 써서 품질을 사는 트레이드오프
+    - **네이티브 확장 사고(extended thinking)** — 외부 스캐폴드 전에 먼저 켜볼 내장 추론
     - 수학 문제로 self-consistency · 코드 문제로 best-of-N + pytest verifier 구현
     - N 을 늘리다가 터지는 비용·지연·verifier 품질 3대 병목
 
@@ -33,6 +34,9 @@ LLM 에 같은 질문을 5번 던지면 5개의 다른 답이 나옵니다. 이 
 | ④ **Best-of-N + Verifier** | N개 생성 → verifier 가 선택 | 코드·검증 가능 태스크에 최강 |
 
 공통 원리: **test-time compute** — 학습은 고정, **추론 시점**에 계산을 더 써서 품질을 산다.
+
+!!! tip "0번째 선택지 — 네이티브 thinking"
+    위 ①~④는 모델 **바깥**에서 짜는 전략입니다. 요즘 모델은 같은 일을 **안에서** 하기도 합니다(extended thinking). 스캐폴드를 짜기 전에 thinking 을 켜보는 게 먼저 — 자세히는 아래 §3-5.
 
 ---
 
@@ -74,6 +78,23 @@ LLM 에 같은 질문을 5번 던지면 5개의 다른 답이 나옵니다. 이 
 ### 3-4. Tree of Thoughts (맥락만)
 
 분기를 트리로 탐색. 구현 복잡도 ↑ · 비용 ↑. 본 책에선 개념만 언급. 궁금하면 Yao et al. 2023.
+
+### 3-5. 네이티브 확장 사고 (Extended Thinking) — 먼저 이걸 켜봤나?
+
+위 ①~④는 **우리가 모델 바깥에서 짜는** test-time compute 스캐폴드입니다. 그런데 2025년 이후 프런티어 모델은 같은 일을 **안에서** 합니다. Claude 의 extended thinking, OpenAI o-계열, DeepSeek R1, Gemini 의 thinking 모드 — 답하기 전에 모델이 내부적으로 긴 추론을 돌리고, 그 **사고 예산(thinking budget)** 을 토큰 수로 우리가 조절합니다. 거칠게 말하면 CoT + 자기검증을 모델이 학습 단계에서 최적화해 내장한 것입니다.
+
+그래서 추론 품질을 올릴 때 순서가 하나 추가됩니다:
+
+1. **먼저** 네이티브 thinking 을 켜보거나, thinking 모드가 있는 모델로 올려본다 — 코드 한 줄(파라미터)로 끝나고, 스캐폴드 유지보수가 없다.
+2. **그래도 부족하면** ③④ 같은 외부 전략을 얹는다.
+
+여전히 외부 스캐폴드가 필요한 경우:
+
+- **결정론적 verifier 가 핵심일 때** — 코드 실행·DB 검증처럼 "정답을 기계로 확인"하는 루프는 모델 내부 사고로 대체 안 됨 (③ Best-of-N + verifier 그대로).
+- **이산 답의 다수결** — 객관식·수치 QA 의 self-consistency (②).
+- **thinking 모드가 없는 모델**(작은 오픈 모델 등)을 써야 할 때.
+
+함정: 네이티브 thinking 도 **공짜가 아니다**. thinking 토큰은 출력 토큰으로 과금되고 지연도 늘어난다. "always-on max thinking" 은 ④를 N=10 으로 돌리는 것만큼 비쌀 수 있으니, [Ch 30](../part6/30-cost-latency.md) 의 비용 관점과 함께 budget 을 조절할 것.
 
 ---
 
